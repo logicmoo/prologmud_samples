@@ -47,9 +47,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Debugging] Normarily this set as 'true' can interfere with debugging
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% :- set_prolog_flag(gc,true).
-% Yet turning it off we cant even startup without crashing
 % :- set_prolog_flag(gc,false).
+% Yet turning it off we cant even startup without crashing
+% :- set_prolog_flag(gc,true).
 
 
 :- doall(printAll(current_prolog_flag(_N,_V))).
@@ -77,9 +77,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 :- if(\+ exists_source(prologmud(mud_loader))).
-:- must((absolute_file_name(logicmoo('../../../prologmud/prolog/prologmud'),Dir),
-               asserta(user:file_search_path(prologmud,Dir)))),
- must(exists_source(prologmud(mud_loader))).
+:- must((absolute_file_name(pack('prologmud/prolog/prologmud'),Dir),asserta(user:file_search_path(prologmud,Dir)))).
+:- sanity(exists_source(prologmud(mud_loader))).
 :- endif.
 
 :- ensure_loaded(prologmud(mud_loader)).
@@ -98,6 +97,11 @@
 % [Optional] Creates or suppliments a world
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+:- if( \+ user:file_search_path(sample_games,_Dir)).
+:- must((absolute_file_name(pack('prologmud_samples/prolog/prologmud_sample_games'),Dir),asserta(user:file_search_path(sample_games,Dir)))).
+:- sanity(user:file_search_path(sample_games,_Dir)).
+:- endif.
+
 :- dynamic(lmconf:eachRule_Preconditional/1).
 :- dynamic(lmconf:eachFact_Preconditional/1).
 :- assert_setting01(lmconf:eachRule_Preconditional(true)).
@@ -109,7 +113,7 @@
 :- sanity(functorDeclares(mobExplorer)).
 
 
-:- ain((tCol(tLivingRoom),
+==>((tCol(tLivingRoom),
  tSet(tRegion),
  tSet(tLivingRoom),
 
@@ -138,9 +142,9 @@ genls(mobExplorer,tHominid))).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Required] isRuntime Hook
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- ain(((localityOfObject(P,_),isRuntime)==>{put_in_world(P)})).
-:- ain(((onStart(Idea)==> ((isLoadedType(tSourceData),isRuntime) ==> {ain_expanded(Idea)})))).
-:- ain((mpred_argtypes(mudAreaConnected(tRegion,tRegion)))).
+(((localityOfObject(P,_),isRuntime)==>{put_in_world(P)})).
+==>(((onStart(Idea)==> ((isLoadedType(tSourceData),isRuntime) ==> {ain_expanded(Idea)})))).
+==>((mpred_argtypes(mudAreaConnected(tRegion,tRegion)))).
 :- set_prolog_flag_until_eof(do_renames,term_expansion).
 
 
@@ -150,7 +154,7 @@ genls(mobExplorer,tHominid))).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- if( \+ tRegion(_)).
 
-:- ain((
+==>((
 tRegion(iLivingRoom7),
 tRegion(iOfficeRoom7),
 
@@ -166,7 +170,7 @@ mudStowing(iExplorer7,'iPhaser776'))).
 % :- add_import_module(mpred_type_isa,baseKB,end).
 :- onSpawn(localityOfObject(iExplorer7,tLivingRoom)).
 
-:- ain((
+==>((
 pddlSomethingIsa('iBoots773',['tBoots','ProtectiveAttire','PortableObject','tWearAble']),
 pddlSomethingIsa('iCommBadge774',['tCommBadge','ProtectiveAttire','PortableObject','tNecklace']),
 pddlSomethingIsa('iGoldUniform775',['tGoldUniform','ProtectiveAttire','PortableObject','tWearAble']),

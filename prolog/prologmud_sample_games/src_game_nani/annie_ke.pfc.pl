@@ -6,7 +6,7 @@
 
 use this file with...
 
-:- declare_load_dbase('../games/src_game_nani/a_nani_household.pfc.pl').
+:- declare_load_dbase('a_nani_household.pfc.pl').
 
 */
 

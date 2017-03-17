@@ -10,6 +10,7 @@
 
 :- ensure_loaded(init_mud_server).
 
+
 :- '$set_source_module'(baseKB).
 :- '$set_typein_module'(baseKB).
 
@@ -24,23 +25,23 @@ start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
 
 % isa(starTrek,mtCycL).
-lst :- ensure_loaded('./games/src_game_startrek/?*.pfc.pl').
+lst :- ensure_loaded(sample_games('src_game_startrek/?*.pfc.pl')).
 % [Manditory] This loads the game and initializes so test can be ran
-:- declare_load_dbase('./games/src_game_nani/a_nani_household.pfc.pl').
+:- declare_load_dbase(sample_games('src_game_nani/a_nani_household.pfc.pl')).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optional] the following game files though can be loaded separate instead
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- declare_load_dbase('./games/src_game_nani/objs_misc_household.pfc.pl').
-:- declare_load_dbase('./games/src_game_nani/?*.pfc.pl').
+:- declare_load_dbase(sample_games('src_game_nani/objs_misc_household.pfc.pl')).
+:- declare_load_dbase(sample_games('src_game_nani/?*.pfc.pl')).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optional] the following worlds are in version control in examples
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% :- add_game_dir('./games/src_game_wumpus',prolog_repl).
-% :- add_game_dir('./games/src_game_sims',prolog_repl).
-% :- add_game_dir('./games/src_game_nani',prolog_repl).
-% :- add_game_dir('./games/src_game_startrek',prolog_repl).
+% :- add_game_dir(sample_games('src_game_wumpus'),prolog_repl).
+% :- add_game_dir(sample_games('src_game_sims'),prolog_repl).
+% :- add_game_dir(sample_games('src_game_nani'),prolog_repl).
+% :- add_game_dir(sample_games('src_game_startrek'),prolog_repl).
 
 %:- check_clause_counts.
 
