@@ -8,7 +8,7 @@
 % INIT MUD SERVER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- ensure_loaded(init_mud_server).
+:- user:ensure_loaded(init_mud_server).
 
 
 :- '$set_source_module'(baseKB).
@@ -25,7 +25,7 @@ start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
 
 % isa(starTrek,mtCycL).
-lst :- ensure_loaded(sample_games('src_game_startrek/?*.pfc.pl')).
+lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc.pl')).
 % [Manditory] This loads the game and initializes so test can be ran
 :- declare_load_dbase(sample_games('src_game_nani/a_nani_household.pfc.pl')).
 
@@ -79,12 +79,14 @@ sanity_test_ifood_rez:- ignore((
 :- statistics.
 :- ain(tSourceData(iWorldData8)).
 :- ain(isLoaded(iWorldData8)).
-:- ain(isRuntime).
+:- after_boot(ain(isRuntime)).
 
 lar0 :- dmsg("Ctrl-D to start MUD"),prolog,login_and_run.
 lar :- login_and_run.
 
-% :- after_boot(lar).
+:- add_history(profile(ain(tAgent(foofy)))).
+
+% :- after_boot(lar0).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Required/Optional]  Ensures...
@@ -98,6 +100,6 @@ initialization_after_boot:- listing(lmconf:after_boot_goal/1),dmsg(after_boot_ca
 % [Required/Optional]  Ensures...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- statistics.
-:- qsave_lm(lm_init_mud).
+:- after_boot(qsave_lm(lm_init_mud)).
 
 

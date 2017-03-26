@@ -3,13 +3,16 @@
 
 */
 
+:- multifile(user:file_search_path/2).
+:-   dynamic(user:file_search_path/2).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SETUP KB EXTENSIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 :- '$set_typein_module'(baseKB).
 :- '$set_source_module'(baseKB).
-:- ensure_loaded(library(logicmoo_plarkc)).
+:- system:ensure_loaded(library(logicmoo_plarkc)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LOAD CYC KB EXTENSIONS
@@ -81,7 +84,7 @@
 :- sanity(exists_source(prologmud(mud_loader))).
 :- endif.
 
-:- ensure_loaded(prologmud(mud_loader)).
+:- baseKB:ensure_loaded(prologmud(mud_loader)).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
