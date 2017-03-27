@@ -1,8 +1,13 @@
 #!/usr/bin/env swipl
 /* * module  MUD server startup script in SWI-Prolog
 
+?- 
+ consult(library(prologmud_sample_games/run_mud_server)).
+
+
 */
 
+:- prolog_load_context(directory,D),cd(D).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % INIT MUD SERVER
