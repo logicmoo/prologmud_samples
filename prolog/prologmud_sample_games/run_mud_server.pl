@@ -86,8 +86,8 @@ sanity_test_ifood_rez:- ignore((
 :- ain(isLoaded(iWorldData8)).
 :- after_boot(ain(isRuntime)).
 
-lar0 :- dmsg("Ctrl-D to start MUD"),prolog,login_and_run.
-lar :- login_and_run.
+lar0 :- dmsg("Ctrl-D to start MUD"),prolog,lar.
+lar :- set_prolog_flag(dmsg_level,never),login_and_run.
 
 :- add_history(profile(ain(tAgent(foofy)))).
 
