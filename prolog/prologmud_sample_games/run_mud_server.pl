@@ -30,6 +30,7 @@ start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
 
 % isa(starTrek,mtCycL).
+lst :- app_argv('--noworld'),!.
 lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc.pl')).
 % [Manditory] This loads the game and initializes so test can be ran
 :- declare_load_dbase(sample_games('src_game_nani/a_nani_household.pfc.pl')).
