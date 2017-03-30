@@ -70,6 +70,6 @@ define public
 #  set environment SWI_HOME_DIR=/home/jan/lib/swipl
 end
 
-run
-thread apply all bt full
+# run
+# thread apply all bt full
 

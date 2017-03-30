@@ -33,6 +33,12 @@ cls_putty() {
    reset -w
 }
 
+[[ -z "$LOGTALKHOME" ]] && export LOGTALKHOME=/usr/share/logtalk
+
+
+[[ -z "$LOGTALKUSER" ]] && export LOGTALKUSER=$LOGTALKHOME
+
+
 while [ 1 ]
 do
       echo "You should not see this ever";      
@@ -42,16 +48,21 @@ do
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       #killall -9 xterm perl
-      killall -9 rlwrap gdb
-      kill -9 $(lsof -t -i:3020 -sTCP:LISTEN)
-      kill -9 $(lsof -t -i:4000 -sTCP:LISTEN)
-      kill -9 $(lsof -t -i:4010 -sTCP:LISTEN)
-      echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      echo $WHOLE
+      killall -9 rlwrap gdb 
+      kill -9 $(lsof -t -i:3020 -sTCP:LISTEN) 2> /dev/null
+      kill -9 $(lsof -t -i:4000 -sTCP:LISTEN) 2> /dev/null
+      kill -9 $(lsof -t -i:4010 -sTCP:LISTEN) 2> /dev/null
+         echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+         echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+         echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       echo DISPLAY=$DISPLAY
       echo LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+      echo LOGTALKHOME=$LOGTALKHOME
+      echo LOGTALKUSER=$LOGTALKUSER
+         echo $WHOLE
+         echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+         echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+         echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       $WHOLE
       export COMMAND_LAST=$?
       cd $OLDPWD
