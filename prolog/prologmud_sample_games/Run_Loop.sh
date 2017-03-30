@@ -11,10 +11,10 @@ export OLDPWD="`pwd`"
 if [ $# -eq 0 ] 
  then
   #  export RUNFILE="${RL_PREFIX} swipl -g consult(init_mud_server) -t prolog"
-     export RUNFILE="${RL_PREFIX} swipl -f init_mud_server.pl"
+     export RUNFILE="${RL_PREFIX} swipl -f run_mud_server.pl --noclio --nosumo "
 #swipl -l init_mud_server.pl"
  else
-    export RUNFILE="${RL_PREFIX} ${*}"
+    export RUNFILE="${RL_PREFIX} swipl -f run_mud_server.pl ${*}"
 fi
 
     export WHOLE="gdb -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
@@ -41,9 +41,11 @@ do
       #swipl forks xterm making it not die until the xterm it launched is dead
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      killall -9 xterm perl
+      #killall -9 xterm perl
       killall -9 rlwrap gdb
-      killall -9 swipl
+      kill -9 $(lsof -t -i:3020 -sTCP:LISTEN)
+      kill -9 $(lsof -t -i:4000 -sTCP:LISTEN)
+      kill -9 $(lsof -t -i:4010 -sTCP:LISTEN)
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
