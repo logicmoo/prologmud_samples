@@ -26,7 +26,6 @@
 start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 :- after_boot(start_telnet).
 
-
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
 
 % isa(starTrek,mtCycL).
