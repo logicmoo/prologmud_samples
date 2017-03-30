@@ -17,7 +17,7 @@ if [ $# -eq 0 ]
     export RUNFILE="${RL_PREFIX} swipl -f run_mud_server.pl ${*}"
 fi
 
-    export WHOLE="gdb -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
+    export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
 	
 cls_putty() {
  	clear
