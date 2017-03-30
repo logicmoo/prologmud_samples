@@ -12,6 +12,8 @@ prolog/prologmud_sample_games/lm_*
 prolog/prologmud_sample_games/ontologyportal_sumo/
 prolog/prologmud_sample_games/*cache
 
+prolog/prologmud_sample_games/_*
+
 prolog/ontologyportal_sumo/
 
 ## Build generated
