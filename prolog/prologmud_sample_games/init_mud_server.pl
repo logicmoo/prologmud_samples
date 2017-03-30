@@ -3,6 +3,8 @@
 
 */
 
+:- prolog_load_context(directory,D),cd(D).
+
 :- multifile(user:file_search_path/2).
 :-   dynamic(user:file_search_path/2).
 
