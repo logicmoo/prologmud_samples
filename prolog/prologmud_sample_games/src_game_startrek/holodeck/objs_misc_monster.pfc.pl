@@ -228,7 +228,7 @@ Object applies:
 
 :-register_module_type([world_types,parser]).
 
-mudLabelTypeProps(Lbl,Type,Props)/ground(mudLabelTypeProps(Lbl,Type,Props))==> (typeHasGlyph(Type,Lbl) , typeProps(Type,Props)).
+% mudLabelTypeProps(Lbl,Type,Props)/ground(mudLabelTypeProps(Lbl,Type,Props))==> (typeHasGlyph(Type,Lbl) , typeProps(Type,Props)).
 % :-register_module_type(dynamic).
 
 :-file_begin(pfc).
@@ -265,7 +265,7 @@ mudLabelTypeProps("dr",tDoor,[mudHeight(3),mudWeight(2)]).
 
 %Empty Location
 % You *have* to use ftVar/isMissing as the ftID of the empty location. (no way!)
-mudLabelTypeProps("--",isMissing,[]).
+typeHasGlyph(isMissing,"--").
 
 % What an agent turns into upon death.
 % Must be named iCorpseFn (or edit agent_to_corpse/1 in lib.pl.

@@ -28,7 +28,7 @@ vette_federation_idea(Agent,Act,Act):-var(Act),!,dmsg(vette_federation_idea(Agen
 vette_federation_idea(_,actSit,actSit):-!.
 vette_federation_idea(Agent,Act,Act):-dmsg(vette_federation_idea(Agent,Act)).
 
-mudLabelTypeProps('Px',tFederation,[]).
+typeHasGlyph(tFederation,"Px").
 
 user:world_agent_plan(_World,Agent,ActV):-
    tAgent(Agent),

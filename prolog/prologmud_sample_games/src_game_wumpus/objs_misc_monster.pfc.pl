@@ -236,7 +236,7 @@ typeProps(tAgent,[predInstMax(mudHealth,500)]).
 
 % :-end_module_type(dynamic).
 
-mudLabelTypeProps(Lbl,Type,Props)/ground(mudLabelTypeProps(Lbl,Type,Props))==> (typeHasGlyph(Type,Lbl) , typeProps(Type,Props)).
+% mudLabelTypeProps(Lbl,Type,Props)/ground(mudLabelTypeProps(Lbl,Type,Props))==> (typeHasGlyph(Type,Lbl) , typeProps(Type,Props)).
 
 % Vacuum World example objects........
 mudLabelTypeProps("wl",tWall,[mudHeight(3),mudWeight(4)]).
