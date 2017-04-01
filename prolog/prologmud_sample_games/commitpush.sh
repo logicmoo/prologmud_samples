@@ -1,5 +1,17 @@
+export d=`date +%Y-%m-%d-%H:%M:%S` 
+
+
+if [ $# -eq 0 ] 
+ then
+   export message="Autocommit ${d}"
+ else
+   export message="${*} ${d}"
+fi
+
+
+
 ( cd ../../..
- export d=`date +%Y-%m-%d-%H:%M:%S` ; git submodule foreach 'git commit -am "Autocommit ${d}" && git push || : ' ; git commit -am "Autocommit ${d}" && git push
+  git submodule foreach 'git commit -am "${message}" && git push || : ' ; git commit -am "${message}" && git push
 )
 #git --git-dir=./games/.git --work-tree=./games pull
 #git pull
