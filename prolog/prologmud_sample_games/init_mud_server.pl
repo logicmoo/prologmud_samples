@@ -57,11 +57,9 @@
 % :- set_prolog_flag(gc,true).
 
 
-:- doall(printAll(current_prolog_flag(_N,_V))).
-:- initialization(kill_unsafe_preds,restore).
-:- if(\+ compiling).
-:- initialization(kill_unsafe_preds).
-:- endif.
+% :- sanity(doall(printAll(current_prolog_flag(_N,_V)))).
+% :- after_boot(during_net_boot(kill_unsafe_preds)).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Regression tests that first run whenever a person starts the MUD on the public server
@@ -149,7 +147,7 @@ genls(mobExplorer,tHominid))).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (((localityOfObject(P,_),isRuntime)==>{put_in_world(P)})).
 ==>(((onStart(Idea)==> ((isLoadedType(tSourceData),isRuntime) ==> {ain_expanded(Idea)})))).
-==>((mpred_argtypes(mudAreaConnected(tRegion,tRegion)))).
+%==>((mpred_argtypes(mudAreaConnected(tRegion,tRegion)))).
 :- set_prolog_flag_until_eof(do_renames,term_expansion).
 
 

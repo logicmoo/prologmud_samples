@@ -29,7 +29,6 @@ start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
 
 % isa(starTrek,mtCycL).
-lst :- app_argv('--noworld'),!.
 lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc.pl')).
 % [Manditory] This loads the game and initializes so test can be ran
 :- declare_load_dbase(sample_games('src_game_nani/a_nani_household.pfc.pl')).
@@ -80,32 +79,36 @@ sanity_test_ifood_rez:- ignore((
 % :- after_boot(set_prolog_flag(runtime_debug,0)).
 :- during_boot(set_prolog_flag(unsafe_speedups,false)).
 
-:- lst.
+:- if( \+ app_argv('--noworld')).
+:- during_boot(lst).
+:- endif.
+
+:- if(false).
 :- statistics.
+:- endif.
 :- ain(tSourceData(iWorldData8)).
 :- ain(isLoaded(iWorldData8)).
 :- after_boot(ain(isRuntime)).
 
-lar0 :- % dmsg("Ctrl-D to start MUD"),prolog,
-        lar.
+lar0 :- app_argv('--repl'),!,dmsg("Ctrl-D to start MUD"),prolog,lar.
+lar0 :- lar.
+       
 lar :- set_prolog_flag(dmsg_level,never),login_and_run.
 
 :- add_history(profile(ain(tAgent(foofy)))).
-
-% :- after_boot(lar0).
+:- after_boot(qsave_lm(lm_init_mud)).
+:- after_boot(lar0).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Required/Optional]  Ensures...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-initialization_after_boot:- listing(lmconf:after_boot_goal/1),dmsg(after_boot_call),after_boot_call,lar0.
+initialization_after_boot:- listing(lmconf:after_boot_goal/1),dmsg(after_boot_call),logicmoo_toplevel,lar0.
+
 :- initialization(initialization_after_boot,after_load).
 :- initialization(initialization_after_boot,restore).
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Required/Optional]  Ensures...
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- statistics.
-:- after_boot(qsave_lm(lm_init_mud)).
+
+
+
 
 
