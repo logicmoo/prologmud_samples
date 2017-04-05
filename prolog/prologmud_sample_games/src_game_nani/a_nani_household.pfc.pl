@@ -38,8 +38,8 @@ use this file with...
 % ==================================================
 % Doors
 % ==================================================
-
-:-decl_mpred_hybrid(mudAreaConnected(tRegion,tRegion),symmetric).
+ 
+prologHybrid(mudAreaConnected(tRegion,tRegion),rtSymmetricBinaryPredicate).
 
 :-onSpawn mudAreaConnected(tLivingRoom,tOfficeRoom).
 :-onSpawn mudAreaConnected(tHall,tDiningRoom).
@@ -50,3 +50,4 @@ use this file with...
 :-onSpawn mudAreaConnected(tDiningRoom, tKitchen).
 :-onSpawn mudAreaConnected(tBedRoom, tClosetRoom).
 :-onSpawn mudAreaConnected(tKitchen, tBackYard).
+:-onSpawn mudAreaConnected(iArea1008, tBackYard).

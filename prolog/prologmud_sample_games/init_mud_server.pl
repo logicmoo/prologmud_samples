@@ -14,11 +14,23 @@
 
 :- '$set_typein_module'(baseKB).
 :- '$set_source_module'(baseKB).
-:- system:ensure_loaded(library(logicmoo_plarkc)).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [Required] Load the Logicmoo User System
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- system:load_library_system(library(logicmoo_user)).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [Mostly Required] Load the Logicmoo Plan Generator System
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- system:ensure_loaded(library(logicmoo_planner)).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LOAD CYC KB EXTENSIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- system:ensure_loaded(library(logicmoo_plarkc)).
 :- check_clause_counts.
 
 :- after_boot((set_prolog_flag(pfc_booted,true),flag_call(runtime_debug=true),set_prolog_flag(read_attvars,false))).
@@ -29,12 +41,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- user:load_library_system(library(parser_all)).
 %:- user:load_library_system(library(parser_e2c)).
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Mostly Required] Load the Logicmoo Plan Generator System
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- user:load_library_system(library(logicmoo_planner)).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,8 +152,7 @@ genls(mobExplorer,tHominid))).
 % [Required] isRuntime Hook
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (((localityOfObject(P,_),isRuntime)==>{put_in_world(P)})).
-==>(((onStart(Idea)==> ((isLoadedType(tSourceData),isRuntime) ==> {ain_expanded(Idea)})))).
-%==>((mpred_argtypes(mudAreaConnected(tRegion,tRegion)))).
+:- system:use_module(library('file_scope')).
 :- set_prolog_flag_until_eof(do_renames,term_expansion).
 
 

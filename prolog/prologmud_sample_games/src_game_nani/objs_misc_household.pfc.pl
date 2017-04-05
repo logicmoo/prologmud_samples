@@ -20,7 +20,7 @@
 
 :- file_begin(pfc).
 
-:-decl_mpred_hybrid(localityOfObject(tObj,tSpatialThing)).
+==>prologHybrid(localityOfObject(tObj,tSpatialThing)).
 % which will imply ... :-decl_mpred_hybrid(localityOfObject(kappa(Self,genls(Self,obj)),kappa(Self2,genls(Self2,tSpatialThing)))).
 
 

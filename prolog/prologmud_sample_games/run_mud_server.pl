@@ -30,6 +30,7 @@ start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 
 % isa(starTrek,mtCycL).
 lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc.pl')).
+lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 % [Manditory] This loads the game and initializes so test can be ran
 :- declare_load_dbase(sample_games('src_game_nani/a_nani_household.pfc.pl')).
 
@@ -80,15 +81,17 @@ sanity_test_ifood_rez:- ignore((
 :- during_boot(set_prolog_flag(unsafe_speedups,false)).
 
 :- if( \+ app_argv('--noworld')).
-:- during_boot(lst).
+:- lst.
+:- lstr.
 :- endif.
 
 :- if(false).
 :- statistics.
 :- endif.
-:- ain(tSourceData(iWorldData8)).
+
+:- during_boot(ain(tSourceData(iWorldData8))).
 :- ain(isLoaded(iWorldData8)).
-:- after_boot(ain(isRuntime)).
+:- after_boot(with_mpred_trace_exec(ain(isRuntime))).
 
 lar0 :- app_argv('--repl'),!,dmsg("Ctrl-D to start MUD"),prolog,lar.
 lar0 :- lar.
