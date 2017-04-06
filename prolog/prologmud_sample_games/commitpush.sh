@@ -11,7 +11,7 @@ fi
 
 
 ( cd ../../..
-  git submodule foreach 'git commit -am "${message}" && git push || : ' ; git commit -am "${message}" && git push
+  git submodule foreach 'git commit -am "${message}" || git push || : ' ; git commit -am "${message}" && git push
 )
 #git --git-dir=./games/.git --work-tree=./games pull
 #git pull
