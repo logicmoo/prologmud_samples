@@ -5,8 +5,18 @@
 
 :- prolog_load_context(directory,D),cd(D).
 
+
+:- use_module(library(prolog_pack)).
+:- if( \+ prolog_pack:current_pack(prologmud)).
 :- multifile(user:file_search_path/2).
 :-   dynamic(user:file_search_path/2).
+:- prolog_load_context(directory,Dir),
+   absolute_file_name('../../../',Y,[relative_to(Dir),file_type(directory)]),
+   (( \+ user:file_search_path(pack,Y)) ->asserta(user:file_search_path(pack,Y));true).
+:- attach_packs.
+:- initialization(attach_packs).
+:- endif.
+:- pack_list_installed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SETUP KB EXTENSIONS
@@ -24,13 +34,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Mostly Required] Load the Logicmoo Plan Generator System
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- system:ensure_loaded(library(logicmoo_planner)).
+:- user:ensure_loaded(library(logicmoo_planner)).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LOAD CYC KB EXTENSIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- system:ensure_loaded(library(logicmoo_plarkc)).
+:- user:ensure_loaded(library(logicmoo_plarkc)).
 :- check_clause_counts.
 
 :- after_boot((set_prolog_flag(pfc_booted,true),flag_call(runtime_debug=true),set_prolog_flag(read_attvars,false))).
@@ -152,7 +162,7 @@ genls(mobExplorer,tHominid))).
 % [Required] isRuntime Hook
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (((localityOfObject(P,_),isRuntime)==>{put_in_world(P)})).
-:- system:use_module(library('file_scope')).
+:- user:use_module(library('file_scope')).
 :- set_prolog_flag_until_eof(do_renames,term_expansion).
 
 
