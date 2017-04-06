@@ -7,11 +7,24 @@ export OLDPWD="`pwd`"
 #export RUNFILE="run_debug.pl"
 
 #export RL_PREFIX='rlwrap -a -A -r -c -N -r'
-%export RL_PREFIX=''
+export KILLNET=1
+
+for i in "$@" ; do
+    if [[ $i == "--nonet" ]] ; then
+       export  KILLNET=0
+        break
+    fi
+done
+
 if [ $# -eq 0 ] 
  then
   #  export RUNFILE="${RL_PREFIX} swipl -g consult(init_mud_server) -t prolog"
-     export RUNFILE="${RL_PREFIX} swipl -f run_mud_server.pl --noclio --nosumo "
+  if [[ $(id -u) == 0 ]]; then
+     export RUNFILE="${RL_PREFIX} swipl -f run_mud_server.pl --nonet --repl --noworld"
+     export KILLNET=0
+  else
+     export RUNFILE="${RL_PREFIX} swipl -f run_mud_server.pl --irc --world"
+  fi
 #swipl -l init_mud_server.pl"
  else
     export RUNFILE="${RL_PREFIX} swipl -f run_mud_server.pl ${*}"
@@ -48,10 +61,10 @@ do
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       #killall -9 xterm perl
-      killall -9 rlwrap gdb 
-      kill -9 $(lsof -t -i:3020 -sTCP:LISTEN) 2> /dev/null
-      kill -9 $(lsof -t -i:4000 -sTCP:LISTEN) 2> /dev/null
-      kill -9 $(lsof -t -i:4010 -sTCP:LISTEN) 2> /dev/null
+      killall --user $USER -9 rlwrap gdb
+      if [[ "$KILLNET" == "1" ]]; then
+	lsof -t -i:3020 -i:4000 -i:4010 | xargs --no-run-if-empty kill -9
+      fi
          echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
          echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
          echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"

@@ -27,78 +27,78 @@
 
 :- thread_local(infSupertypeName).
 % alolwos lexical deduction such as tStandTable is a tTable and a tBedRoom is a tRoom
-% :-onSpawn localityOfObject(tStandTable, tBedRoom).
+% onSpawn localityOfObject(tStandTable, tBedRoom).
 
 :- op(600,fx,onSpawn).
 
 % onSpawn accepts class in any argument
 % though also isntances like 
 
-:-onSpawn tRegion(tKitchen).
-:-onSpawn tRegion(tHall).
-:-onSpawn tRegion(tCellar).
-:-onSpawn tRegion(tOfficeRoom).
-:-onSpawn tRegion(tLivingRoom).
-:-onSpawn tRegion(tDiningRoom).
-:-onSpawn tRegion(tBedRoom).
-:-onSpawn tRegion(tBathRoom).
-:-onSpawn tRegion(tClosetRoom).
-:-onSpawn tRegion(tBackYard).
+onSpawn tRegion(tKitchen).
+onSpawn tRegion(tHallWay).
+onSpawn tRegion(tCellar).
+onSpawn tRegion(tOfficeRoom).
+onSpawn tRegion(tLivingRoom).
+onSpawn tRegion(tDiningRoom).
+onSpawn tRegion(tBedRoom).
+onSpawn tRegion(tBathroom).
+onSpawn tRegion(tClosetRoom).
+onSpawn tRegion(tBackYard).
 
 
-:-onSpawn localityOfObject(tRedApple, tKitchen).
-:-onSpawn localityOfObject(tGreenApple, tKitchen).
-%:-onSpawn localityOfObject(iFn(tApple,[mudColor(vRed)]), tKitchen).
-%:-onSpawn localityOfObject(iFn(tApple,[mudColor(vGreen)]), tKitchen).
-:-onSpawn localityOfObject(tDesk, tOfficeRoom).
-:-onSpawn localityOfObject(tFlashlight, tDesk).
-:-onSpawn localityOfObject(tWashingMachine, tCellar).
-:-onSpawn localityOfObject(tNani, tWashingMachine).
-:-onSpawn localityOfObject(tBroccoli, tKitchen).
-:-onSpawn localityOfObject(tCrackers, tKitchen).
-:-onSpawn localityOfObject(tComputer, tDesk).
-:-onSpawn localityOfObject(tEnvelope, tDesk).
-:-onSpawn localityOfObject(tStamp, tEnvelope).
-:-onSpawn localityOfObject(tKey, tEnvelope).
-:-onSpawn localityOfObject(tBed, tBedRoom).
-:-onSpawn localityOfObject(tStandTable, tBedRoom).
-:-onSpawn localityOfObject(tPajamas, tStandTable).
-:-onSpawn localityOfObject(tShirt, tClosetRoom).
-:-onSpawn localityOfObject(tPillow, tBed).
-:-onSpawn localityOfObject(tBlanket, tBed).                                                              
-:-onSpawn localityOfObject(tTable, tKitchen).
-:-onSpawn localityOfObject(tCoat, tClosetRoom).
-:-onSpawn localityOfObject(tPants, tClosetRoom).
-:-onSpawn localityOfObject(tLightSwitch, tBedRoom).
-:-onSpawn localityOfObject(tBall, tBackYard).
-:-onSpawn localityOfObject(tSofa, tLivingRoom).
-:-onSpawn localityOfObject(tEasyChair, tLivingRoom).
-:-onSpawn localityOfObject(tCoffeeTable, tLivingRoom).
-:-onSpawn localityOfObject(tCoffeeCup, tKitchen).
-:-onSpawn localityOfObject(tCoffee, tCoffeeCup).
-%:-onSpawn localityOfObject(tBook(mudColor(vGreen)), tCoffeeTable).
-%:-onSpawn localityOfObject(tBook(mudColor(vPink)), tCoffeeTable).
-:-onSpawn localityOfObject(tGreenBook, tCoffeeTable).
-:-onSpawn localityOfObject(tPinkBook, tCoffeeTable).
-:-onSpawn localityOfObject(tBookcase, tLivingRoom).
-:-onSpawn localityOfObject(tDresser, tBedRoom).
-:-onSpawn localityOfObject(tTopDrawer, tDresser).
-:-onSpawn localityOfObject(tMiddleDrawer, tDresser).
-:-onSpawn localityOfObject(tBottomDrawer, tDresser). 
-:-onSpawn localityOfObject(tHousePlant, tPlanter).
-:-onSpawn localityOfObject(tPlanter, tGueridon). 
-:-onSpawn localityOfObject(tGueridon, tLivingRoom).
-:-onSpawn localityOfObject(tGardenPlant, tBackYard).
-:-onSpawn localityOfObject(tCandle,tKitchen).
-:-onSpawn localityOfObject(tBathTub,tBathRoom).
-:-onSpawn localityOfObject(tShower,tBathRoom).
-:-onSpawn localityOfObject(tToilet,tBathRoom).
-:-onSpawn localityOfObject(tTreadmill,tHall).
-:-onSpawn localityOfObject(tSink,tBathRoom).
-:-onSpawn localityOfObject(tKitchenSink,tKitchenCounter).
-:-onSpawn localityOfObject(tFridge,tKitchen).
-:-onSpawn localityOfObject(tStove,tKitchen).
-:-onSpawn localityOfObject(tKitchenCounter,tKitchen).
+onSpawn localityOfObject(tRedApple, tKitchen).
+onSpawn localityOfObject(tGreenApple, tKitchen).
+%onSpawn localityOfObject(iFn(tApple,[mudColor(vRed)]), tKitchen).
+%onSpawn localityOfObject(iFn(tApple,[mudColor(vGreen)]), tKitchen).
+onSpawn localityOfObject(tDesk, tOfficeRoom).
+onSpawn localityOfObject(tFlashlight, tDesk).
+onSpawn localityOfObject(tWashingMachine, tCellar).
+onSpawn localityOfObject(tNani, tWashingMachine).
+onSpawn localityOfObject(tBroccoli, tKitchen).
+onSpawn localityOfObject(tCrackers, tKitchen).
+onSpawn localityOfObject(tComputer, tDesk).
+onSpawn localityOfObject(tEnvelope, tDesk).
+onSpawn localityOfObject(tStamp, tEnvelope).
+onSpawn localityOfObject(tKey, tEnvelope).
+onSpawn localityOfObject(tBed, tBedRoom).
+onSpawn localityOfObject(tStandTable, tBedRoom).
+onSpawn localityOfObject(tPajamas, tStandTable).
+onSpawn localityOfObject(tShirt, tClosetRoom).
+onSpawn localityOfObject(tPillow, tBed).
+onSpawn localityOfObject(tBlanket, tBed).                                                              
+onSpawn localityOfObject(tTable, tKitchen).
+onSpawn localityOfObject(tCoat, tClosetRoom).
+onSpawn localityOfObject(tPants, tClosetRoom).
+onSpawn localityOfObject(tLightSwitch, tBedRoom).
+onSpawn localityOfObject(tBall, tBackYard).
+onSpawn localityOfObject(tSofa, tLivingRoom).
+onSpawn localityOfObject(tEasyChair, tLivingRoom).
+onSpawn localityOfObject(tCoffeeTable, tLivingRoom).
+onSpawn localityOfObject(tCoffeeCup, tKitchen).
+onSpawn localityOfObject(tCoffee, tCoffeeCup).
+%onSpawn localityOfObject(tBook(mudColor(vGreen)), tCoffeeTable).
+%onSpawn localityOfObject(tBook(mudColor(vPink)), tCoffeeTable).
+onSpawn localityOfObject(tGreenBook, tCoffeeTable).
+onSpawn localityOfObject(tPinkBook, tCoffeeTable).
+onSpawn localityOfObject(tBookcase, tLivingRoom).
+onSpawn localityOfObject(tDresser, tBedRoom).
+onSpawn localityOfObject(tTopDrawer, tDresser).
+onSpawn localityOfObject(tMiddleDrawer, tDresser).
+onSpawn localityOfObject(tBottomDrawer, tDresser). 
+onSpawn localityOfObject(tHousePlant, tPlanter).
+onSpawn localityOfObject(tPlanter, tGueridon). 
+onSpawn localityOfObject(tGueridon, tLivingRoom).
+onSpawn localityOfObject(tGardenPlant, tBackYard).
+onSpawn localityOfObject(tCandle,tKitchen).
+onSpawn localityOfObject(tBathTub,tBathroom).
+onSpawn localityOfObject(tShower,tBathroom).
+onSpawn localityOfObject(tToilet,tBathroom).
+onSpawn localityOfObject(tTreadmill,tHallWay).
+onSpawn localityOfObject(tBathroomSink,tBathroom).
+onSpawn localityOfObject(tKitchenSink,tKitchenCounter).
+onSpawn localityOfObject(tFridge,tKitchen).
+onSpawn localityOfObject(tStove,tKitchen).
+onSpawn localityOfObject(tKitchenCounter,tKitchen).
 
 
 
@@ -109,7 +109,7 @@
 genls(tCandle,tPortableDevice).
 genls(tFlashlight, tPortableDevice).
 genls(tFlashlight, tTurnOnAble).
-genls(tDesk, tOfficeRoomFurnature).
+genls(tDesk, tOfficeFurnature).
 genls(tApple, tFood).
 genls(tNani, tArt).
 genls(tNani, tWashAble).
@@ -156,40 +156,57 @@ genls(tLightSwitch, tWallFurnature).
 genls(tComputer, tOfficeFurnature).
 genls(tPartofFurnature,tPartofObj).
 
-genls(tBed, tBedRoomFurnature).
-genls(tStandTable, tBedRoomFurnature).
-genls(tDresser, tBedRoomFurnature).
+genls(tBed, tBedroomFurnature).
+genls(tStandTable, tBedroomFurnature).
+genls(tDresser, tBedroomFurnature).
 
 genls(tWashingMachine, tDeviceFurnature).
 genls(tTable, tFurnature).
 genls(tTable, tHasSurface).
-genls(tSofa, tLivingRoomFurnature).
-genls(tEasyChair, tLivingRoomFurnature).
-genls(tCoffeeTable, tLivingRoomFurnature).
+genls(tSofa, tLivingroomFurnature).
+genls(tEasyChair, tLivingroomFurnature).
+genls(tCoffeeTable, tLivingroomFurnature).
 genls(tBookcase, tWallFurnature).
 genls(tDrawer, tContainer).
 genls(tDrawer, tOpenCloseAble).
 genls(tDrawer, tPartofFurnature).
-genls(tTopDrawer, tPartofFurnature).
-genls(tMiddleDrawer, tPartofFurnature).
-genls(tBottomDrawer, tPartofFurnature). 
+genls(tTopDrawer, tDrawer).
+genls(tMiddleDrawer, tDrawer).
+genls(tBottomDrawer, tDrawer). 
 genls(tHousePlant, tPartofObj).
 genls(tPlanter, tContainer). 
-genls(tGueridon, tLivingRoomFurnature).
+genls(tGueridon, tLivingroomFurnature).
 genls(tGardenPlant, tOutdoorFurnature).
 genls(tSpatialThing,tLookAble).
 genls(tNani,tTeddybear).
 genls(tTeddybear,tTreasure).
 
-genls(tBathTub,tBathRoomFurnature).
-genls(tShower,tBathRoomFurnature).
-genls(tToilet,tBathRoomFurnature).
-genls(tSink,tBathRoomFurnature).
-genls(tKitchenSink,tKitchenFurnature).
+
+genls(tBathTub,tHumanEnterAble).
+genls(tShower,tHumanEnterAble).
+genls(tToilet,tSitAble).
+genls(tBathroomSink,tSink).
+genls(tFridge,tContainer).
+
+genls(tSink,tFurnature).
+
+genls(tKitchenFurnature,tDeviceFurnature).
+
+genls(tBathTub,tBathroomFurnature).
+genls(tShower,tBathroomFurnature).
+genls(tToilet,tBathroomFurnature).
+genls(tBathroomSink,tBathroomFurnature).
+genls(tKitchenSink,isEach(tKitchenFurnature,tSink)).
 genls(tFridge,tKitchenFurnature).
-genls(tStove,tKitchenFurnature).
+genls(tStove,isEach(tKitchenFurnature,tHasSurface)).
+genls(tOven,tPartofFurnature).
+localityOfObject(tOven,tStove).
 genls(tKitchenCounter,tKitchenFurnature).
 
+genls(I,tBathroomFurnature)==> onSpawn(localityOfObject(I,tBathroom)).
+genls(I,tKitchenFurnature)==> onSpawn(localityOfObject(I,tKitchen)).
+genls(I,tOfficeFurnature)==> onSpawn(localityOfObject(I,tOfficeRoom)).
+genls(I,tOfficeItem)==> onSpawn(localityOfObject(I,tDesk)).
 
 % ==================================================
 % typeProps Descriptions

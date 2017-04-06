@@ -23,16 +23,16 @@ use this file with...
 % ==================================================
 
 /* technically the following are not needed due the mudAreaConnected/2s below */
-:-onSpawn tRegion(tKitchen).
-:-onSpawn tRegion(tHall).
-:-onSpawn tRegion(tCellar).
-:-onSpawn tRegion(tOfficeRoom).
-:-onSpawn tRegion(tLivingRoom).
-:-onSpawn tRegion(tDiningRoom).
-:-onSpawn tRegion(tBedRoom).
-:-onSpawn tRegion(tBathRoom).
-:-onSpawn tRegion(tClosetRoom).
-:-onSpawn tRegion(tBackYard).
+onSpawn tRegion(tKitchen).
+onSpawn tRegion(tHall).
+onSpawn tRegion(tCellar).
+onSpawn tRegion(tOfficeRoom).
+onSpawn tRegion(tLivingRoom).
+onSpawn tRegion(tDiningRoom).
+onSpawn tRegion(tBedRoom).
+onSpawn tRegion(tBathRoom).
+onSpawn tRegion(tClosetRoom).
+onSpawn tRegion(tBackYard).
 
 
 % ==================================================
@@ -41,13 +41,13 @@ use this file with...
  
 prologHybrid(mudAreaConnected(tRegion,tRegion),rtSymmetricBinaryPredicate).
 
-:-onSpawn mudAreaConnected(tLivingRoom,tOfficeRoom).
-:-onSpawn mudAreaConnected(tHall,tDiningRoom).
-:-onSpawn mudAreaConnected(tHall,tBedRoom).
-:-onSpawn mudAreaConnected(tHall,tLivingRoom).
-:-onSpawn mudAreaConnected(tHall,tBathRoom).
-:-onSpawn mudAreaConnected(tKitchen, tCellar).
-:-onSpawn mudAreaConnected(tDiningRoom, tKitchen).
-:-onSpawn mudAreaConnected(tBedRoom, tClosetRoom).
-:-onSpawn mudAreaConnected(tKitchen, tBackYard).
-:-onSpawn mudAreaConnected(iArea1008, tBackYard).
+onSpawn mudAreaConnected(tLivingRoom,tOfficeRoom).
+onSpawn mudAreaConnected(tHall,tDiningRoom).
+onSpawn mudAreaConnected(tHall,tBedRoom).
+onSpawn mudAreaConnected(tHall,tLivingRoom).
+onSpawn mudAreaConnected(tHall,tBathRoom).
+onSpawn mudAreaConnected(tKitchen, tCellar).
+onSpawn mudAreaConnected(tDiningRoom, tKitchen).
+onSpawn mudAreaConnected(tBedRoom, tClosetRoom).
+onSpawn mudAreaConnected(tKitchen, tBackYard).
+onSpawn mudAreaConnected(iArea1008, tBackYard).

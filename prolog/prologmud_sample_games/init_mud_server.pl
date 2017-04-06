@@ -176,7 +176,7 @@ mudStowing(iExplorer7,'iPhaser776'))).
 :- mpred_type_isa:import(baseKB:ttCoercable/1).
 % :- mpred_type_isa:import(baseKB:ttStringType/1).
 % :- add_import_module(mpred_type_isa,baseKB,end).
-:- onSpawn(localityOfObject(iExplorer7,tLivingRoom)).
+onSpawn(localityOfObject(iExplorer7,tLivingRoom)).
 
 ==>((
 pddlSomethingIsa('iBoots773',['tBoots','ProtectiveAttire','PortableObject','tWearAble']),
@@ -200,7 +200,7 @@ pddlSomethingIsa('iGoldUniform675',['tGoldUniform','ProtectiveAttire','PortableO
 pddlSomethingIsa('iPhaser676',['tPhaser','Handgun',tWeapon,'LightingDevice','PortableObject','Device-SingleUser','tWearAble']))).
 
 
-:- onSpawn(localityOfObject(iCommanderdata66,tOfficeRoom)).
-:- onSpawn(mudAreaConnected(tLivingRoom,tOfficeRoom)).
+onSpawn(localityOfObject(iCommanderdata66,tOfficeRoom)).
+onSpawn(mudAreaConnected(tLivingRoom,tOfficeRoom)).
 :- endif.
 

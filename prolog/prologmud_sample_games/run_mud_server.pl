@@ -81,7 +81,9 @@ sanity_test_ifood_rez:- ignore((
 :- during_boot(set_prolog_flag(unsafe_speedups,false)).
 
 :- if( \+ app_argv('--noworld')).
+:- if(app_argv('--world')).
 :- lst.
+:- endif.
 :- lstr.
 :- endif.
 
