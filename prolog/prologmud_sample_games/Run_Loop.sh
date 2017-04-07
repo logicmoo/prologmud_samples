@@ -21,13 +21,15 @@ if [ $USEKB == 1 ]; then
 
    export KBFILE='-x kb7166.prc'
 
-   if [ ! -f kb7166.prc]; then
-      echo download https://www.dropbox.com/s/0dc1ec7ehse8vve/kb7166.zip?dl=1
-      wget -O kb7166.zip -N https://www.dropbox.com/s/0dc1ec7ehse8vve/kb7166.zip?dl=1
-      unzip -o kb7166.zip
+   if [ ! -f ./kb7166.prc ]; then
+      if [ ! -f ./kb7166.zip ]; then
+         echo download https://www.dropbox.com/s/0dc1ec7ehse8vve/kb7166.zip?dl=1
+         wget -O ./kb7166.zip -N https://www.dropbox.com/s/0dc1ec7ehse8vve/kb7166.zip?dl=1
+      fi
+      unzip -o ./kb7166.zip
    fi
-   if [ ! -f kb7166.prc]; then
-      echo cant find kb7166.prc
+   if [ ! -f ./kb7166.prc ]; then
+      echo cant find $(pwd)/kb7166.prc
       export KBFILE=""
    fi
 else
