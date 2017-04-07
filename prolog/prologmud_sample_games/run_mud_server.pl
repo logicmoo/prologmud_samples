@@ -28,17 +28,19 @@ start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
 
-% isa(starTrek,mtCycL).
-lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc.pl')).
-lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 % [Manditory] This loads the game and initializes so test can be ran
-:- declare_load_dbase(sample_games('src_game_nani/a_nani_household.pfc.pl')).
+:- baseKB:ensure_loaded(sample_games('src_game_nani/objs_misc_household.pfc')).
+:- baseKB:ensure_loaded(sample_games('src_game_nani/a_nani_household.pfc')).
+
+
+% isa(starTrek,mtCycL).
+lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*')).
+lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optional] the following game files though can be loaded separate instead
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- declare_load_dbase(sample_games('src_game_nani/objs_misc_household.pfc.pl')).
-:- declare_load_dbase(sample_games('src_game_nani/?*.pfc.pl')).
+:- declare_load_dbase(sample_games('src_game_nani/?*.pfc*')).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optional] the following worlds are in version control in examples
