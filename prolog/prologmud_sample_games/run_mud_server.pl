@@ -13,12 +13,16 @@
 % INIT MUD SERVER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- user:ensure_loaded(init_mud_server).
-
-
 :- '$set_source_module'(baseKB).
 :- '$set_typein_module'(baseKB).
 
+:- user:ensure_loaded(init_mud_server).
+
+:- if( \+ is_startup_file(_) ).
+:- initialization_after_boot(run_mud_server).
+:- endif.
+
+end_of_file.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optionaly] Start the telent server % iCommanderdata66
@@ -103,16 +107,8 @@ lar0 :- lar.
 lar :- set_prolog_flag(dmsg_level,never),login_and_run.
 
 :- add_history(profile(ain(tAgent(foofy)))).
-:- after_boot(qsave_lm(lm_init_mud)).
+%:- after_boot(qsave_lm(lm_init_mud)).
 :- after_boot(lar0).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Required/Optional]  Ensures...
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-initialization_after_boot:- listing(lmconf:after_boot_goal/1),dmsg(after_boot_call),logicmoo_toplevel,lar0.
-
-:- initialization(initialization_after_boot,after_load).
-:- initialization(initialization_after_boot,restore).
 :- statistics.
 
 

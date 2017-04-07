@@ -5,23 +5,16 @@
 
 :- prolog_load_context(directory,D),cd(D).
 
-
 :- use_module(library(prolog_pack)).
-:- if( \+ prolog_pack:current_pack(prologmud)).
+:- if( \+ prolog_pack:current_pack(prologmud_samples)).
 :- multifile(user:file_search_path/2).
 :-   dynamic(user:file_search_path/2).
 :- prolog_load_context(directory,Dir),
    absolute_file_name('../../../',Y,[relative_to(Dir),file_type(directory)]),
    (( \+ user:file_search_path(pack,Y)) ->asserta(user:file_search_path(pack,Y));true).
-:- attach_packs.
-:- initialization(attach_packs).
+:- initialization(attach_packs,now).
 :- endif.
 :- pack_list_installed.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Required] Load the Logicmoo User System
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- system:load_library_system(library(logicmoo_webbot)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SETUP KB EXTENSIONS
@@ -33,7 +26,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Required] Load the Logicmoo User System
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- system:load_library_system(library(logicmoo_user)).
+:- user:load_library_system(library(logicmoo_webbot)).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [Required] Load the Logicmoo User System
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- user:load_library_system(library(logicmoo_user)).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,6 +48,13 @@
 
 :- after_boot((set_prolog_flag(pfc_booted,true),flag_call(runtime_debug=true),set_prolog_flag(read_attvars,false))).
 
+:- statistics.
+
+:- if( \+ is_startup_file(_) ).
+:- initialization_after_boot(init_mud_server).
+:- endif.
+
+end_of_file.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Mostly Required] Load the Logicmoo Parser/Generator System
