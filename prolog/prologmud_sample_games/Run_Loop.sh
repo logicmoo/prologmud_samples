@@ -10,6 +10,11 @@ export KILLNET=1
 export USEKB=1
 export KBFILE=""
 
+kill -9 %1 %2 %3
+kill -9 %1 %2 %3
+kill -9 %1 %2 %3
+kill -9 %1 %2 %3
+
 for i in "$@" ; do
    if [[ $i == "--nonet" ]] ; then export  KILLNET=0; fi
    if [[ $i == "-x" ]] ; then export USEKB=0; fi     

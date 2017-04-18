@@ -3,16 +3,18 @@ export d=`date +%Y-%m-%d-%H:%M:%S`
 
 if [ $# -eq 0 ] 
  then
-   export message="Autocommit ${d}"
+( cd ../../..
+  git submodule foreach 'git status' ; git status
+)
  else
    export message="${*} ${d}"
+( cd ../../..
+  git submodule foreach 'git commit -am "${message}" || git push || : ' ; git commit -am "${message}" || git push
+)
 fi
 
 
 
-( cd ../../..
-  git submodule foreach 'git commit -am "${message}" || git push || : ' ; git commit -am "${message}" || git push
-)
 #git --git-dir=./games/.git --work-tree=./games pull
 #git pull
 #% hg pull

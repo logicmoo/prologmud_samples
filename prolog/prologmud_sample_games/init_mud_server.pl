@@ -54,7 +54,7 @@
 :- initialization_after_boot(init_mud_server).
 :- endif.
 
-end_of_file.
+:- if(\+ gethostname(gitlab)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Mostly Required] Load the Logicmoo Parser/Generator System
@@ -222,5 +222,7 @@ pddlSomethingIsa('iPhaser676',['tPhaser','Handgun',tWeapon,'LightingDevice','Por
 
 onSpawn(localityOfObject(iCommanderdata66,tOfficeRoom)).
 onSpawn(mudAreaConnected(tLivingRoom,tOfficeRoom)).
+:- endif.
+
 :- endif.
 

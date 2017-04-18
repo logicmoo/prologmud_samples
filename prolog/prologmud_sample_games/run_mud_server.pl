@@ -22,7 +22,12 @@
 :- initialization_after_boot(run_mud_server).
 :- endif.
 
-end_of_file.
+:- if(gethostname(gitlab)).
+
+:- set_prolog_flag(access_level,system).
+:- debug.
+
+:- else.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optionaly] Start the telent server % iCommanderdata66
@@ -109,9 +114,22 @@ lar :- set_prolog_flag(dmsg_level,never),login_and_run.
 :- add_history(profile(ain(tAgent(foofy)))).
 %:- after_boot(qsave_lm(lm_init_mud)).
 :- after_boot(lar0).
+
 :- statistics.
 
+:- endif.
 
 
+:- if(gethostname(gitlab)).
+:- set_prolog_flag(runtime_debug,3).
+:- set_prolog_flag(runtime_safety,3).
+:- set_prolog_flag(runtime_speed,0).
 
+:- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_clif.pfc')).
+:- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_sumo.pfc')).
+:- recompile_clif.
+:- endif.
+
+% :- rtrace.
+:- zebra5.
 
