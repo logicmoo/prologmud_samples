@@ -54,7 +54,6 @@
 :- initialization_after_boot(init_mud_server).
 :- endif.
 
-:- if(\+ gethostname(gitlab)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Mostly Required] Load the Logicmoo Parser/Generator System
@@ -96,11 +95,6 @@
 %:- load_library_system(pack(logicmoo_base/t/examples/pfc/'sanity_sv.pfc')).
 %:- load_library_system(pack(logicmoo_base/t/examples/pfc/'sanity_foob.pfc')).
 
-:- if((gethostname(ubuntu),fail)). % INFO this fail is so we can start faster
-:- show_entry(gripe_time(40, doall(baseKB:regression_test))).
-:- endif.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ============= MUD SERVER CODE LOADING =============
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,8 +104,11 @@
 :- sanity(exists_source(prologmud(mud_loader))).
 :- endif.
 
+:- if( \+ app_argv('--noworld')).
+:- if(app_argv('--world')).
 :- baseKB:ensure_loaded(prologmud(mud_loader)).
-
+:- endif.
+:- endif.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ============= MUD SERVER CODE LOADED =============
@@ -120,6 +117,10 @@
 :- with_mpred_trace_exec(ain(isLoaded(iSourceCode7))).
 
 :- flag_call(runtime_debug=true).
+
+:- if((gethostname(ubuntu),fail)). % INFO this fail is so we can start faster
+:- show_entry(gripe_time(40, doall(baseKB:regression_test))).
+:- endif.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,10 +169,11 @@ genls(mobExplorer,tHominid))).
 
 :- endif.
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Required] isRuntime Hook
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(((localityOfObject(P,_),isRuntime)==>{put_in_world(P)})).
+(((localityOfObject(P,_),isRuntime)==>{if_defined(put_in_world(P))})).
 :- user:use_module(library('file_scope')).
 :- set_prolog_flag_until_eof(do_renames,term_expansion).
 
@@ -180,6 +182,7 @@ genls(mobExplorer,tHominid))).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optional] Creates or suppliments a world
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- if( \+ app_argv('--noworld')).
 :- if( \+ tRegion(_)).
 
 ==>((
@@ -192,9 +195,8 @@ wearsClothing(iExplorer7,'iCommBadge774'),
 wearsClothing(iExplorer7,'iGoldUniform775'),
 mudStowing(iExplorer7,'iPhaser776'))).
 
-:- mpred_type_isa:import(baseKB:tCol/1).
-:- mpred_type_isa:import(baseKB:ttCoercable/1).
-% :- mpred_type_isa:import(baseKB:ttStringType/1).
+:- kb_shared(baseKB:tCol/1).
+:- kb_shared(baseKB:ttCoercable/1).
 % :- add_import_module(mpred_type_isa,baseKB,end).
 onSpawn(localityOfObject(iExplorer7,tLivingRoom)).
 
@@ -223,6 +225,5 @@ pddlSomethingIsa('iPhaser676',['tPhaser','Handgun',tWeapon,'LightingDevice','Por
 onSpawn(localityOfObject(iCommanderdata66,tOfficeRoom)).
 onSpawn(mudAreaConnected(tLivingRoom,tOfficeRoom)).
 :- endif.
-
 :- endif.
 

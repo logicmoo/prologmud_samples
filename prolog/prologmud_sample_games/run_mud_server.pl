@@ -22,17 +22,17 @@
 :- initialization_after_boot(run_mud_server).
 :- endif.
 
-:- if(gethostname(gitlab)).
 
 :- set_prolog_flag(access_level,system).
 :- debug.
 
-:- else.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Optionaly] Start the telent server % iCommanderdata66
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-start_telnet:- on_x_log_cont(start_mud_telnet_4000).
+:- if( \+ app_argv('--noworld')).
+start_telnet:- on_x_log_cont((start_mud_telnet_4000)).
 :- after_boot(start_telnet).
 
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
@@ -40,7 +40,7 @@ start_telnet:- on_x_log_cont(start_mud_telnet_4000).
 % [Manditory] This loads the game and initializes so test can be ran
 :- baseKB:ensure_loaded(sample_games('src_game_nani/objs_misc_household.pfc')).
 :- baseKB:ensure_loaded(sample_games('src_game_nani/a_nani_household.pfc')).
-
+:- endif.
 
 % isa(starTrek,mtCycL).
 lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*')).
@@ -69,6 +69,7 @@ lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sanity tests
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- if( \+ app_argv('--noworld')).
 sanity_test_ifood_rez:- ignore((
      % mpred_notrace_exec,
      % flag_call(runtime_debug>true),
@@ -80,6 +81,7 @@ sanity_test_ifood_rez:- ignore((
 
 :- after_boot_sanity_test((gripe_time(1.0,must(coerce("s",vtDirection,_))))).
 :- after_boot_sanity_test((gripe_time(2.0,must( \+ coerce(l,vtDirection,_))))).
+:- endif.
 :- after_boot_sanity_test((statistics)).
 :- after_boot_sanity_test(check_clause_counts).
 
@@ -98,10 +100,6 @@ sanity_test_ifood_rez:- ignore((
 :- lstr.
 :- endif.
 
-:- if(false).
-:- statistics.
-:- endif.
-
 :- during_boot(ain(tSourceData(iWorldData8))).
 :- ain(isLoaded(iWorldData8)).
 :- after_boot(with_mpred_trace_exec(ain(isRuntime))).
@@ -109,7 +107,8 @@ sanity_test_ifood_rez:- ignore((
 lar0 :- app_argv('--repl'),!,dmsg("Ctrl-D to start MUD"),prolog,lar.
 lar0 :- lar.
        
-lar :- set_prolog_flag(dmsg_level,never),login_and_run.
+lar :- % set_prolog_flag(dmsg_level,never),
+       if_defined(login_and_run,wdmsg("MUD code not loaded")).
 
 :- add_history(profile(ain(tAgent(foofy)))).
 %:- after_boot(qsave_lm(lm_init_mud)).
@@ -117,19 +116,57 @@ lar :- set_prolog_flag(dmsg_level,never),login_and_run.
 
 :- statistics.
 
-:- endif.
+:- if(gethostname(gitlab)).                                            
 
-
-:- if(gethostname(gitlab)).
 :- set_prolog_flag(runtime_debug,3).
 :- set_prolog_flag(runtime_safety,3).
 :- set_prolog_flag(runtime_speed,0).
 
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_clif.pfc')).
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_sumo.pfc')).
-:- recompile_clif.
+
+:- zebra5.
+
+:- clif_recompile.
+
 :- endif.
 
 % :- rtrace.
-:- zebra5.
+% :- mpred_trace_exec.
+:- zebra.
+:- clif_show.
+
+:-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],
+   (kif_to_boxlog(
+     all([Human],
+        exists([Heart],
+          isa(Human,tHuman) => 
+             (isa(Heart,tHeart) & hasOrgan(Human,Heart)))),O)),
+   wdmsgl(defunctionalize,O).
+
+
+
+e1:- ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
+   kif_add(exists([[Door, tDoor]], isa(Room,tRoom) => hasExit(Room,Door))).
+
+:-  ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
+   kif_add((all([[Room, tRoom]],exists([[Door, tDoor]], hasExit2(Room,Door))))).
+
+e3:- ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
+   kif_add(exists([[Door, tDoor]], isa(Room,tRoom) => hasExit3(Room,Door))).
+
+e4:-  ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
+   (kif_add((isa(Room,tRoom) => exists(Door, isa(Door,tDoor) & hasExit4(Room,Door))))).
+
+
+e5:-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],
+   (kif_add(
+     all([[Human,tHuman]],
+        exists([Heart],
+         % isa(Human,tHuman) => 
+             (isa(Heart,tHeart) & hasOrgan(Human,Heart)))))).
+
+
+:- break.
+
 
