@@ -125,38 +125,45 @@ lar :- % set_prolog_flag(dmsg_level,never),
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_clif.pfc')).
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_sumo.pfc')).
 
-:- zebra5.
 
 :- clif_recompile.
 
 :- endif.
 
+
+:- zebra0.
+
+:- break.
+
+end_of_file.
+
+
+% :- zebra5.
 % :- rtrace.
 % :- mpred_trace_exec.
-:- zebra.
-:- clif_show.
+%:- zebra.
+%:- clif_show.
 
 :-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],
-   (kif_to_boxlog(
-     all([Human],
-        exists([Heart],
-          isa(Human,tHuman) => 
-             (isa(Heart,tHeart) & hasOrgan(Human,Heart)))),O)),
-   wdmsgl(defunctionalize,O).
+   (kif_to_boxlog(all([Human],exists([Heart],isa(Human,tHuman) 
+     => (isa(Heart,tHeart) 
+      & hasOrgan(Human,Heart)))),O)),wdmsgl(defunctionalize,O).
 
+:-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],(kif_to_boxlog(all([Human],exists([Heart],isa(Human,tHuman) => (isa(Heart,tHeart) & hasOrgan(Human,Heart)))),O)),wdmsgl(defunctionalize,O).
 
+any_to_pfc(((tHeart(skIsHeartInArg2ofHasorgan_Fn(Human)) :- tHuman(Human))),(hasOrgan(Human, skIsHeartInArg2ofHasorgan_Fn(Human)) :- tHuman(Human)),O).
+O = tHuman(Heart)==> if_missing(hasOrgan(Human,_),hasOrgan(Human,skIsHeartInArg2ofHasorgan_Fn(Human)))  & tHeart(skIsHeartInArg2ofHasorgan_Fn(Human)).
 
 e1:- ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
    kif_add(exists([[Door, tDoor]], isa(Room,tRoom) => hasExit(Room,Door))).
 
 :-  ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
-   kif_add((all([[Room, tRoom]],exists([[Door, tDoor]], hasExit2(Room,Door))))).
+   kif_add((all([[Room, tRoom]],exists([[Door, tDoor]], hasExit(Room,Door))))).
 
 e3:- ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
    kif_add(exists([[Door, tDoor]], isa(Room,tRoom) => hasExit3(Room,Door))).
 
-e4:-  ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
-   (kif_add((isa(Room,tRoom) => exists(Door, isa(Door,tDoor) & hasExit4(Room,Door))))).
+e4:-  ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],(kif_add((isa(Room,tRoom) => exists(Door, isa(Door,tDoor) & hasExit4(Room,Door))))).
 
 
 e5:-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],
