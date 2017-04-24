@@ -125,13 +125,15 @@ lar :- % set_prolog_flag(dmsg_level,never),
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_clif.pfc')).
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_sumo.pfc')).
 
-
-:- clif_recompile.
+:- pfclog_compile.
+:- boxlog_compile.
+:- clif_compile.
 
 :- endif.
 
-
+:- mpred_trace_all.
 :- zebra0.
+:- forall(trait(P),listing(P)).
 
 :- break.
 
