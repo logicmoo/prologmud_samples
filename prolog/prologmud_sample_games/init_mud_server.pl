@@ -37,13 +37,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Mostly Required] Load the Logicmoo Plan Generator System
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- user:ensure_loaded(library(logicmoo_planner)).
-
+:- user:load_library_system(library(logicmoo_planner)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LOAD CYC KB EXTENSIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- user:ensure_loaded(library(logicmoo_plarkc)).
+:- user:load_library_system(library(logicmoo_plarkc)).
+
 :- check_clause_counts.
 
 :- after_boot((set_prolog_flag(pfc_booted,true),flag_call(runtime_debug=true),set_prolog_flag(read_attvars,false))).
