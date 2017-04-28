@@ -62,7 +62,8 @@
 
 
 :- user:test_for_release(library(logicmoo_plarkc)).
-:- user:test_for_release(library(logicmoo_planner)).
+% :- user:test_for_release(library(logicmoo_planner)).
+:- user:load_library_system(library(logicmoo_planner)).
 :- user:test_for_release(library(parser_all)).
 :- user:test_for_release(init_mud_server).
 
