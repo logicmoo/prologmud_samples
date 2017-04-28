@@ -39,8 +39,6 @@ onSpawn tRegion(tBackYard).
 % Doors
 % ==================================================
  
-prologHybrid(mudAreaConnected(tRegion,tRegion),rtSymmetricBinaryPredicate).
-
 onSpawn mudAreaConnected(tLivingRoom,tOfficeRoom).
 onSpawn mudAreaConnected(tHall,tDiningRoom).
 onSpawn mudAreaConnected(tHall,tBedRoom).

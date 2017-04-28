@@ -185,6 +185,9 @@ genls(mobExplorer,tHominid))).
 :- if( \+ app_argv('--noworld')).
 :- if( \+ tRegion(_)).
 
+==> prologHybrid(mudAreaConnected(tRegion,tRegion),rtSymmetricBinaryPredicate).
+==> rtArgsVerbatum(mudAreaConnected).
+
 ==>((
 tRegion(iLivingRoom7),
 tRegion(iOfficeRoom7),

@@ -32,7 +32,9 @@
 % [Optionaly] Start the telent server % iCommanderdata66
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- if( \+ app_argv('--noworld')).
-start_telnet:- on_x_log_cont((start_mud_telnet_4000)).
+start_telnet:- 
+   user:ensure_loaded(init_mud_server),
+  on_x_log_cont((call(call,start_mud_telnet_4000))).
 :- after_boot(start_telnet).
 
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
@@ -71,10 +73,11 @@ lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- if( \+ app_argv('--noworld')).
 sanity_test_ifood_rez:- ignore((
+     user:ensure_loaded(init_mud_server),
      % mpred_notrace_exec,
      % flag_call(runtime_debug>true),
      ain(isa(iFoodRez2,tFood)),must(isa(iFoodRez2,tEatAble)))),
-    must((parseIsa_Call(tEatAble,O,["food"],Rest),O=iFoodRez2,Rest=[])).
+    must((call(call,parseIsa_Call(tEatAble,O,["food"],Rest)),O=iFoodRez2,Rest=[])).
 
 :- after_boot_sanity_test((dmsg(sanity_test_ifood_rez))).
 
@@ -122,22 +125,25 @@ lar :- % set_prolog_flag(dmsg_level,never),
 :- set_prolog_flag(runtime_safety,3).
 :- set_prolog_flag(runtime_speed,0).
 
+:- else.
+
+:- set_prolog_flag(runtime_debug,1).
+:- set_prolog_flag(runtime_safety,1).
+:- set_prolog_flag(runtime_speed,1).
+
+:- endif.
+
+
+end_of_file.
+
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_clif.pfc')).
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_sumo.pfc')).
 
-:- pfclog_compile.
-:- boxlog_compile.
-:- clif_compile.
-
-:- endif.
+:- kif_compile.
 
 :- mpred_trace_all.
 :- zebra0.
 :- forall(trait(P),listing(P)).
-
-:- break.
-
-end_of_file.
 
 
 % :- zebra5.
