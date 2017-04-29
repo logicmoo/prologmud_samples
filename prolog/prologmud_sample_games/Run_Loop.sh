@@ -41,7 +41,7 @@ else
    export KBFILE=""
 fi
 
-export SWIPL='swipl -f run_mud_server.pl'
+export SWIPL='swipl -l run_mud_server.pl'
 
 
 if [ $# -eq 0 ] 
