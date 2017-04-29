@@ -105,9 +105,7 @@
 :- endif.
 
 :- if( \+ app_argv('--noworld')).
-:- if(app_argv('--world')).
 :- baseKB:ensure_loaded(prologmud(mud_loader)).
-:- endif.
 :- endif.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
