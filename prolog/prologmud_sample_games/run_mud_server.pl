@@ -134,40 +134,6 @@ lar :- % set_prolog_flag(dmsg_level,never),
 :- endif.
 
 
-e7:-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],
-   (kif_to_boxlog(all([Human],exists([Heart],isa(Human,tHuman) 
-     => (isa(Heart,tHeart) 
-      & hasOrgan(Human,Heart)))),O)),wdmsgl(test_defunctionalize,O).
-
-e6:-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],(test_boxlog(all([Human],exists([Heart],isa(Human,tHuman) => (isa(Heart,tHeart) & hasOrgan(Human,Heart)))))).
-
-e0 :- any_to_pfc((((tHeart(skIsHeartInArg2ofHasorgan_Fn(Human)) 
- :- tHuman(Human))),(hasOrgan(Human, skIsHeartInArg2ofHasorgan_Fn(Human)) :- tHuman(Human))),O),wdmsg(O).
-% O = tHuman(Heart)==> if_missing(hasOrgan(Human,_),hasOrgan(Human,skIsHeartInArg2ofHasorgan_Fn(Human)))  & tHeart(skIsHeartInArg2ofHasorgan_Fn(Human)).
-
-
-e1:- % ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
-   test_boxlog(exists([[Door, tDoor]], isa(Room,tRoom) => hasExit(Room,Door))).
-
-e2:- % ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
-   test_boxlog((all([[Room, tRoom]],exists([[Door, tDoor]], hasExit(Room,Door))))).
-
-e3:- % ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
-   test_boxlog(exists([[Door, tDoor]], isa(Room,tRoom) => hasExit3(Room,Door))).
-
-e4:-  ['$VAR'('Room'),'$VAR'('Door')]= [Room,Door],
-   make,(test_boxlog((isa(Room,tRoom) => exists(Door, isa(Door,tDoor) & hasExit4(Room,Door))))).
-
-
-e5:-  ['$VAR'('Human'),'$VAR'('Heart')]= [Human,Heart],
-   (test_boxlog(
-     all([[Human,tHuman]],
-        exists([Heart],
-         % isa(Human,tHuman) => 
-             (isa(Heart,tHeart) & hasOrgan(Human,Heart)))))).
-
-
-
 end_of_file.
 
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_clif.pfc')).
