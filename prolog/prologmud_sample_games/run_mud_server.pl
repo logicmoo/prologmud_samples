@@ -16,6 +16,10 @@
 :- '$set_source_module'(baseKB).
 :- '$set_typein_module'(baseKB).
 
+:- set_prolog_stack(global, limit(32*10**9)).
+:- set_prolog_stack(local, limit(32*10**9)).
+:- set_prolog_stack(trail, limit(32*10**9)).
+
 :- user:ensure_loaded(init_mud_server).
 
 :- if( \+ is_startup_file(_) ).
