@@ -167,18 +167,20 @@ genls(tOven,tPartofFurnature).
 localityOfObject(tOven,tStove).
 genls(tKitchenCounter,tKitchenFurnature).
 
-ttTypeFacet(ttInstanceType).
+% ttTypeFacet(ttInstanceType).
 
-ttInstanceType(I),genls(I,tBathroomFurnature)==> onSpawn(localityOfObject(I,tBathroom)).
-ttInstanceType(I),genls(I,tLivingroomFurnature)==> onSpawn(localityOfObject(I,tLivingRoom)).
-ttInstanceType(I),genls(I,tBedroomFurnature)==> onSpawn(localityOfObject(I,tBedRoom)).
-ttInstanceType(I),genls(I,tKitchenFurnature)==> onSpawn(localityOfObject(I,tKitchen)).
-ttInstanceType(I),genls(I,tOfficeFurnature)==> onSpawn(localityOfObject(I,tOfficeRoom)).
-ttInstanceType(I),genls(I,tOfficeItem)==> onSpawn(localityOfObject(I,tDesk)).
-ttInstanceType(I),genls(I,tOutdoorFurnature)==> onSpawn(localityOfObject(I,tBackYard)).
+needs_spawned(IType) :- nonvar(IType),tSet(IType),\+ (genls(Sub,IType),Sub\=IType), \+ clause_b(onSpawn(localityOfObject(IType,_))).
+
+genls(I,tBathroomFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tBathroom)).
+genls(I,tLivingroomFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tLivingRoom)).
+genls(I,tBedroomFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tBedRoom)).
+genls(I,tKitchenFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tKitchen)).
+genls(I,tOfficeFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tOfficeRoom)).
+genls(I,tOfficeItem),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tDesk)).
+genls(I,tOutdoorFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tBackYard)).
 
 
-genls(IType,_),{ \+ genls(_,IType) } ==> ttInstanceType(IType).
+
 
 % ==================================================
 % typeProps Descriptions

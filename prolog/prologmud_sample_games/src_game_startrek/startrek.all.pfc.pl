@@ -8,6 +8,8 @@
 
 :- file_begin(pfc).
 
+:- install_constant_renamer_until_eof.
+
 :- style_check(-discontiguous).
 
 typeGrid('tSpaceInAHOC',0, [ed,ed,ed,ex,ed,ed,ed]).
