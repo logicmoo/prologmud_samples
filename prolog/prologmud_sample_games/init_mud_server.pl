@@ -51,7 +51,7 @@
 
 :- statistics.
 
-:- if( \+ is_startup_file(_) ).
+:- if( \+ is_startup_script(_) ).
 :- init_why("init_mud_server").
 :- endif.
 

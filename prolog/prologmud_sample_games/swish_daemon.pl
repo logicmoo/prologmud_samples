@@ -54,6 +54,10 @@ Run
 
 :- nb_setval(pldoc_file,[]).
 
+
+:- multifile http:location/3.
+:- dynamic http:location/3.
+
 http:location(pldoc, root(pldoc), [priority(100)]).
 
 

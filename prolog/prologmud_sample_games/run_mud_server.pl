@@ -22,7 +22,7 @@
 
 :- user:ensure_loaded(init_mud_server).
 
-:- if( \+ is_startup_file(_) ).
+:- if( \+ is_startup_script(_) ).
 :- init_why("run_mud_server").
 :- endif.
 
