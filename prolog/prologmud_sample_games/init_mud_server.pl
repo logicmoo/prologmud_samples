@@ -26,6 +26,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Required] Load the Logicmoo User System
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- user:use_module(library(logicmoo_util_common)).
 :- user:load_library_system(library(logicmoo_webbot)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,7 +52,7 @@
 :- statistics.
 
 :- if( \+ is_startup_file(_) ).
-:- initialization_after_boot(init_mud_server).
+:- init_why("init_mud_server").
 :- endif.
 
 

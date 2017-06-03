@@ -23,7 +23,7 @@
 :- user:ensure_loaded(init_mud_server).
 
 :- if( \+ is_startup_file(_) ).
-:- initialization_after_boot(run_mud_server).
+:- init_why("run_mud_server").
 :- endif.
 
 
@@ -138,6 +138,31 @@ lar :- % set_prolog_flag(dmsg_level,never),
 :- endif.
 
 
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
+
+
+
+
+
+
+
+
+
+end_of_file.
+end_of_file.
+end_of_file.
+end_of_file.
 end_of_file.
 
 :- ensure_loaded(baseKB:library('logicmoo/common_logic/common_logic_clif.pfc')).
