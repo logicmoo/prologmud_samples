@@ -16,6 +16,8 @@ prolog/prologmud_sample_games/_*
 
 prolog/ontologyportal_sumo/
 
+prolog/prologmud_sample_games/users.db
+
 ## Build generated
 build/
 DerivedData/
