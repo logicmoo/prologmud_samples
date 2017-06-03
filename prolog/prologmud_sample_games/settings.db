@@ -1,0 +1,40 @@
+﻿/*  Saved settings
+    Date: Thu Jun  1 19:41:31 2017
+*/
+
+
+%	Version of jquery served by the html resource "jquery"
+setting(jquery:version, '2.1.3.min').
+
+%	Keep information to support source-level debugging
+setting(pengine_sandbox:debug_info, true).
+
+%	Backend to use (name of the module
+setting(user_profile:backend, impl_profile_prolog).
+
+%	Name of the SMTP host for relaying the mail
+setting(smtp:host, relay).
+
+%	Port on which the SMTP host listens (0: default)
+setting(smtp:port, 0).
+
+%	Security system to use
+setting(smtp:security, none).
+
+%	Default from-address
+setting(smtp:from, '').
+
+%	Default user to authenticate
+setting(smtp:user, '').
+
+%	Default password for smtp:user
+setting(smtp:password, '').
+
+%	Keep information to support source-level debugging
+setting(swish:debug_info, true).
+
+%	Set to true to allow users to self register
+setting(cliopatria:enable_self_register, true).
+
+%	Address of the fallback server
+setting(cpack:server, 'http://cliopatria.swi-prolog.org').

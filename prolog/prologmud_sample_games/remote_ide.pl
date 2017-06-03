@@ -1,0 +1,1 @@
+/home/prologmud_server/lib/swipl/pack/swish-with-filesystem-interaction/remote_ide.pl
