@@ -48,7 +48,7 @@
 
 
 % [Required] Load the Logicmoo Backchaining Inference System
-:- gripe_time(40,with_no_mpred_expansions(if_file_exists(user:test_for_release(library(logicmoo_engine))))).
+:- gripe_time(40,with_no_mpred_expansions(if_file_exists(user:test_for_release(library(logicmoo_user))))).
 
 
 :- asserta(baseKB:skip_el_assertions).
