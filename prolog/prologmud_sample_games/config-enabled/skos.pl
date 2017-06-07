@@ -1,0 +1,1 @@
+../cpack/skos/config-available/skos.pl

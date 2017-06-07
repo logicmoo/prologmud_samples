@@ -1,0 +1,1 @@
+../cpack/autocompletion/config-available/autocompletion.pl

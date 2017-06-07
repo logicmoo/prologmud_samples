@@ -1,0 +1,31 @@
+% Snapshot of defined RDF prefixes
+
+prefix(dc, 'http://purl.org/dc/elements/1.1/').
+prefix(dcterms, 'http://purl.org/dc/terms/').
+prefix(eor, 'http://dublincore.org/2000/03/13/eor#').
+prefix(foaf, 'http://xmlns.com/foaf/0.1/').
+prefix(owl, 'http://www.w3.org/2002/07/owl#').
+prefix(rdf, 'http://www.w3.org/1999/02/22-rdf-syntax-ns#').
+prefix(rdfs, 'http://www.w3.org/2000/01/rdf-schema#').
+prefix(serql, 'http://www.openrdf.org/schema/serql#').
+prefix(skos, 'http://www.w3.org/2004/02/skos/core#').
+prefix(void, 'http://rdfs.org/ns/void#').
+prefix(xsd, 'http://www.w3.org/2001/XMLSchema#').
+prefix(user, 'http://www.swi-prolog.org/cliopatria/user/').
+prefix(tpf, 'http://cliopatria.swi-prolog.org/pf/text#').
+prefix(lib, 'http://www.swi-prolog.org/rdf/library/').
+prefix(vann, 'http://purl.org/vocab/vann/').
+prefix(graphviz, 'http://www.graphviz.org/').
+prefix(cpack, 'http://cliopatria.swi-prolog.org/schema/cpack#').
+prefix(provx, 'http://cliopatria.swi-prolog.org/ns/prov#').
+prefix(doap, 'http://usefulinc.com/ns/doap#').
+prefix(prov, 'http://www.w3.org/ns/prov#').
+prefix(skosxl, 'http://www.w3.org/2008/05/skos-xl#').
+prefix(amalgame, 'http://purl.org/vocabularies/amalgame#').
+prefix(dcat, 'http://www.w3.org/ns/dcat#').
+prefix(dctypes, 'http://purl.org/dc/dcmitype/').
+prefix(dcam, 'http://purl.org/dc/dcam/').
+prefix(align, 'http://knowledgeweb.semanticweb.org/heterogeneity/alignment#').
+prefix(evaluator, 'http://purl.org/vocabularies/amalgame/evaluator#').
+prefix(ens, 'http://www.europeana.eu/schemas/edm/').
+prefix(ore, 'http://www.openarchives.org/ore/terms/').

@@ -1,0 +1,1 @@
+../cpack/EDM/config-available/EDM.pl

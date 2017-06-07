@@ -14,6 +14,7 @@ automatically.
 %:- set_setting_default(http:public_port,   3050).
 %:- set_setting_default(http:public_scheme, http).
 
+/*
 :- multifile http:location/3.
 :- dynamic   http:location/3.
 
@@ -23,4 +24,4 @@ automatically.
 % proxy /my-swish-app to http://machine.running.swish/
 
 http:location(root, '/swish', []).
-
+*/

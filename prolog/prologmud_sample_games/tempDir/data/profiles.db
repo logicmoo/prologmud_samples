@@ -1,0 +1,8 @@
+created(1496679166.4520826).
+assert(profile('d0187dee-4a09-11e7-8c0d-c32f12063645')).
+assert(profile_attribute('d0187dee-4a09-11e7-8c0d-c32f12063645',name,"Administrator")).
+assert(profile_attribute('d0187dee-4a09-11e7-8c0d-c32f12063645',nick_name,"admin")).
+assert(profile_attribute('d0187dee-4a09-11e7-8c0d-c32f12063645',identity_provider,local)).
+assert(profile_attribute('d0187dee-4a09-11e7-8c0d-c32f12063645',external_identity,"admin")).
+assert(profile_attribute('d0187dee-4a09-11e7-8c0d-c32f12063645',last_peer,"10.0.0.122")).
+assert(profile_attribute('d0187dee-4a09-11e7-8c0d-c32f12063645',last_login,1496679167)).

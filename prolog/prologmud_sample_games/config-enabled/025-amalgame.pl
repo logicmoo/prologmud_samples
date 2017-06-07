@@ -1,0 +1,1 @@
+../cpack/amalgame/config-available/025-amalgame.pl
