@@ -3,7 +3,19 @@
 
 #( mkdir -p /tmp/tempDir/ ; cp -a tempDir/* /tmp/tempDir/* ;  cd  /tmp/tempDir/ ; ln  -s * -r /home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/ )
 
-cls ; killall -9 swipl perl ; killall -9 swipl perl ;  swipl -l run.pl -l run_mud_server.pl --irc --world --clio
+#cls ; killall -9 swipl perl ; killall -9 swipl perl ;  swipl --irc --world --repl -g "[run_mud_server]" -s run_clio.pl
+#cls ; killall -9 swipl perl ; killall -9 swipl perl ;  swipl -l run.pl -l run_mud_server.pl --irc --world --clio
+
+#!/bin/bash
+
+echo "First Parameter: $0"
+echo
+if [[ "$0" == "bash" ]] ; then
+    echo "The script was sourced."
+return
+else
+    echo "The script WAS NOT sourced."
+fi
 
 export OLDPWD="`pwd`"
 export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -46,17 +58,18 @@ else
    export KBFILE=""
 fi
 
-export SWIPL='swipl -l run_mud_server.pl'
+export SWIPL='swipl '
 
 
 if [ $# -eq 0 ] 
  then
     # //root
      if [[ $(id -u) == 0 ]]; then
-        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --nonet --repl --noworld"
+        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --irc --world --repl -g consult(run_mud_server) -s run_clio.pl"
+        i#export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --nonet --repl --noworld"
         export KILLNET=0
      else
-        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --irc --world"
+        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --irc --world --repl -g consult(run_mud_server) -s run_clio.pl"
      fi
  else
    # //other
@@ -95,7 +108,9 @@ do
       echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       
       #swipl forks xterm making it not die until the xterm it launched is dead
-      killall --user $USER -9 rlwrap gdb
+      killall --user $USER -9 rlwrap gdb perl
+       lsof -t -i:3020 -i:4000 -i:4010 | xargs --no-run-if-empty kill -9
+
 
       if [[ "$KILLNET" == "1" ]]; then
           lsof -t -i:3020 -i:4000 -i:4010 | xargs --no-run-if-empty kill -9

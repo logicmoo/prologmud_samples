@@ -1,0 +1,6 @@
+start([time(1496687845)]).
+assert('http://vocab.deri.ie/void#cygri','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal(b731f3cc92872055ce378c0d97c6d2a1e9f824b9),22).
+assert('http://vocab.deri.ie/void#junzha','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('1cdd85b1d6a23d41d7d8380b35d9f0b75bb04162'),34).
+assert('http://vocab.deri.ie/void#keiale','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('4946f25bdccc199d936d90d6bb51379896c15c6d'),46).
+assert('http://vocab.deri.ie/void#Michael%20Hausenblas','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('357367f3791bfbd197cba8f5e4b0fc2071d3dac5'),58).
+end([time(1496687863)]).

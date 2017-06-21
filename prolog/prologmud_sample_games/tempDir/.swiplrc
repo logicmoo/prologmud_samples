@@ -1,0 +1,52 @@
+:- set_prolog_flag(verbose_autoload,true).
+:- set_prolog_flag(verbose_load,full).
+
+:- multifile(logtalk_library_path/2).
+:- dynamic(logtalk_library_path/2).
+
+logtalk_library_path(scratch_directory, '/tmp').
+
+
+:- multifile prolog:history/2.
+:- dynamic   prolog:history/2.
+
+
+:- current_prolog_flag(readline,Was)->writeln(readline=Was);true.
+:- set_prolog_flag(readline,editline).
+% :- set_prolog_flag(readline,true).
+
+:- if(current_prolog_flag(readline,editline)).
+:- use_module(library(readline)).
+:- listing(prolog:history/2).
+:- abolish(prolog:history/2).
+:- current_prolog_flag(readline,Was),writeln(readline=Was).
+:- use_module(library(editline)).
+:- else.
+:- use_module(library(editline)).
+:- listing(prolog:history/2).
+:- abolish(prolog:history/2).
+:- current_prolog_flag(readline,Was),writeln(readline=Was).
+:- set_prolog_flag(readline,readline).
+:- use_module(library(readline)).
+:- endif.
+
+:- listing(prolog:history/2).
+:- current_prolog_flag(readline,Was),writeln(readline=Was).
+
+:- multifile user:file_search_path/2.
+:- dynamic   user:file_search_path/2.
+user:file_search_path(pack, ('.')).
+user:file_search_path(pack, ('..')).
+%:- attach_packs.
+:- pack_list_installed.
+
+:- use_module(user:library(must_trace)).
+
+:- if(\+ getenv('DISPLAY',_)).
+system:guitracer:-writeln('guitracer: DISPLAY is unset.').
+system:noguitracer:-writeln('noguitracer: DISPLAY is unset.').
+:- endif.
+
+%:- initialization(set_prolog_flag(readline, readline), restore).
+%:- make.
+

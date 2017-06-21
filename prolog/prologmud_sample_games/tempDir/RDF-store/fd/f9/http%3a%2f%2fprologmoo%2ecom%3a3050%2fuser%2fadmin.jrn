@@ -1,0 +1,10 @@
+start([time(1497931814)]).
+assert('http://prologmoo.com:3050/user/admin','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://xmlns.com/foaf/0.1/Person').
+assert('http://prologmoo.com:3050/user/admin','http://xmlns.com/foaf/0.1/name',literal('Administrator')).
+assert('http://prologmoo.com:3050/user/admin','http://xmlns.com/foaf/0.1/nick',literal(admin)).
+retract('http://prologmoo.com:3050/user/admin','http://xmlns.com/foaf/0.1/name',literal('Administrator')).
+assert('http://prologmoo.com:3050/user/admin','http://xmlns.com/foaf/0.1/name',literal('Administrator')).
+assert('http://prologmoo.com:3050/user/admin','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('08485034a28e67b1c44afef03ca4d965432ec2cc')).
+assert('http://prologmoo.com:3050/user/admin','http://xmlns.com/foaf/0.1/mbox','mailto:').
+assert('http://prologmoo.com:3050/user/admin','http://xmlns.com/foaf/0.1/workInfoHomepage','').
+end([time(1497932153)]).

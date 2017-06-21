@@ -11,6 +11,15 @@ prefix(serql, 'http://www.openrdf.org/schema/serql#').
 prefix(skos, 'http://www.w3.org/2004/02/skos/core#').
 prefix(void, 'http://rdfs.org/ns/void#').
 prefix(xsd, 'http://www.w3.org/2001/XMLSchema#').
+prefix(hdt, 'hdt://data/').
+prefix(wgs84, 'http://www.w3.org/2003/01/geo/wgs84_pos#').
+prefix(gno, 'http://www.geonames.org/ontology#').
+prefix(gn, 'http://www.geonames.org/').
+prefix(lgo, 'http://linkedgeodata.org/ontology/').
+prefix(wn, 'http://wordnet-rdf.princeton.edu/wn31/').
+prefix(wno, 'http://wordnet-rdf.princeton.edu/ontology#').
+prefix(lemon, 'http://lemon-model.net/lemon#').
+prefix(swrc, 'http://swrc.ontoware.org/ontology#').
 prefix(user, 'http://www.swi-prolog.org/cliopatria/user/').
 prefix(tpf, 'http://cliopatria.swi-prolog.org/pf/text#').
 prefix(lib, 'http://www.swi-prolog.org/rdf/library/').
