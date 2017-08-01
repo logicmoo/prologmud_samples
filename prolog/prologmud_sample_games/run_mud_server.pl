@@ -7,6 +7,8 @@
 
 */
 
+:- set_prolog_flag(lm_no_autoload,false).
+:- set_prolog_flag(lm_pfc_lean,false).
 :- prolog_load_context(directory,D),cd(D).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +50,7 @@ start_telnet:-
 :- baseKB:ensure_loaded(sample_games('src_game_nani/a_nani_household.pfc')).
 :- endif.
 
-% isa(starTrek,mtCycL).
+% isa(starTrek,mtHybrid).
 lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*')).
 lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 

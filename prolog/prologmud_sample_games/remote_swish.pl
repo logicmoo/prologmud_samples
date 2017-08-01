@@ -38,6 +38,9 @@
 	    swish/1			% ?Port
 	  ]).
 
+:- set_prolog_flag(lm_no_autoload,false).
+:- set_prolog_flag(lm_pfc_lean,false).
+
 :- use_module(library(http/thread_httpd)).
 :- use_module(library(http/http_dispatch)).
 :- use_module(library(http/http_path)).
@@ -125,6 +128,12 @@ http:location(root, '/', [priority(1100)]).
 http:location(swish, root('swish'), [priority(500)]).
 http:location(root, '/swish', []).
 
+% http:location(swish, '/example', [priority(500)]).
+%http:location(root, root('example'), [priority(500)]).
+%http:location(example, root('example'), [priority(500)]).
+% http:location(root, '/example', []).
+:- http_handler(root(example), swish,[]).
+
 
 
 nowdmsg(_).
@@ -199,7 +208,8 @@ pengines:authentication_hook(Request, swish, User) :-
 :- multifile pengines:allowed/2.
 :- dynamic pengines:allowed/2.
 
-
+% dmiles runs in very well protected VM
+pengines:not_sandboxed(_Maybe, _Application) :- gethostname(X),X=gitlab.
 pengines:not_sandboxed(Maybe, Application) :- currently_logged_in(pengines:not_sandboxed(Maybe, Application),_User),!.
 
 current_user(User):- currently_logged_in(why,User).

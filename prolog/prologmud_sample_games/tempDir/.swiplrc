@@ -1,10 +1,10 @@
 :- set_prolog_flag(verbose_autoload,true).
 :- set_prolog_flag(verbose_load,full).
 
-:- multifile(logtalk_library_path/2).
-:- dynamic(logtalk_library_path/2).
+:- logtalk:multifile(logtalk_library_path/2).
+:- logtalk:dynamic(logtalk_library_path/2).
 
-logtalk_library_path(scratch_directory, '/tmp').
+logtalk:logtalk_library_path(scratch_directory, '/tmp/tempDir/scratch').
 
 
 :- multifile prolog:history/2.

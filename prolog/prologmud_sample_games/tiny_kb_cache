@@ -1,3 +1,4 @@
+:- asserta(baseKB:ignore_file_mpreds('/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/tiny_kb_cache')).
 :-multifile tiny_kb/3.
 :-dynamic tiny_kb/3.
 :-style_check(-singleton).
