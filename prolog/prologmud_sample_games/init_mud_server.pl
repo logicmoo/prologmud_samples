@@ -30,75 +30,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Required] Load the Logicmoo User System
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- user:use_module(library(logicmoo_util_common)).
-:- user:load_library_system(library(logicmoo_webbot)).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Required] Load the Logicmoo User System
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- user:load_library_system(library(logicmoo_lib)).
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Mostly Required] Load the Logicmoo Plan Generator System
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- user:load_library_system(library(logicmoo_planner)).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LOAD CYC KB EXTENSIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- user:load_library_system(library(logicmoo_plarkc)).
-
-:- check_clause_counts.
-
-:- after_boot((set_prolog_flag(pfc_booted,true),flag_call(runtime_debug=true),set_prolog_flag(read_attvars,false))).
-
-:- statistics.
-
-:- if( \+ is_startup_script(_) ).
-:- init_why("init_mud_server").
-:- endif.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Mostly Required] Load the Logicmoo Parser/Generator System
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-:- user:load_library_system(library(parser_all)).
-%:- user:load_library_system(library(parser_e2c)).
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Required] Load the CYC Network Client and Logicmoo CycServer Emulator (currently server is disabled)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% :- user:load_library_system(library(plark/logicmoo/logicmoo_u_cyc_api)).
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Optional] NOT YET Load the Logicmoo RDF/OWL Browser System
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% :- user:load_library_system(logicmoo(mpred_online/mpred_rdf)).
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Debugging] Normarily this set as 'true' can interfere with debugging
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% :- set_prolog_flag(gc,false).
-% Yet turning it off we cant even startup without crashing
-% :- set_prolog_flag(gc,true).
-
-
-% :- sanity(doall(printAll(current_prolog_flag(_N,_V)))).
-% :- after_boot(during_net_boot(kill_unsafe_preds)).
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Regression tests that first run whenever a person starts the MUD on the public server
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%:- load_library_system(pack(logicmoo_base/t/examples/pfc/'sanity_col_as_unary.pfc')).
-%:- load_library_system(pack(logicmoo_base/t/examples/pfc/'sanity_birdt.pfc')).
-%:- load_library_system(pack(logicmoo_base/t/examples/pfc/'sanity_sv.pfc')).
-%:- load_library_system(pack(logicmoo_base/t/examples/pfc/'sanity_foob.pfc')).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ============= MUD SERVER CODE LOADING =============

@@ -1,1 +1,0 @@
-../cpack/rdf_qa/config-available/rdf_qa.pl

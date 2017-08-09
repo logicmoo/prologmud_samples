@@ -13,9 +13,11 @@ killall -9 swipl xterm # darn xpce xterms!
 killall -9 perl # we forked the flash server and it holds SWIPL alive
 killall -9 swipl # its ok since this is the prologmud_server user and not root
 #swipl --irc --world --repl 
-echo -t "[library(logtalk)],user:[remote_swish],user:[run_clio],user:[library(logicmoo_user)],user:[run_mud_server],prolog" # -f /dev/null
-#swipl --irc --world --repl
-swipl --irc --world --repl -g "logtalk:[library(logtalk)]" -l remote_swish.pl -t "[run_clio],user:[library(logicmoo_user)],user:[run_mud_server],prolog"
+echo -t "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_swish)],[run_mud_server],prolog)" # -f /dev/null
+cls ; killall -9 perl swipl perl xterm; swipl  -f /dev/null --irc --world --repl run_mud_server.pl
+
+#cls ; swipl  -f /dev/null --irc --world --repl -g  "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_cliop)],[run_mud_server],prolog)"
+#%% swipl --irc --world --repl -g  "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_cliop)],[run_mud_server],prolog)"
 
 
 

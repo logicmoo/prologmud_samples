@@ -41,6 +41,7 @@
 :- set_prolog_flag(lm_no_autoload,false).
 :- set_prolog_flag(lm_pfc_lean,false).
 
+
 :- use_module(library(http/thread_httpd)).
 :- use_module(library(http/http_dispatch)).
 :- use_module(library(http/http_path)).
@@ -62,15 +63,16 @@ Open SWISH as an IDE for developing a remote application.
 
 :- meta_predicate(from_http(0)).
 from_http(G):- with_output_to(main_error,G).
-:- stream_property(X,file_no(2)),
+
+set_main_error:- stream_property(X,file_no(2)),
    stream_property(X,alias(Was)),
    set_stream(X,alias(main_error)),
    set_stream(X,alias(Was)).
     
-:- use_module(library(aleph),[]).
+%:- use_module(library(aleph),[]).
 
 
-:- use_module(library(must_trace)).
+%:- use_module(library(must_trace)).
 
 reexport_from(ReExporter,From:P):- 
     From:export(From:P),
