@@ -11,11 +11,13 @@ if [ $# -eq 0 ]
 ( cd ../../..
   git submodule foreach 'git commit -am "${message}" || : ' ; git commit -am "${message}" 
 )
-fi
+
 
 ( cd ../../..
-echo  git submodule foreach ' git push || : ' ; git push
+  git submodule foreach ' git push || : ' ; git push
 )
+
+fi
 
 
 
