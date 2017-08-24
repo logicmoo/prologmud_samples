@@ -121,9 +121,9 @@ lar :- % set_prolog_flag(dmsg_level,never),
 
 :- add_history(profile(ain(tAgent(foofy)))).
 %:- after_boot(qsave_lm(lm_init_mud)).
-:- after_boot(lar0).
+%:- after_boot(lar0).
 
-:- statistics.
+:- after_boot((statistics,dmsg("Type lar.<enter> at the '?-' prompt to start the MUD (a shortcut for ?- login_and_run. )"))).
 
 :- if(gethostname(gitlab)).                                            
 
