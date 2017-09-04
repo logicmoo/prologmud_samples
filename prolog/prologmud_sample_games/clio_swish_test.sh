@@ -14,10 +14,10 @@ killall -9 perl # we forked the flash server and it holds SWIPL alive
 killall -9 swipl # its ok since this is the prologmud_server user and not root
 #swipl --irc --world --repl 
 echo -t "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_swish)],[run_mud_server],prolog)" # -f /dev/null
-cls ; killall -9 perl swipl perl xterm; swipl  -f /dev/null --irc --world --repl run_mud_server.pl
-
-#cls ; swipl  -f /dev/null --irc --world --repl -g  "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_cliop)],[run_mud_server],prolog)"
-#%% swipl --irc --world --repl -g  "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_cliop)],[run_mud_server],prolog)"
+cls ; killall -9 perl swipl perl xterm; 
+cls ; kill -9 %1 %2 %3 %4 ; kill -9 %1 %2 %3 %4 
+#swipl  -f /dev/null --irc --world --repl --www -l run_mud_server.pl -g "set_defaultAssertMt(prologMOO)"
+swipl  -f /dev/null --irc --world --repl --www -l run_mud_server.pl
 
 
 
