@@ -1,0 +1,14 @@
+_HiStOrY_V2_
+lar.
+login_and_run.
+consult(pack(logicmoo_base/t/examples/fol/attvar_existentials)).
+mmmake,consult(pack(logicmoo_base/t/examples/fol/attvar_existentials)).
+mmake,consult(pack(logicmoo_base/t/examples/fol/attvar_existentials)).
+rtrace(\040assert_ex(loves(joe,mary))).
+mmake,rtrace(\040assert_ex(loves(joe,mary))).
+f(X).
+mmake,rtrace(\040assert_ex(loves(joe,mary))).
+producer(nameOf(Sue,\040"Sue")).
+f(X).
+r(X).
+current_prolog_flag(compiled_at,Y).
