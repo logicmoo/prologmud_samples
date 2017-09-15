@@ -9,12 +9,12 @@ if [ $# -eq 0 ]
  else
    export message="${*} ${d}"
 ( cd ../../..
-  git submodule foreach 'git commit -am "${message}" || : ' ; git commit -am "${message}" 
+  git submodule foreach 'pwd ; git commit -am "${message}" || : ' ; git commit -am "${message}" 
 )
 
 
 ( cd ../../..
-  git submodule foreach ' git push || : ' ; git push
+  git submodule foreach 'pwd ; git push || : ' ; git push
 )
 
 fi
