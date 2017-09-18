@@ -4,7 +4,7 @@ export d=`date +%Y-%m-%d-%H:%M:%S`
 if [ $# -eq 0 ] 
  then
 ( cd ../../..
-  git submodule foreach 'git status' ; git status
+  git submodule foreach 'pwd ; git status' ; git status
 )
  else
    export message="${*} ${d}"
