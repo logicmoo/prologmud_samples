@@ -1,52 +1,50 @@
-:- set_prolog_flag(verbose_autoload,true).
-:- set_prolog_flag(verbose_load,full).
 
-:- logtalk:multifile(logtalk_library_path/2).
-:- logtalk:dynamic(logtalk_library_path/2).
+:- '$hide'('$toplevel':restore_debug).
+:- '$hide'('$toplevel':save_debug).
+:- '$hide'('$toplevel':residue_vars/2).
+:- '$hide'('system':deterministic/1).
+:- '$hide'(toplevel_call/2).
+:- '$hide'('$toplevel':'$query_loop'/0).
+  %[5] [$toplevel] '$execute_goal2'(user:trace, [])
+  %[3] [$toplevel] '$query_loop'
+  %[2] [$toplevel] '$runtoplevel'
 
-logtalk:logtalk_library_path(scratch_directory, '/tmp/tempDir/scratch').
+:- use_module(library(prolog_pack)).
+%:- if( \+ prolog_pack:current_pack(logicmoo_base)).
+:- multifile(user:file_search_path/2).
+:-   dynamic(user:file_search_path/2).
+
+dir_from(Rel,Y):-
+    ((getenv('LM_WORKSPACE',Dir);
+     prolog_load_context(directory,Dir);
+     '~/logicmoo_workspace'=Dir;
+     '/home/dmiles/logicmoo_workspace/'=Dir)),
+    absolute_file_name(Rel,Y,[relative_to(Dir),file_type(directory),file_errors(fail)]),
+    exists_directory(Y),!.
+
+add_pack_path(Rel):- 
+   dir_from(Rel,Y),
+   (( \+ user:file_search_path(pack,Y)) ->asserta(user:file_search_path(pack,Y));true).
+
+:- add_pack_path(packs_sys).
+:- add_pack_path(packs_usr).
+:- add_pack_path(packs_web).
+:- add_pack_path(packs_xtra).
+
+:- initialization(attach_packs,now).
+:- pack_list_installed.
+%:- endif.
 
 
-:- multifile prolog:history/2.
-:- dynamic   prolog:history/2.
-
-
-:- current_prolog_flag(readline,Was)->writeln(readline=Was);true.
-:- set_prolog_flag(readline,editline).
-% :- set_prolog_flag(readline,true).
-
-:- if(current_prolog_flag(readline,editline)).
-:- use_module(library(readline)).
-:- listing(prolog:history/2).
-:- abolish(prolog:history/2).
-:- current_prolog_flag(readline,Was),writeln(readline=Was).
+:- if(exists_source(library(editline))).
 :- use_module(library(editline)).
 :- else.
-:- use_module(library(editline)).
-:- listing(prolog:history/2).
-:- abolish(prolog:history/2).
-:- current_prolog_flag(readline,Was),writeln(readline=Was).
-:- set_prolog_flag(readline,readline).
+:- if(exists_source(library(readline))).
 :- use_module(library(readline)).
 :- endif.
-
-:- listing(prolog:history/2).
-:- current_prolog_flag(readline,Was),writeln(readline=Was).
-
-:- multifile user:file_search_path/2.
-:- dynamic   user:file_search_path/2.
-user:file_search_path(pack, ('.')).
-user:file_search_path(pack, ('..')).
-%:- attach_packs.
-:- pack_list_installed.
-
-:- use_module(user:library(must_trace)).
-
-:- if(\+ getenv('DISPLAY',_)).
-system:guitracer:-writeln('guitracer: DISPLAY is unset.').
-system:noguitracer:-writeln('noguitracer: DISPLAY is unset.').
 :- endif.
+setup_hist0:-  '$toplevel':setup_history.
+:- setup_hist0.
 
-%:- initialization(set_prolog_flag(readline, readline), restore).
-%:- make.
+
 

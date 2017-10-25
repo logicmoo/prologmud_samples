@@ -11,10 +11,10 @@ export HOME=/tmp/tempDir
 rsync -avh tempDir/ $HOME/
 
 
-export PATH=~/lib/swipl-7.7.1/bin/x86_64-linux:$PATH
+export PATH=$LOGICMOO_WS/bin:$SWI_HOME_DIR/bin/x86_64-linux:$PATH
 
 export DISPLAY=10.0.0.122:0.0
-export LOGTALKHOME=/home/prologmud_server/lib/swipl/pack/logtalk/logtalk-3.10.9
+export LOGTALKHOME=~/lib/swipl/pack/logtalk/logtalk-3.10.9
 
 killall -9 swipl xterm # darn xpce xterms!
 killall -9 perl # we forked the flash server and it holds SWIPL alive
@@ -28,7 +28,7 @@ cls ; kill -9 %1 %2 %3 %4 ; kill -9 %1 %2 %3 %4
 #swipl  -f /dev/null --irc --world --repl --www -l run_mud_server.pl -g "set_defaultAssertMt(prologMOO)"
 
 
-swipl  -f /dev/null --irc --world --repl --www -l run_mud_server.pl
+swipl --irc --world --repl --www -l run_mud_server.pl
 
 
 echo swipl  -f /dev/null --irc --world --repl --www -g "profile(user:consult(run_mud_server))."
