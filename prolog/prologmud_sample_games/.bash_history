@@ -1,0 +1,1 @@
+tempDir/.bash_history
