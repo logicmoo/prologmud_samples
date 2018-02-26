@@ -7,7 +7,7 @@
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+#HISTCONTROL=ignoredups:ignorespace
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -101,8 +101,4 @@ fi
 alias ls='ls --color=auto -A '
 alias cp='cp -i '
 alias mv='mv -i '
-export PATH=~/bin:/opt/logicmoo_workspace/bin:$PATH
-#cd /opt/logicmoo_workspace/packs_usr/wam_common_lisp/t
-set -o ignoreeof
-export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/
 
