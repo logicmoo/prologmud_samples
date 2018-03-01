@@ -138,3 +138,150 @@ exit
 screen
 script /dev/null 
 logout 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh .sadad
+./StartMUD.sh 
+./StartMUD.sh 
+reset
+reset 
+reset --help
+tput clear
+tput reset
+tput reset
+tput --help
+tput 
+man tput
+tput srg0
+tput sgr0
+echo -n -e '\e[?0c'
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+./StartMUD.sh 
+cat ./StartMUD.sh 
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl $* || echo -n -e '\e[?0c'
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+vi .swiplrc 
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+cat setup_env.sh 
+ls
+cp tempDir /tmp/
+cp -a tempDir /tmp/
+ls
+ls data 
+ls data 
+ls data 
+ls -l
+ls -l
+ls -l
+ls -l
+ls data 
+ls data 
+ls -l
+ls -l
+ls  ../../../../../../../../tmp/tempDir/data
+ls  ../../../../../../../../tmp/tempDir/data
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+ls
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.plswipl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.plswipl
+reset
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+$LOGICMOO_WS/bin/swipl --world --repl --www --irc --swish --elfinder --all  -l run_mud_server.pl
+rtrace(cls
+reset
+ls

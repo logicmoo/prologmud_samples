@@ -18,15 +18,15 @@ use this file with...
 :- file_begin(pfc).
 
 tRegion(dmiles_room).
-mudAreaConnected(dmiles_room,iHall7).
+onSpawn mudAreaConnected(dmiles_room,iHall7).
 
 tSet(tOakDesk).
 genls(tOakDesk,tFurniture).
+genls(tOakDeskA,tOakDesk).
+genls(tOakDeskB,tOakDesk).
 
 
-tOakDesk(iOakDesk7).
-tOakDesk(iOakDesk8).
-localityOfObject(iOakDesk7,dmiles_room).
-localityOfObject(iOakDesk8,dmiles_room).
+onSpawn localityOfObject(tOakDeskA,dmiles_room).
+onSpawn localityOfObject(tOakDeskB,dmiles_room).
 
 
