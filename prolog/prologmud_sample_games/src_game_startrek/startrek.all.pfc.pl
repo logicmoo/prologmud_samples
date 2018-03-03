@@ -319,7 +319,7 @@ number_of_clauses(1).
 Pattern: localityOfObject(_G1375,_G1376). 
  */
 /*
- Moved down a little
+ Moved down a little?
 localityOfObject('iArea1005Object666','iArea1005').
 localityOfObject('iArea1008Object667','iArea1008').
 localityOfObject('iArea1013Object668','iArea1013').
@@ -794,6 +794,9 @@ nameString('iDilithiumCrystal758',"a dilithium crystal").
 nameString('iTricorder759',"a medical Tricorder").
 nameString('iTricorder760',"a medical Tricorder").
 nameString('iTricorder761',"a medical Tricorder").
+
+
+:- break.
 
  /* found 322 for nameString(_G1446,_G1447). */ 
 

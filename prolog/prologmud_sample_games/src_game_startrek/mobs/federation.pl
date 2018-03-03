@@ -50,11 +50,11 @@ federation_idea(Agent,actEat(tFood)) :-
    instance(Food,tFood).
 
 federation_idea(Agent,actTake(What)) :-
-	mudNearFeet(Agent,What),
+	mudNearBody(Agent,What),
 	isa_any(What,[tGold,tElixer,tTreasure]).  
 
 federation_idea(Agent,actTake(What)) :-
-	mudNearFeet(Agent,What),
+	mudNearBody(Agent,What),
 	isa_any(What,[tFood,tUsefull,tItem]).
 
 federation_idea(Agent,actMove(1,Dir)) :-

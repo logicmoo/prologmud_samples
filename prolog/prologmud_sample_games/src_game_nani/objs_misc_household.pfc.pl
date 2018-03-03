@@ -164,22 +164,30 @@ genls(tKitchenSink,isEach(tKitchenFurnature,tSink)).
 genls(tFridge,tKitchenFurnature).
 genls(tStove,isEach(tKitchenFurnature,tHasSurface)).
 genls(tOven,tPartofFurnature).
-localityOfObject(tOven,tStove).
+onSpawn localityOfObject(tOven,tStove).
 genls(tKitchenCounter,tKitchenFurnature).
+
+
+onSpawn(localityOfObject(Obj, Where)),tSet(Obj),tSet(Where)==> typicalLocation(Obj, Where).
+onSpawn(inRegion(Obj, Where)),tSet(Obj),tSet(Where)==> typicalRegion(Obj, Where).
 
 % ttTypeFacet(ttInstanceType).
 
-needs_spawned(IType) :- nonvar(IType),tSet(IType),\+ (genls(Sub,IType),Sub\=IType), \+ clause_b(onSpawn(localityOfObject(IType,_))).
+needs_spawned(IType) :- nonvar(IType), tSet(IType), \+ clause_b(onSpawn(inRegion(IType,_))),\+ clause_b(onSpawn(localityOfObject(IType,_))), !, \+ (genls(Sub,IType),nonvar(Sub),Sub\=IType). 
 
-genls(I,tBathroomFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tBathroom)).
-genls(I,tLivingroomFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tLivingRoom)).
-genls(I,tBedroomFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tBedRoom)).
-genls(I,tKitchenFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tKitchen)).
-genls(I,tOfficeFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tOfficeRoom)).
-genls(I,tOfficeItem),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tDesk)).
-genls(I,tOutdoorFurnature),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,tBackYard)).
+typicalRegion(tBathroomFurnature,tBathroom).
+typicalRegion(tLivingroomFurnature,tLivingRoom).
+typicalRegion(tBedroomFurnature,tBedRoom).
+typicalRegion(tKitchenFurnature,tKitchen).
+typicalRegion(tOfficeFurnature,tOfficeRoom).
+typicalLocation(tOfficeItem,tDesk).
+typicalRegion(tOutdoorFurnature,tBackYard).
+
+typicalRegion(Type,RegionType),genls(I,Type),{needs_spawned(I)} ==> onSpawn(inRegion(I,RegionType)).
+typicalLocation(Type,ContainerType),genls(I,Type),{needs_spawned(I)} ==> onSpawn(localityOfObject(I,ContainerType)).
 
 
+definitionalProp(isEach(mudColor,mudSize,mudShape,mudMaterial,mudTexture,mudWeight)).
 
 
 % ==================================================
@@ -289,4 +297,21 @@ onSpawn localityOfObject(tKitchenSink,tKitchenCounter).
 onSpawn localityOfObject(tFridge,tKitchen).
 onSpawn localityOfObject(tStove,tKitchen).
 onSpawn localityOfObject(tKitchenCounter,tKitchen).
+
+
+% ==================================================
+% Doors
+% ==================================================
+ 
+onSpawn pathDirLeadsTo(tKitchen,vDown,tCellar).
+onSpawn mudAreaConnected(tLivingRoom,tOfficeRoom).
+onSpawn mudAreaConnected(tHallWay,tDiningRoom).
+onSpawn mudAreaConnected(tHallWay,tBedRoom).
+onSpawn mudAreaConnected(tHallWay,tLivingRoom).
+onSpawn mudAreaConnected(tHallWay,tBathRoom).
+onSpawn mudAreaConnected(tKitchen, tCellar).
+onSpawn mudAreaConnected(tDiningRoom, tKitchen).
+onSpawn mudAreaConnected(tBedRoom, tClosetRoom).
+onSpawn mudAreaConnected(tKitchen, tBackYard).
+onSpawn mudAreaConnected(iArea1008, tBackYard).
 

@@ -268,7 +268,8 @@ start_telnet:-
 :- endif.
 
 % isa(starTrek,mtHybrid).
-lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*')).
+lst :- !.
+% lst :- nop(baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*'))).
 lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 
 % ==============================================
@@ -326,17 +327,14 @@ sanity_test_ifood_rez:- ignore((
 :- lstr.
 :- endif.
 
-:- during_boot(ain(tSourceData(iWorldData8))).
-:- ain(isLoaded(iWorldData8)).
-:- after_boot(with_mpred_trace_exec(ain(isRuntime))).
-
 lar0 :- app_argv('--repl'),!,dmsg("Ctrl-D to start MUD"),prolog,lar.
 lar0 :- lar.
        
 lar :- % set_prolog_flag(dmsg_level,never),
+     start_runtime,
        if_defined(login_and_run,wdmsg("MUD code not loaded")).
 
-:- add_history(profile(ain(tAgent(foofy)))).
+
 %:- after_boot(qsave_lm(lm_init_mud)).
 %:- after_boot(lar0).
 
@@ -355,6 +353,19 @@ lar :- % set_prolog_flag(dmsg_level,never),
 :- set_prolog_flag(runtime_speed,1).
 
 :- endif.
+
+:- during_boot(ain(tSourceData(iWorldData8))).
+
+start_runtime:- 
+   ain(isLoaded(iWorldData8)),
+   with_mpred_trace_exec(ain(isRuntime)).
+
+:- after_boot(start_runtime).
+
+:- add_history(profile(ain(tAgent(foofy)))).
+:- add_history(listing(inRegion)).
+:- add_history(listing(localityOfObject)).
+:- add_history(listing(mudAtLoc)).
 
 
 end_of_file.

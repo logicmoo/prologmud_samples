@@ -18,7 +18,7 @@ use this file with...
 :- file_begin(pfc).
 
 tRegion(dmiles_room).
-onSpawn mudAreaConnected(dmiles_room,iHall7).
+onSpawn mudAreaConnected(dmiles_room,iHallWay7).
 
 tSet(tOakDesk).
 genls(tOakDesk,tFurniture).

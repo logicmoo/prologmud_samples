@@ -24,8 +24,9 @@ use this file with...
 
 /* technically the following are not needed due the mudAreaConnected/2s below */
 onSpawn tRegion(tKitchen).
-onSpawn tRegion(tHall).
+onSpawn tRegion(tHallWay).
 onSpawn tRegion(tCellar).
+onSpawn pathDirLeadsTo(tKitchen,vDown,tCellar).
 onSpawn tRegion(tOfficeRoom).
 onSpawn tRegion(tLivingRoom).
 onSpawn tRegion(tDiningRoom).
@@ -40,10 +41,10 @@ onSpawn tRegion(tBackYard).
 % ==================================================
  
 onSpawn mudAreaConnected(tLivingRoom,tOfficeRoom).
-onSpawn mudAreaConnected(tHall,tDiningRoom).
-onSpawn mudAreaConnected(tHall,tBedRoom).
-onSpawn mudAreaConnected(tHall,tLivingRoom).
-onSpawn mudAreaConnected(tHall,tBathRoom).
+onSpawn mudAreaConnected(tHallWay,tDiningRoom).
+onSpawn mudAreaConnected(tHallWay,tBedRoom).
+onSpawn mudAreaConnected(tHallWay,tLivingRoom).
+onSpawn mudAreaConnected(tHallWay,tBathRoom).
 onSpawn mudAreaConnected(tKitchen, tCellar).
 onSpawn mudAreaConnected(tDiningRoom, tKitchen).
 onSpawn mudAreaConnected(tBedRoom, tClosetRoom).
