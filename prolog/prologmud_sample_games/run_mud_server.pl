@@ -254,10 +254,12 @@ onSpawn(mudAreaConnected(tLivingRoom,tOfficeRoom)).
 % ==============================================
 % [Optionaly] Start the telent server % iCommanderdata66
 % ==============================================
-:- if( \+ app_argv('--noworld')).
+:- if( \+ app_argv('--nonet')).
+
 start_telnet:- 
    user:ensure_loaded(init_mud_server),
-  on_x_log_cont((call(call,start_mud_telnet_4000))).
+  on_x_log_cont((call(call,start_mud_telnet))).
+
 :- after_boot(start_telnet).
 
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).

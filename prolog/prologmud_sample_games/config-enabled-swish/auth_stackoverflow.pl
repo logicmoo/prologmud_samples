@@ -59,7 +59,7 @@ this module:
      - The client secret
      - The key
      - Register a redirect url.  To test from localhost, this should be
-       =|http://localhost:3050/oauth2/stackexchange/reply|=
+       =|http://localhost:3020/oauth2/stackexchange/reply|=
 
   2. COPY this file to =config-enabled=
 
@@ -96,7 +96,7 @@ this module:
 oauth2:server_attribute(stackexchange, url,
                         'https://stackexchange.com').
 oauth2:server_attribute(stackexchange, redirect_uri,
-                        'http://prologmoo.com:3050/oauth2/stackexchange/reply').
+                        'http://prologmoo.com:3020/oauth2/stackexchange/reply').
 oauth2:server_attribute(stackexchange, authorization_endpoint,
                         '/oauth').
 oauth2:server_attribute(stackexchange, token_endpoint,
@@ -104,11 +104,11 @@ oauth2:server_attribute(stackexchange, token_endpoint,
 oauth2:server_attribute(stackexchange, api_endpoint,
                         'https://api.stackexchange.com').
 oauth2:server_attribute(stackexchange, client_id,
-                        '9966').
+                        '11965').
 oauth2:server_attribute(stackexchange, client_secret,
-                        'YRRNF4YVj8Tz7T*it8VnYQ((').
+                        'yNAiTlXIFRL2Hp9RLY8Yvw((').
 oauth2:server_attribute(stackexchange, key,
-                        ')1ck0jHtwdKpvfKcrtSB8w((').
+                        'BUsDi85p6QqSAIvkghjWlg((').
 oauth2:server_attribute(stackexchange, site,
                         'stackoverflow').
 oauth2:server_attribute(stackexchange, scope,

@@ -11,7 +11,7 @@ automatically.
 */
 
 %:- set_setting_default(http:public_host,   localhost).
-%:- set_setting_default(http:public_port,   3050).
+%:- set_setting_default(http:public_port,   3020).
 %:- set_setting_default(http:public_scheme, http).
 
 /*

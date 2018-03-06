@@ -54,7 +54,7 @@ module:
      - A client ID
      - A client secret
      - Register a redirect url.  To test from localhost, this should be
-       `http://localhost:3050/oauth2/google/reply`
+       `http://localhost:3020/oauth2/google/reply`
 
   2. COPY this file to =config-enabled=
 
@@ -142,7 +142,7 @@ map_user_info(Dict, Dict) :-
 oauth2:server_attribute(google, url,
                         'https://accounts.google.com').
 oauth2:server_attribute(google, redirect_uri,
-                        'http://prologmoo.com:3050/oauth2/google/reply').
+                        'http://prologmoo.com:3020/oauth2/google/reply').
 oauth2:server_attribute(google, client_id,
                         '131442651-0b9tbp7n2ihu4or4nj31395n05v1lg2c.apps.googleusercontent.com').
 oauth2:server_attribute(google, client_secret,

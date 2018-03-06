@@ -292,7 +292,7 @@ swish_config:authenticate(Request, User) :-
 :- initialization(swish).
 
 swish :-
-	swish('0.0.0.0':3050).
+	swish('0.0.0.0':3020).
 
 swish(Port) :-
 	http_server_property(Port, goal(swish_ide:http_dispatch)), !,
@@ -336,7 +336,7 @@ host_port(Port,_, Port):-!.
 :- listing(pengines:allowed/2).
 
 
-pet:- pengine_rpc("http://prologmoo.com:3050",
+pet:- pengine_rpc("http://prologmoo.com:3020",
                        sin_table(X,Y),
                        [ src_text(':- dynamic(sin_table/2). sin_table(1,2).'),
                          application(swish)

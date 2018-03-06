@@ -43,7 +43,7 @@ it as a server process.
 
 This file is normally used from  `run.pl`,   which  is started like this
 from   the   shell   to   start   the   SWISH   server   accessible   on
-http://localhost:3050/
+http://localhost:3020/
 
     swipl run.pl
 
@@ -59,7 +59,7 @@ http://localhost:3050/
 %    interface.
 
 server :-
-	server(localhost:3050).
+	server(localhost:3020).
 server(Port) :-
 	http_server(http_dispatch,
 		    [ port(Port),
