@@ -1,6 +1,9 @@
 #!/bin/bash
 #cls ; swipl -T18G -L18G -T18G -s externals/MUD_ScriptEngines/snark/snark_in_prolog.pl
 
+. setup_env.sh
+
+
 #( mkdir -p /tmp/tempDir/ ; cp -a tempDir/* /tmp/tempDir/* ;  cd  /tmp/tempDir/ ; ln  -s * -r /home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/ )
 
 #cls ; killall -9 swipl perl ; killall -9 swipl perl ;  swipl --irc --world --repl -g "[run_mud_server]" -s run_clio.pl
@@ -24,7 +27,7 @@ export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #export RL_PREFIX='rlwrap -a -A -r -c -N -r'
 export KILLNET=1
-export USEKB=1
+export USEKB=0
 export KBFILE=""
 
 kill -9 %1 %2 %3
@@ -35,8 +38,8 @@ kill -9 %1 %2 %3
 for i in "$@" ; do
    if [[ $i == "--nonet" ]] ; then export  KILLNET=0; fi
    if [[ $i == "-x" ]] ; then export USEKB=0; fi     
+   if [[ $i == "--prc" ]] ; then export USEKB=1; fi
    if [[ $i == "--nocyc" ]] ; then export USEKB=0; fi
-   if [[ $i == "--cyc" ]] ; then export USEKB=1; fi
 done
 
 if [ $USEKB == 1 ]; then
@@ -58,18 +61,18 @@ else
    export KBFILE=""
 fi
 
-export SWIPL='swipl '
-
+export SWIPL=$LOGICMOO_WS/bin/swipl
+export CMDARGS="--world --repl --www --irc --swish --elfinder --all"
 
 if [ $# -eq 0 ] 
  then
     # //root
      if [[ $(id -u) == 0 ]]; then
-        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --irc --world --repl -g consult(run_mud_server) -s run_clio.pl"
-        i#export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --nonet --repl --noworld"
+        #export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} ${CMDARGS} -g consult(run_mud_server) -s run_clio.pl"
+        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} ${CMDARGS} --nonet --repl --noworld"
         export KILLNET=0
      else
-        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} --irc --world --repl -g consult(run_mud_server) -s run_clio.pl"
+        export RUNFILE="${RL_PREFIX} ${SWIPL} ${KBFILE} ${CMDARGS} --irc --world --repl -g consult(run_mud_server)"
      fi
  else
    # //other
