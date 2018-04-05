@@ -10,6 +10,11 @@
 % INIT LOCAL DIR
 % ==============================================
 
+:- if(current_prolog_flag(argv,[])).
+:- prolog_load_context(directory,CWD),cd(CWD).
+:- set_prolog_flag('os_argv',['-l','run_mud_server.pl,--all','--world','--repl','--lisp','--lispsock','--sumo','--planner','--cliop','--sigma','--www','--irc','--swish','--docs','--plweb','--elfinder']).
+:- endif.
+
 :- set_prolog_flag(lm_no_autoload,false).
 :- set_prolog_flag(lm_pfc_lean,false).
 :- prolog_load_context(directory,D),cd(D).
@@ -24,7 +29,9 @@
 % Enable History
 % ==============================================
 :- if(exists_source(library(editline))). 
+:- if(\+ current_prolog_flag(windows,true)).
 :- use_module(library(editline)).
+:- endif.
 :- else.
 :- if(exists_source(library(readline))).
 :- use_module(library(readline)).

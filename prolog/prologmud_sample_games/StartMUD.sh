@@ -11,6 +11,10 @@ elif grep -q dash /proc/$$/cmdline; then
     case $0 in *dash*) SOURCED=1 ;; esac
 fi
 
+fg
+fg
+fg
+
 if [[ "$SOURCED"=="1" ]] ; then
     echo "The script was sourced."
 else
@@ -26,6 +30,8 @@ export OLDPWD="`pwd`"
 export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #export SWIPL=/usr/local/lib/swipl-7.1.11/bin/x86_64-linux/swipl
 
+export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/
+rsync -avh /opt/logicmoo_workspace/packs_usr/prologmud_samples/prolog/prologmud_sample_games/tempDir/ /tmp/tempDir
 
 if [[ -z "${LOGICMOO_BASE_PORT}" ]]; then
   LOGICMOO_BASE_PORT=3000
@@ -71,12 +77,34 @@ export SWIPL="$LOGICMOO_WS/bin/swipl -G18G -L18G -T18G"
 export CMDARGS="-l run_mud_server.pl --all --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --elfinder"
 #CMDARGS=+"--tinykb --fullkb --rcyc --logtalk --nlu"
 
+unset DISPLAY
+
+nvm use 8.0.0
+nvm use --delete-prefix v8.0.0 --silent
+node --version
+
+function start_redirect_old {
+      local PORT100=$((100+$1))
+      lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
+     local PORT=$((0+$1))
+     local HIST=history_$1
+     local COMP=completion_$1
+     touch $HIST
+     touch $COMP
+     echo nohup node app.js -p $PORT100 -c rlwrap -a -A -r -c -N -r --file=$COMP --history-filename=$HIST -s 1000 telnet localhost $PORT
+     nohup node app.js -p $PORT100 -c rlwrap -a -A -r -c -N -r --file=$COMP --history-filename=$HIST -s 1000 telnet localhost $PORT &
+     # nohup node app.js -p $PORT100 -c ./myloginsession $PORT &
+}
 
 function start_redirect {
+   local PORT100=$((100+$1))
+   lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
      local PORT=$((0+$1))
-     local PORT100=$((100+$1))
-     local START_REDIR="nohup ttyd -r 1000 -p ${PORT100} telnet localhost ${PORT}"
-     lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
+     local HIST=history_$1
+     local COMP=completion_$1
+     touch $HIST
+     touch $COMP
+     local START_REDIR="nohup ttyd -r 100 -p ${PORT100} rlwrap -a -A -r -c -N -r --file=${COMP} --history-filename=${HIST} -s 1000 telnet localhost ${PORT}"
      $START_REDIR &
 }
 function kill_redirect {
@@ -126,6 +154,7 @@ export MY_PID=$$
 export MY_PTTY=$(tty)
 
 
+
 list_descendants ()
 {
 
@@ -140,14 +169,20 @@ list_descendants ()
 
 #export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
 export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" --args ${RUNFILE}"
+export WHOLE="${RUNFILE}"
 
-while [[ $COMMAND_LAST -ne 666 ]] && [[ $COMMAND_LAST -ne 9 ]] && [[ $COMMAND_LAST -ne 1 ]] && [[ $COMMAND_LAST -ne 137 ]];
+if [[ $UID == 0 ]]; then
+  export WHOLE="sudo -u prologmud_server ${WHOLE}"
+fi
+
+
+while [[ RAN_ALREADY -ne 1 ]] && [[ $COMMAND_LAST -ne 666 ]] && [[ $COMMAND_LAST -ne 9 ]] && [[ $COMMAND_LAST -ne 1 ]] && [[ $COMMAND_LAST -ne 137 ]];
 do
      echo "You should rarely see this";    
 
       
    if [[ $COMMAND_LAST -ne 4 ]]; then
-       cls_putty
+      echo cls_putty
    fi
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "~~~~~~~~~~~~~KILL PREV~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -183,7 +218,14 @@ do
 
      RAN_ALREADY=1
 
+
+    
+wasdir=""
+
     if [[ "$USE_NET" == "1" ]]; then
+
+         wasdir=$(dirname -- $0)
+         cd /opt/logicmoo_workspace/packs_web/wetty
          start_redirect $(($LOGICMOO_BASE_PORT+0))
          start_redirect $(($LOGICMOO_BASE_PORT+1))
          start_redirect $(($LOGICMOO_BASE_PORT+2))
@@ -191,6 +233,7 @@ do
          start_redirect $(($LOGICMOO_BASE_PORT+23))
          start_redirect $(($LOGICMOO_BASE_PORT+25))
          start_redirect $(($LOGICMOO_BASE_PORT+601))
+         cd $wasdir
      fi
           
      
@@ -230,7 +273,13 @@ do
        fi
 
       reset -c -Q -w -I -w
+      sleep 2
      )
 done
 
 return $COMMAND_LAST 2> /dev/null || exit $COMMAND_LAST
+
+
+
+
+
