@@ -10,14 +10,18 @@
 % INIT LOCAL DIR
 % ==============================================
 
-:- if(current_prolog_flag(argv,[])).
-:- prolog_load_context(directory,CWD),cd(CWD).
-:- set_prolog_flag('os_argv',['-l','run_mud_server.pl,--all','--world','--repl','--lisp','--lispsock','--sumo','--planner','--cliop','--sigma','--www','--irc','--swish','--docs','--plweb','--elfinder']).
-:- endif.
-
 :- set_prolog_flag(lm_no_autoload,false).
 :- set_prolog_flag(lm_pfc_lean,false).
+
 :- prolog_load_context(directory,D),cd(D).
+
+:- if(current_prolog_flag(argv,[])).
+:- if(\+ ((current_prolog_flag(os_argv,X),member(E,X),atom_concat('--',_,E)))).
+:- set_prolog_flag('os_argv',['-l','run_mud_server.pl','--all','--pdt','--world','--repl','--lisp','--lispsock','--sumo','--planner','--cliop','--sigma','--www','--irc','--swish','--docs','--plweb','--elfinder']).
+:- current_prolog_flag('os_argv',Is),writeq(set_prolog_flag('os_argv',Is)),!,nl.
+:- endif.
+:- endif.
+
 :- set_prolog_stack(global, limit(32*10**9)).
 :- set_prolog_stack(local, limit(32*10**9)).
 :- set_prolog_stack(trail, limit(32*10**9)).
@@ -277,8 +281,8 @@ start_telnet:-
 :- endif.
 
 % isa(starTrek,mtHybrid).
-lst :- !.
-% lst :- nop(baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*'))).
+%lst :- !.
+lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*')).
 lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 
 % ==============================================
@@ -292,7 +296,8 @@ lstr :- forall(registered_mpred_file(F),baseKB:ensure_loaded(F)).
 % :- add_game_dir(sample_games('src_game_wumpus'),prolog_repl).
 % :- add_game_dir(sample_games('src_game_sims'),prolog_repl).
 % :- add_game_dir(sample_games('src_game_nani'),prolog_repl).
-% :- add_game_dir(sample_games('src_game_startrek'),prolog_repl).
+%:- add_game_dir(sample_games('src_game_startrek'),prolog_repl).
+:- declare_load_dbase(sample_games('src_game_startrek/?*.pfc*')).
 
 %:- check_clause_counts.
 

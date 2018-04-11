@@ -796,7 +796,7 @@ nameString('iTricorder760',"a medical Tricorder").
 nameString('iTricorder761',"a medical Tricorder").
 
 
-:- break.
+%:- break.
 
  /* found 322 for nameString(_G1446,_G1447). */ 
 

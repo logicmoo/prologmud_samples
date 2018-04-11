@@ -53,6 +53,7 @@ setup_hist0:-  '$toplevel':setup_history.
 
 :- endif.
 
+
 :- multifile(user:file_search_path/2).
 :-   dynamic(user:file_search_path/2).
 dir_from(Rel,Y):-
@@ -71,10 +72,13 @@ add_pack_path(Rel):-
 :- add_pack_path(packs_xtra).
 :- add_pack_path(packs_lib).
 
+attach_packs_n_utils:-
+   attach_packs,
+   use_module(library(logicmoo_utils)),
+   use_module(library(must_trace)).
+:- initialization(attach_packs_n_utils,now).
 
-:- initialization(attach_packs,now).
-
-% :- pack_list_installed.
+:- pack_list_installed.
 
 
 

@@ -31,7 +31,14 @@ export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #export SWIPL=/usr/local/lib/swipl-7.1.11/bin/x86_64-linux/swipl
 
 export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/
-rsync -avh /opt/logicmoo_workspace/packs_usr/prologmud_samples/prolog/prologmud_sample_games/tempDir/ /tmp/tempDir
+
+cp $LOGICMOO_WS/packs_xtra/golorp/?*.txt $NEWPWD/
+rsync -avh $LOGICMOO_WS/packs_usr/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/tempDir
+chmod a+w -R /tmp/tempDir
+chmod a+w -R /tmp/tempDir/?*
+chmod a+w -R /tmp/tempDir/?*/ 
+
+( cd $LOGICMOO_WS/packs_sys/eggdrop/conf/ ; eggdrop )
 
 if [[ -z "${LOGICMOO_BASE_PORT}" ]]; then
   LOGICMOO_BASE_PORT=3000
@@ -72,12 +79,14 @@ fi
 
 . setup_env.sh
 
+echo LOGICMOO_WS=$LOGICMOO_WS
+echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
 
 export SWIPL="$LOGICMOO_WS/bin/swipl -G18G -L18G -T18G"
-export CMDARGS="-l run_mud_server.pl --all --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --elfinder"
+export CMDARGS="-l run_mud_server.pl --all --world --pdt --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --elfinder"
 #CMDARGS=+"--tinykb --fullkb --rcyc --logtalk --nlu"
 
-unset DISPLAY
+#unset DISPLAY
 
 nvm use 8.0.0
 nvm use --delete-prefix v8.0.0 --silent
@@ -96,7 +105,7 @@ function start_redirect_old {
      # nohup node app.js -p $PORT100 -c ./myloginsession $PORT &
 }
 
-function start_redirect {
+function start_redirect_ttyd {
    local PORT100=$((100+$1))
    lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
      local PORT=$((0+$1))
@@ -106,7 +115,17 @@ function start_redirect {
      touch $COMP
      local START_REDIR="nohup ttyd -r 100 -p ${PORT100} rlwrap -a -A -r -c -N -r --file=${COMP} --history-filename=${HIST} -s 1000 telnet localhost ${PORT}"
      $START_REDIR &
+}      
+
+function start_redirect {
+   local PORT=$((0+$1))
+   local PORT100=$((100 + $1))
+   lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
+   nohup websocket_redir.sh butterfly $PORT $PORT100 &
 }
+
+     
+
 function kill_redirect {
      lsof -t -i:$((100+$1)) | xargs --no-run-if-empty echo USE_NET=1 kill -9
      lsof -t -i:$((100+$1)) | xargs --no-run-if-empty kill -9
@@ -179,7 +198,7 @@ fi
 while [[ RAN_ALREADY -ne 1 ]] && [[ $COMMAND_LAST -ne 666 ]] && [[ $COMMAND_LAST -ne 9 ]] && [[ $COMMAND_LAST -ne 1 ]] && [[ $COMMAND_LAST -ne 137 ]];
 do
      echo "You should rarely see this";    
-
+  
       
    if [[ $COMMAND_LAST -ne 4 ]]; then
       echo cls_putty
@@ -190,7 +209,7 @@ do
     echo kill -9 $(list_descendants $MY_PID)
     kill -9 $(list_descendants $MY_PID)
     #swipl forks xterm making it not die until the xterm it launched is dead
-    killall --user $USER -9 xterm perl
+    killall --user $USER -9 xterm #perl
      if [[ "$USE_NET" == "1" ]]; then
        lsof -t -i:$LOGICMOO_BASE_PORT | xargs --no-run-if-empty kill -9
        kill_redirect $(($LOGICMOO_BASE_PORT+0))
@@ -216,7 +235,7 @@ do
       sleep 1
      fi
 
-     RAN_ALREADY=1
+   # RAN_ALREADY=1
 
 
     
@@ -225,7 +244,7 @@ wasdir=""
     if [[ "$USE_NET" == "1" ]]; then
 
          wasdir=$(dirname -- $0)
-         cd /opt/logicmoo_workspace/packs_web/wetty
+         cd $LOGICMOO_WS/packs_web/wetty
          start_redirect $(($LOGICMOO_BASE_PORT+0))
          start_redirect $(($LOGICMOO_BASE_PORT+1))
          start_redirect $(($LOGICMOO_BASE_PORT+2))
