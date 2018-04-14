@@ -293,6 +293,9 @@ wasdir=""
 
       reset -c -Q -w -I -w
       sleep 2
+      if [[ "$COMMAND_LAST" == "4" ]]; then
+         cls
+      fi
      )
 done
 

@@ -113,6 +113,8 @@ add_pack_path0(Rel):-
 :- kb_global(plunit:loading_unit/4).
 
 
+:- use_module(library(logicmoo_util_startup)).
+
 % ==============================================
 % [Required] Load the Logicmoo User System
 % ==============================================
