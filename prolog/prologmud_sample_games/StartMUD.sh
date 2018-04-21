@@ -33,7 +33,7 @@ export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/
 
 cp $LOGICMOO_WS/packs_xtra/golorp/?*.txt $NEWPWD/
-rsync -avh $LOGICMOO_WS/packs_usr/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/tempDir
+rsync -avh $LOGICMOO_WS/packs_usr/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/
 chmod a+w -R /tmp/tempDir
 chmod a+w -R /tmp/tempDir/?*
 chmod a+w -R /tmp/tempDir/?*/ 

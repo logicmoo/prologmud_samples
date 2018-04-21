@@ -109,6 +109,7 @@ add_pack_path0(Rel):-
 :- '$set_typein_module'(baseKB).
 :- '$set_source_module'(baseKB).
 
+%:- setenv('DISPLAY', '').
 :- use_module(library(plunit)).
 :- kb_global(plunit:loading_unit/4).
 
@@ -378,6 +379,7 @@ start_runtime:-
 
 :- after_boot(start_runtime).
 
+%:- setenv('DISPLAY', '').
 :- add_history(profile(ain(tAgent(foofy)))).
 :- add_history(listing(inRegion)).
 :- add_history(listing(localityOfObject)).
