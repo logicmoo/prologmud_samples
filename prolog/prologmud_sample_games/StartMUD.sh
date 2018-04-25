@@ -24,7 +24,7 @@ fi
 # #( mkdir -p /tmp/tempDir/ ; cp -a tempDir/?* /tmp/tempDir/?* ;  cd  /tmp/tempDir/ ; ln  -s * -r /home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/ )
 
 #cls ; killall -9 swipl perl ; killall -9 swipl perl ;  swipl --irc --world --repl -g "[run_mud_server]" -s run_clio.pl
-#cls ; killall -9 swipl perl ; killall -9 swipl perl ;  swipl -l run.pl -l run_mud_server.pl --irc --world --clio
+#cls ; killall -9 swipl-prologmud perl ; killall -9 swipl perl ;  swipl -l run.pl -l run_mud_server.pl --irc --world --clio
 
 export OLDPWD="`pwd`"
 export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -82,11 +82,11 @@ fi
 echo LOGICMOO_WS=$LOGICMOO_WS
 echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
 
-export SWIPL="$LOGICMOO_WS/bin/swipl -G18G -L18G -T18G"
+export SWIPL="$LOGICMOO_WS/bin/swipl-prologmud -G18G -L18G -T18G"
 export CMDARGS="-l run_mud_server.pl --all --world --pdt --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --elfinder"
 #CMDARGS=+"--tinykb --fullkb --rcyc --logtalk --nlu"
 
-#unset DISPLAY
+unset DISPLAY
 
 nvm use 8.0.0
 nvm use --delete-prefix v8.0.0 --silent
@@ -218,7 +218,7 @@ do
        kill_redirect $(($LOGICMOO_BASE_PORT+3))
        kill_redirect $(($LOGICMOO_BASE_PORT+23))
        kill_redirect $(($LOGICMOO_BASE_PORT+25))
-       kill_redirect $(($LOGICMOO_BASE_PORT+601))
+       kill_redirect $(($LOGICMOO_BASE_PORT+301))
      fi
 
      echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -251,7 +251,7 @@ wasdir=""
          start_redirect $(($LOGICMOO_BASE_PORT+3))
          start_redirect $(($LOGICMOO_BASE_PORT+23))
          start_redirect $(($LOGICMOO_BASE_PORT+25))
-         start_redirect $(($LOGICMOO_BASE_PORT+601))
+         start_redirect $(($LOGICMOO_BASE_PORT+301))
          cd $wasdir
      fi
           
@@ -288,7 +288,7 @@ wasdir=""
          kill_redirect $(($LOGICMOO_BASE_PORT+3))
          kill_redirect $(($LOGICMOO_BASE_PORT+23))
          kill_redirect $(($LOGICMOO_BASE_PORT+25))
-         kill_redirect $(($LOGICMOO_BASE_PORT+601))
+         kill_redirect $(($LOGICMOO_BASE_PORT+301))
        fi
 
       reset -c -Q -w -I -w
