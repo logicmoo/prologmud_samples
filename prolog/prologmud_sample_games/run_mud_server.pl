@@ -80,6 +80,7 @@ setup_hist0:-  '$toplevel':setup_history.
 :- use_module(library(prolog_pack)).
 :- multifile(user:file_search_path/2).
 :-   dynamic(user:file_search_path/2).
+
 dir_from0(Rel,Y):-
     ((getenv('LOGICMOO_WS',Dir);
       prolog_load_context(directory,Dir);
@@ -89,9 +90,12 @@ dir_from0(Rel,Y):-
       fail)),
     absolute_file_name(Rel,Y,[relative_to(Dir),file_type(directory),file_errors(fail)]),
     exists_directory(Y),!.
+
+add_pack_path0(_):-pack_property(pfc,_),!.
 add_pack_path0(Rel):- 
    dir_from0(Rel,Y),
    (( \+ user:file_search_path(pack,Y)) ->asserta(user:file_search_path(pack,Y));true).
+
 :- add_pack_path0(packs_sys).
 :- add_pack_path0(packs_usr).
 :- add_pack_path0(packs_web).
@@ -99,7 +103,24 @@ add_pack_path0(Rel):-
 :- add_pack_path0(packs_lib).
 :- initialization(attach_packs,now).
 
-% :- pack_list_installed.
+:- pack_property(prologmud_samples,version(Version)),
+   forall(
+   (pack_property(Pack,version(Version)), pack_property(Pack,directory(Dir)),
+      directory_file_path(Dir, '.git', GitDir)),
+   (exists_directory(GitDir),
+     print_message(informational, pack(git_fetch(Dir))),
+     git([fetch], [ directory(Dir) ]),
+     git_describe(V0, [ directory(Dir) ]),
+     git_describe(V1, [ directory(Dir), commit('origin/master') ]),
+     (   V0 == V1
+     ->  print_message(informational, pack(up_to_date(Pack)))
+     ;   true,
+         git([merge, 'origin/master'], [ directory(Dir) ]),
+         pack_rebuild(Pack)
+     ))).
+
+
+:- pack_list_installed.
 
 
 % ==============================================
