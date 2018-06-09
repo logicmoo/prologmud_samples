@@ -8,4 +8,5 @@ maintainer('TeamSPoon', 'https://github.com/TeamSPoon/' ).
 home('https://github.com/TeamSPoon/prologmud_samples.git' ).
 download( 'https://github.com/TeamSPoon/prologmud_samples/release/*.zip' ).
 requires(prologmud).
+requires(wam_common_lisp).
 
