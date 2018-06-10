@@ -83,10 +83,10 @@ echo LOGICMOO_WS=$LOGICMOO_WS
 echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
 
 export SWIPL="$LOGICMOO_WS/bin/swipl-prologmud -G18G -L18G -T18G"
-export CMDARGS="-l run_mud_server.pl --all --world --pdt --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --elfinder"
+export CMDARGS="-l run_mud_server.pl $* --all --world --pdt --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --elfinder"
 #CMDARGS=+"--tinykb --fullkb --rcyc --logtalk --nlu"
 
-unset DISPLAY
+#unset DISPLAY
 
 nvm use 8.0.0
 nvm use --delete-prefix v8.0.0 --silent
@@ -145,7 +145,7 @@ if [ $# -eq 0 ]
      fi
  else
    # //other
-    export RUNFILE="${RL_PREFIX} ${SWIPL} ${*}"
+    export RUNFILE="${RL_PREFIX} ${SWIPL} ${CMDARGS}"
 fi
 
 cls_putty() {
