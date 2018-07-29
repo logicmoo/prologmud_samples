@@ -91,7 +91,7 @@ dir_from0(Rel,Y):-
     absolute_file_name(Rel,Y,[relative_to(Dir),file_type(directory),file_errors(fail)]),
     exists_directory(Y),!.
 
-add_pack_path0(_):-pack_property(pfc,_),!.
+add_pack_path0(packs_sys):-pack_property(pfc,_),!.
 add_pack_path0(Rel):- 
    dir_from0(Rel,Y),
    (( \+ user:file_search_path(pack,Y)) ->asserta(user:file_search_path(pack,Y));true).
@@ -103,12 +103,18 @@ add_pack_path0(Rel):-
 :- add_pack_path0(packs_lib).
 :- initialization(attach_packs,now).
 
-:- pack_property(prologmud_samples,version(Version)),
+update_packs:-    
+   use_module(library(prolog_pack)),
+   (pack_property(prologmud_samples,version(Version));
+    pack_property(pfc,version(Version))),!,
+   use_module(library(git)),
    forall(
    (pack_property(Pack,version(Version)), pack_property(Pack,directory(Dir)),
-      directory_file_path(Dir, '.git', GitDir)),
-   (exists_directory(GitDir),
-     print_message(informational, pack(git_fetch(Dir))),
+      directory_file_path(Dir, '.git', GitDir),
+      %(exists_file(GitDir);exists_directory(GitDir)),
+       access_file(GitDir,read),
+       access_file(GitDir,write)),
+     ( print_message(informational, pack(git_fetch(Dir))),
      git([fetch], [ directory(Dir) ]),
      git_describe(V0, [ directory(Dir) ]),
      git_describe(V1, [ directory(Dir), commit('origin/master') ]),
@@ -117,8 +123,10 @@ add_pack_path0(Rel):-
      ;   true,
          git([merge, 'origin/master'], [ directory(Dir) ]),
          pack_rebuild(Pack)
-     ))).
+     ))),
+   initialization(attach_packs,now).
 
+:- update_packs.
 
 :- pack_list_installed.
 

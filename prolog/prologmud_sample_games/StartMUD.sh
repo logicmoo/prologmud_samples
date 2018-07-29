@@ -33,7 +33,7 @@ export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/
 
 cp $LOGICMOO_WS/packs_xtra/golorp/?*.txt $NEWPWD/
-rsync -avh $LOGICMOO_WS/packs_usr/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/
+rsync -avh $LOGICMOO_WS/packs_sys/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/
 chmod a+w -R /tmp/tempDir
 chmod a+w -R /tmp/tempDir/?*
 chmod a+w -R /tmp/tempDir/?*/ 
@@ -244,7 +244,7 @@ wasdir=""
     if [[ "$USE_NET" == "1" ]]; then
 
          wasdir=$(dirname -- $0)
-         cd $LOGICMOO_WS/packs_web/wetty
+         # cd $LOGICMOO_WS/packs_web/wetty
          start_redirect $(($LOGICMOO_BASE_PORT+0))
          start_redirect $(($LOGICMOO_BASE_PORT+1))
          start_redirect $(($LOGICMOO_BASE_PORT+2))

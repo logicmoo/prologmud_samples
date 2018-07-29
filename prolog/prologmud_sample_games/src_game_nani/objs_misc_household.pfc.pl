@@ -234,7 +234,7 @@ typeProps(tStandTable,[mudColor(isEach(vBlack,vShiney)),mudSize(vMedium),mudShap
 typeProps(tTable,[mudColor(isEach(vBlue,vWhite)),mudSize(vLarge),mudShape(vOval),mudMaterial(vWood),mudTexture(isEach(vBumpy,vIrregular)),mudWeight(50)]).
 typeProps(tTeddybear,[mudColor(vNatural),mudShape(vUnique)]).
 typeProps(tTopDrawer,[mudColor(isEach(vBrown,vShiney)),mudSize(vMedium),mudShape(isEach(vRectangular,vConcavePolyhedron)),mudMaterial(vWood),mudTexture(vSmooth)]). 
-typeProps(tTorso,[mudColor(isLikeFn(mudColor,tSkin)),isa(tBodypart),mudShape(vUnique)]).
+==>typeProps(tTorso,[mudColor(isLikeFn(mudColor,tSkin)),isa(tBodypart),mudShape(vUnique)]).
 typeProps(tWashingMachine,[mudColor(vWhite),mudSize(vLarge),mudShape(isEach(vCubular,vSquare)),mudMaterial(vMetal),mudTexture(vSmooth),mudWeight(125)]).
 
 
