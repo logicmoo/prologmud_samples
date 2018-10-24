@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#apt-get install eggdrop 
+#apt-get install npm
+
 SOURCED=0
 if [ -n "$ZSH_EVAL_CONTEXT" ]; then 
     [[ $ZSH_EVAL_CONTEXT =~ :file$ ]] && SOURCED=1
@@ -30,7 +33,21 @@ export OLDPWD="`pwd`"
 export NEWPWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #export SWIPL=/usr/local/lib/swipl-7.1.11/bin/x86_64-linux/swipl
 
-export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/
+# export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/
+export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server
+
+pathmunge () {
+        if ! echo "$PATH" | grep -Eq "(^|:)$1($|:)" ; then
+           if [ "$2" = "after" ] ; then
+              PATH="$PATH:$1"
+           else
+              PATH="$1:$PATH"
+           fi
+        fi
+}
+export LOGICMOO_WS=/opt/logicmoo_workspace
+pathmunge $LOGICMOO_WS/bin:$PATH
+
 
 cp $LOGICMOO_WS/packs_xtra/golorp/?*.txt $NEWPWD/
 rsync -avh $LOGICMOO_WS/packs_sys/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/
@@ -38,7 +55,12 @@ chmod a+w -R /tmp/tempDir
 chmod a+w -R /tmp/tempDir/?*
 chmod a+w -R /tmp/tempDir/?*/ 
 
+pidof  eggdrop >/dev/null
+if [[ $? -ne 0 ]] ; then
+        echo "Restarting eggdrop:     $(date)" 
 ( cd $LOGICMOO_WS/packs_sys/eggdrop/conf/ ; eggdrop )
+fi
+
 
 if [[ -z "${LOGICMOO_BASE_PORT}" ]]; then
   LOGICMOO_BASE_PORT=3000
@@ -82,9 +104,14 @@ fi
 echo LOGICMOO_WS=$LOGICMOO_WS
 echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
 
-export SWIPL="$LOGICMOO_WS/bin/swipl-prologmud -G18G -L18G -T18G"
-export CMDARGS="-l run_mud_server.pl $* --all --world --pdt --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --elfinder"
-#CMDARGS=+"--tinykb --fullkb --rcyc --logtalk --nlu"
+killall -9 swipl-prologmud
+       
+export SWIPL="$LOGICMOO_WS/bin/swipl-prologmud -o"
+      #"-G18G -L18G -T18G"
+export CMDARGS="-l run_mud_server.pl $* --all --world --repl --lisp --lispsock --sumo --planner"
+#CMDARGS=+" --sigma --www --docs --cliop --swish --plweb --elfinder"
+#CMDARGS=+" --sigma --www --docs --cliop --swish --plweb --elfinder"
+#CMDARGS=+" --tinykb --fullkb --rcyc --logtalk --nlu --pdt --irc"
 
 #unset DISPLAY
 
@@ -186,9 +213,9 @@ list_descendants ()
   echo "$children"
 } 
 
-#export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
-export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" --args ${RUNFILE}"
-export WHOLE="${RUNFILE}"
+export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
+#export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" --args ${RUNFILE}"
+#export WHOLE="${RUNFILE}"
 
 if [[ $UID == 0 ]]; then
   export WHOLE="sudo -u prologmud_server ${WHOLE}"

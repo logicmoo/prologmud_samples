@@ -10,6 +10,9 @@
 % INIT LOCAL DIR
 % ==============================================
 
+:- '$set_typein_module'(baseKB).
+:- '$set_source_module'(baseKB).
+
 :- set_prolog_flag(lm_no_autoload,false).
 :- set_prolog_flag(lm_pfc_lean,false).
 
@@ -135,8 +138,6 @@ update_packs:-
 % SETUP KB EXTENSIONS
 % ==============================================
 
-:- '$set_typein_module'(baseKB).
-:- '$set_source_module'(baseKB).
 
 %:- setenv('DISPLAY', '').
 :- use_module(library(plunit)).
