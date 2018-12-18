@@ -18,23 +18,31 @@
 
 :- prolog_load_context(directory,D),cd(D).
 
-:- if(current_prolog_flag(argv,[])).
-:- if(\+ ((current_prolog_flag(os_argv,X),member(E,X),atom_concat('--',_,E)))).
-:- set_prolog_flag('os_argv',['-l','run_mud_server.pl','--all','--pdt','--world','--repl','--lisp','--lispsock','--sumo','--planner','--cliop','--sigma','--www','--irc','--swish','--docs','--plweb','--elfinder']).
-:- current_prolog_flag('os_argv',Is),writeq(set_prolog_flag('os_argv',Is)),!,nl.
+%:- if(current_prolog_flag(argv,[])).
+:- if(\+ ((current_prolog_flag(argv,X),member(E,X),atom_concat('--',_,E)))).
+:- current_prolog_flag('argv',WasArgV),
+   set_prolog_flag('argv',['-l','run_mud_server.pl',
+   '--all','--pdt','--world','--repl','--lisp','--lispsock','--sumo',
+   '--planner','--cliop','--sigma','--www',
+   '--irc','--swish','--docs','--plweb',
+   '--elfinder',
+   '--defaults'|WasArgV]).
+:- current_prolog_flag('argv',Is),writeq(set_prolog_flag('argv',Is)),!,nl.
 :- endif.
-:- endif.
+%:- endif.
 
+/*
+:- set_prolog_flag(stack_limit, 32 000 000 000).
 :- set_prolog_stack(global, limit(32*10**9)).
 :- set_prolog_stack(local, limit(32*10**9)).
 :- set_prolog_stack(trail, limit(32*10**9)).
- 
+*/
 
-:- if(\+ current_predicate(setup_hist0/0)).
 
 % ==============================================
 % Enable History
 % ==============================================
+:- if(\+ current_predicate(setup_hist0/0)).
 :- if(exists_source(library(editline))). 
 :- if(\+ current_prolog_flag(windows,true)).
 :- use_module(library(editline)).
@@ -47,36 +55,7 @@
 setup_hist0:-  '$toplevel':setup_history.
 :- setup_hist0.
 :- endif.
-
-% ==============================================
-% Easier to trace while access_level system
-% ==============================================
-:- '$hide'('$toplevel':restore_debug).
-:- '$hide'('$toplevel':save_debug).
-:- '$hide'('$toplevel':residue_vars/2).
-:- '$hide'('system':deterministic/1).
-:- '$hide'(toplevel_call/2).
-:- '$hide'('$toplevel':'$query_loop'/0).
-
-% ==============================================
-% System metapredicates
-% ==============================================
-:- meta_predicate '$syspreds':bit(2,?,?).
-:- meta_predicate '$bags':findnsols_loop(*,*,0,*,*).
-:- meta_predicate '$bags':findall_loop(*,0,*,*).
-:- meta_predicate '$attvar':unfreeze(0).
-:- meta_predicate '$attvar':run_crv(0,*,*,*).
-:- meta_predicate '$expand':expand_term_list(4,*,*,*,*).
-:- meta_predicate '$parms':cached_library_directory(*,0,*).
-:- meta_predicate '$toplevel':residue_vars(0,-).
-:- meta_predicate '$toplevel':toplevel_call(0).
-:- meta_predicate '$toplevel':run_initialize(0,*).
-% :- meta_predicate '$toplevel':run_init_goal(0,*).
-% :- meta_predicate '$attvar':uhook(*,0,*,*).
-% :- meta_predicate '$attvar':uhook(*,0,*).
-:- meta_predicate '$toplevel':'$execute_goal2'(0,*).
-
-
+   
 % ==============================================
 % Add Pack Directories
 % ==============================================
@@ -99,13 +78,17 @@ add_pack_path0(Rel):-
    dir_from0(Rel,Y),
    (( \+ user:file_search_path(pack,Y)) ->asserta(user:file_search_path(pack,Y));true).
 
+:- if( \+ exists_source(library(logicmoo_common))).
 :- add_pack_path0(packs_sys).
+:- endif.
+
 :- add_pack_path0(packs_usr).
 :- add_pack_path0(packs_web).
 :- add_pack_path0(packs_xtra).
 :- add_pack_path0(packs_lib).
 :- initialization(attach_packs,now).
 
+update_packs:- !.
 update_packs:-    
    use_module(library(prolog_pack)),
    (pack_property(prologmud_samples,version(Version));
@@ -138,13 +121,12 @@ update_packs:-
 % SETUP KB EXTENSIONS
 % ==============================================
 
+:- use_module(library(logicmoo_utils_all)).
 
 %:- setenv('DISPLAY', '').
 :- use_module(library(plunit)).
 :- kb_global(plunit:loading_unit/4).
 
-
-:- use_module(library(logicmoo_util_startup)).
 
 % ==============================================
 % [Required] Load the Logicmoo User System
@@ -229,7 +211,7 @@ genls(mobExplorer,tHominid))).
 % [Required] isRuntime Hook
 % ==============================================
 (((localityOfObject(P,_),isRuntime)==>{if_defined(put_in_world(P))})).
-:- user:use_module(library('file_scope')).
+%:- user:use_module(library('file_scope')).
 :- set_prolog_flag_until_eof(do_renames,term_expansion).
 
 

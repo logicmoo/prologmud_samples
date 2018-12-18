@@ -1,11 +1,11 @@
-
+:- if(false).
 :- if(false).
 
-:- if(\+ current_predicate(setup_hist0/0)).
 
 % =====================
 % Enable History
 % =====================
+:- if(\+ current_predicate(setup_hist0/0)).
 :- if(exists_source(library(editline))).
 %:- use_module(library(editline)).
 :- else.
@@ -66,7 +66,11 @@ dir_from(Rel,Y):-
 add_pack_path(Rel):- 
    dir_from(Rel,Y),
    (( \+ user:file_search_path(pack,Y)) ->asserta(user:file_search_path(pack,Y));true).
+
+:- if( \+ exists_source(library(logicmoo_common))).
 :- add_pack_path(packs_sys).
+:- endif.
+
 :- add_pack_path(packs_usr).
 :- add_pack_path(packs_web).
 :- add_pack_path(packs_xtra).
@@ -74,12 +78,12 @@ add_pack_path(Rel):-
 
 attach_packs_n_utils:-
    attach_packs,
-   use_module(library(logicmoo_utils)),
-   use_module(library(must_trace)).
+   use_module(library(logicmoo_common)).
 :- initialization(attach_packs_n_utils,now).
 
 :- pack_list_installed.
 
+:- endif.
 
 
 
