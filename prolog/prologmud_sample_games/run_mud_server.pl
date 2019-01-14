@@ -82,6 +82,10 @@ add_pack_path0(Rel):-
 :- add_pack_path0(packs_sys).
 :- endif.
 
+:- if( \+ exists_source(library(logicmoo_hyhtn))).
+:- add_pack_path0(packs_xtra).
+:- endif.
+
 :- add_pack_path0(packs_usr).
 :- add_pack_path0(packs_web).
 :- add_pack_path0(packs_xtra).
