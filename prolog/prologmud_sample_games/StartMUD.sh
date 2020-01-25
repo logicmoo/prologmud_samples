@@ -107,7 +107,9 @@ echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
 killall -9 swipl-prologmud
        
 export SWIPL="$LOGICMOO_WS/bin/swipl-prologmud -o"
+export SWIPL="swipl-prologmud -o"
       #"-G18G -L18G -T18G"
+export SWIPL="swipl -o"
 export CMDARGS="-l run_mud_server.pl $* --all --world --repl --lisp --lispsock --sumo --planner"
 #CMDARGS=+" --sigma --www --docs --cliop --swish --plweb --elfinder"
 #CMDARGS=+" --sigma --www --docs --cliop --swish --plweb --elfinder"

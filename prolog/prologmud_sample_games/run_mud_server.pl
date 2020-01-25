@@ -10,8 +10,27 @@
 % INIT LOCAL DIR
 % ==============================================
 
+%:- abolish(system:trace,0).
+%:- asserta(system:trace).
+% :- set_prolog_flag(encoding,text).
+
 :- '$set_typein_module'(baseKB).
 :- '$set_source_module'(baseKB).
+
+:- if(gethostname(gitlab)).                                            
+
+:- set_prolog_flag(runtime_debug,3).
+:- set_prolog_flag(runtime_safety,3).
+:- set_prolog_flag(runtime_speed,0).
+
+:- else.
+
+:- set_prolog_flag(runtime_debug,1).
+:- set_prolog_flag(runtime_safety,1).
+:- set_prolog_flag(runtime_speed,1).
+
+:- endif.
+
 
 :- set_prolog_flag(lm_no_autoload,false).
 :- set_prolog_flag(lm_pfc_lean,false).
@@ -19,14 +38,16 @@
 :- prolog_load_context(directory,D),cd(D).
 
 %:- if(current_prolog_flag(argv,[])).
+%  sudo -u prologmud_server gdb -x gdbinit -return-child-result -ex "set pagination off" -ex run -ex quit --args swipl -l run_mud_server.pl --all --world --repl --lisp --lispsock --sumo --planner --nonet --repl --noworld
 :- if(\+ ((current_prolog_flag(argv,X),member(E,X),atom_concat('--',_,E)))).
 :- current_prolog_flag('argv',WasArgV),
-   set_prolog_flag('argv',['-l','run_mud_server.pl',
-   '--all','--pdt','--world','--repl','--lisp','--lispsock','--sumo',
-   '--planner','--cliop','--sigma','--www',
-   '--irc','--swish','--docs','--plweb',
-   '--elfinder',
-   '--defaults'|WasArgV]).
+   append(WasArgV,[         
+   '--','--all','--pdt','--world','--repl','--lisp','--lispsock','--sumo', '--planner',
+   '--cliop','--sigma','--www', '--irc','--swish','--docs','--plweb',   
+   % '--nonet' '--noworld',
+   '--elfinder', '--defaults' ], NewArgV),
+   set_prolog_flag('argv',NewArgV).
+
 :- current_prolog_flag('argv',Is),writeq(set_prolog_flag('argv',Is)),!,nl.
 :- endif.
 %:- endif.
@@ -398,9 +419,10 @@ start_runtime:-
 %:- setenv('DISPLAY', '').
 :- add_history(profile(ain(tAgent(foofy)))).
 :- add_history(listing(inRegion)).
-:- add_history(listing(localityOfObject)).
+:- add_history(listing(localityOfObject)).                  
 :- add_history(listing(mudAtLoc)).
 
+% :- break.
 
 end_of_file.
 end_of_file.
