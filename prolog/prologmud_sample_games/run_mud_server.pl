@@ -191,23 +191,21 @@ onSpawn(mudAreaConnected(tLivingRoom,tOfficeRoom)).
 
 
 
-% ==============================================
-% [Optionaly] Start the telent server % iCommanderdata66
-% ==============================================
-:- if( \+ app_argv('--nonet')).
-
 start_telnet:- 
    user:ensure_loaded(init_mud_server),
   on_x_log_cont((call(call,start_mud_telnet))).
 
+% ==============================================
+% [Optionaly] Start the telent server % iCommanderdata66
+% ==============================================
+:- if( \+ app_argv('--nonet')).
 :- after_boot(start_telnet).
-
 % :- assert_setting01(lmconf:eachFact_Preconditional(isRuntime)).
+:- endif.
 
 % [Manditory] This loads the game and initializes so test can be ran
 :- baseKB:ensure_loaded(sample_games('src_game_nani/objs_misc_household.pfc')).
 :- baseKB:ensure_loaded(sample_games('src_game_nani/a_nani_household.pfc')).
-:- endif.
 
 % isa(starTrek,mtHybrid).
 %lst :- !.
@@ -268,7 +266,10 @@ sanity_test_ifood_rez:- ignore((
 :- if(app_argv('--world')).
 :- lst.
 :- endif.
-:- lstr.
+:- retractall(t_l:disable_px).
+%:- xlisting('/mnt/sde1/packs_sys/logicmoo_base/prolog/logicmoo/pfc/system_basic.pfc.pl').
+%:- break.
+%:- lstr.
 :- endif.
 
 lar0 :- app_argv('--repl'),!,dmsg("Ctrl-D to start MUD"),prolog,lar.
@@ -315,8 +316,6 @@ start_runtime:-
 :- listing(feature_test).
 :- listing(sanity_test).
 :- listing(regression_test).
-
-% :- break.
 
 end_of_file.
 end_of_file.
