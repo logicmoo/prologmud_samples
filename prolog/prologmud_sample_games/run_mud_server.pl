@@ -210,7 +210,7 @@ start_telnet:-
 % isa(starTrek,mtHybrid).
 %lst :- !.
 lst :- baseKB:ensure_loaded(sample_games('src_game_startrek/?*.pfc*')).
-lstr :- forall(baseKB:how_virtualize_file(heads,F),baseKB:ensure_loaded(F)).
+lstr :- forall((baseKB:how_virtualize_file(heads,F), \+ mpred_unload_option(F, never)), baseKB:ensure_loaded(F)).
 lstra :- forall(baseKB:how_virtualize_file(_,F),baseKB:ensure_loaded(F)).
 
 % ==============================================
