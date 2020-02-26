@@ -40,6 +40,7 @@
 
 :- pack_list_installed.
 
+:- ensure_loaded(library(nomic_mu)).
 %e:- ensure_loaded(library(logicmoo_utils_all)).
 
 % ==============================================
@@ -51,15 +52,6 @@
 % ==============================================
 % ============= MUD SERVER CODE LOADING =============
 % ==============================================
-
-:- if(\+ exists_source(prologmud(mud_loader))).
-:- must((absolute_file_name(pack('prologmud/prolog/prologmud'),Dir),asserta(user:file_search_path(prologmud,Dir)))).
-:- sanity(exists_source(prologmud(mud_loader))).
-:- endif.
-
-:- if( \+ app_argv('--noworld')).
-:- baseKB:ensure_loaded(prologmud(mud_loader)).
-:- endif.
 
 :- baseKB:ensure_loaded(library(logicmoo_mud)).
 
