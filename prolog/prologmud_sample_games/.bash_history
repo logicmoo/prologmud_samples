@@ -62,3 +62,16 @@ screen
 screen -r
 screen -r
 screen -r
+node -v
+cd eggdrop/conf/
+eggdrop
+which swipl
+swipl user_module_file.pl /opt/logicmoo_workspace/packs_sys/prologmud_samples/prolog/prologmud_sample_games/swish/daemon.pl --no-fork --port=1080 --user=www-data --workers=16
+cd /opt/logicmoo_workspace/packs_sys/prologmud_samples/prolog/prologmud_sample_games
+cd lps_corner
+swipl user_module_file.pl /opt/logicmoo_workspace/packs_sys/prologmud_samples/prolog/prologmud_sample_games/swish/daemon.pl --no-fork --port=1080 --user=www-data --workers=16
+cd swish/
+swipl user_module_file.pl /opt/logicmoo_workspace/packs_sys/prologmud_samples/prolog/prologmud_sample_games/swish/daemon.pl --no-fork --port=1080 --user=www-data --workers=16
+swipl user_module_file.pl /opt/logicmoo_workspace/packs_sys/prologmud_samples/prolog/prologmud_sample_games/swish/daemon.pl --no-fork --port=1080 --workers=16
+vi  /usr/lib/swi-prolog/library/pengines_io.pl
+vi  /usr/lib/swi-prolog/library/pengines_io.pl
