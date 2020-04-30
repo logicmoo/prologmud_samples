@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#apt-get install eggdrop 
-#apt-get install npm
-
 SOURCED=0
 if [ -n "$ZSH_EVAL_CONTEXT" ]; then 
     [[ $ZSH_EVAL_CONTEXT =~ :file$ ]] && SOURCED=1
@@ -48,17 +45,10 @@ pathmunge () {
 export LOGICMOO_WS=/opt/logicmoo_workspace
 pathmunge $LOGICMOO_WS/bin:$PATH
 
-
-cp $LOGICMOO_WS/packs_xtra/golorp/?*.txt $NEWPWD/
-rsync -avh $LOGICMOO_WS/packs_sys/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/
-chmod a+w -R /tmp/tempDir
-chmod a+w -R /tmp/tempDir/?*
-chmod a+w -R /tmp/tempDir/?*/ 
-
 pidof  eggdrop >/dev/null
 if [[ $? -ne 0 ]] ; then
         echo "Restarting eggdrop:     $(date)" 
-( cd $LOGICMOO_WS/packs_sys/eggdrop/conf/ ; eggdrop )
+# ( cd $LOGICMOO_WS/packs_sys/eggdrop/conf/ ; eggdrop )
 fi
 
 
@@ -104,7 +94,7 @@ fi
 echo LOGICMOO_WS=$LOGICMOO_WS
 echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
 
-killall -9 swipl-prologmud
+# killall -9 swipl-prologmud
        
 export SWIPL="$LOGICMOO_WS/bin/swipl-prologmud -o"
 export SWIPL="swipl-prologmud -o"
@@ -236,9 +226,9 @@ do
     echo "~~~~~~~~~~~~~KILL PREV~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo kill -9 $(list_descendants $MY_PID)
-    kill -9 $(list_descendants $MY_PID)
+    # kill -9 $(list_descendants $MY_PID)
     #swipl forks xterm making it not die until the xterm it launched is dead
-    killall --user $USER -9 xterm #perl
+    # killall --user $USER -9 xterm #perl
      if [[ "$USE_NET" == "1" ]]; then
        lsof -t -i:$LOGICMOO_BASE_PORT | xargs --no-run-if-empty kill -9
        kill_redirect $(($LOGICMOO_BASE_PORT+0))

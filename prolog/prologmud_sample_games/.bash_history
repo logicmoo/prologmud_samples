@@ -75,3 +75,37 @@ swipl user_module_file.pl /opt/logicmoo_workspace/packs_sys/prologmud_samples/pr
 swipl user_module_file.pl /opt/logicmoo_workspace/packs_sys/prologmud_samples/prolog/prologmud_sample_games/swish/daemon.pl --no-fork --port=1080 --workers=16
 vi  /usr/lib/swi-prolog/library/pengines_io.pl
 vi  /usr/lib/swi-prolog/library/pengines_io.pl
+./StartMUD.sh
+find -name "*.qlf"
+find -name "*.qlf"
+./StartMUD.sh
+fg
+./StartMUD.sh
+pwd
+cd /opt/logicmoo_workspace/packs_sys
+grep content_type . -r --include="*.pl"
+cls ; grep content_type . -r --include="*.pl"
+./StartMUD.sh
+cd ~
+./StartMUD.sh
+vi /mnt/sde1/packs_sys/logicmoo_nlu/prolog/nomic_mu.pl 
+./StartMUD.sh
+cls
+./StartMUD.sh
+cls
+./StartMUD.sh
+cls
+./StartMUD.sh
+cd ~prologmud_server/eggdrop/conf/
+eggdrop
+cd ~
+./StartMUD.sh
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+screen -r
+screen -rd
+./on_boot.sh 
+screen -r
+ls /mnt/sdj1/packs_web/butterfly/
+ls /opt/logicmoo_workspace/packs_web/butterfly/
