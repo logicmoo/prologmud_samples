@@ -41,6 +41,9 @@
 :- pack_list_installed.
 
 :- ensure_loaded(library(nomic_mu)).
+% http://gitlab.logicmoo.org:3020/pldoc/pack/
+:- asserta((pldoc_http:doc_enabled:-!)).
+
 %e:- ensure_loaded(library(logicmoo_utils_all)).
 
 % ==============================================
