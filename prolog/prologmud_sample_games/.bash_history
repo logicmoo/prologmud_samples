@@ -109,3 +109,11 @@ screen -rd
 screen -r
 ls /mnt/sdj1/packs_web/butterfly/
 ls /opt/logicmoo_workspace/packs_web/butterfly/
+./on_boot.sh 
+./PreStartMUD.sh 
+cd eggdrop
+ls
+cd conf/
+eggdrop
+cd ~
+./PreStartMUD.sh 

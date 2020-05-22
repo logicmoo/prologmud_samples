@@ -1,0 +1,1 @@
+../cpack/jquery/config-available/jquery.pl

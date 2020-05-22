@@ -1,0 +1,10 @@
+_HiStOrY_V2_
+['/usr/lib/swi-prolog/library/theme/auto.pl'].
+use_module(library(logicmoo_common)).
+['/opt/logicmoo_workspace/packs_web/plweb/plweb.pl'].
+['/usr/lib/swi-prolog/library/theme/auto.pl'].
+use_module(library(logicmoo_common)).
+add_pack_path('/opt/logicmoo_workspace/packs_web/plweb/packs').
+pack_install_dir('/opt/logicmoo_workspace/packs_web/plweb/packs').
+pack_download_dir('/opt/logicmoo_workspace/packs_web/plweb/packs').
+['/usr/lib/swi-prolog/library/theme/auto.pl'].

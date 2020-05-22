@@ -1,0 +1,14 @@
+_HiStOrY_V2_
+use_module(www(routes)).
+prolog_load_context(directory,\040Dir),\012\040\040\040asserta(user:file_search_path(www,\040Dir)).
+current_op(X,Y,Z).
+current_op(X,Y,else).
+current_op(X,Y,Z).
+current_op(X,Y,then).
+current_op(X,Y,then).:-\040user:['lps_corner/swish/user_module_file.pl'].
+:-\040user:['swish/daemon.pl'].
+:-\040user:['lps_corner/swish/user_module_file.pl'].
+:-\040user:['swish/daemon.pl'].
+user:['lps_corner/swish/user_module_file.pl'].
+pack_install(rocksdb).
+server.
