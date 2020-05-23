@@ -127,3 +127,69 @@ ls
 swipl run_mud_server.pl 
 ln -s cpack
 rm cpack 
+
+swipl run_mud_server.pl 
+swipl run_mud_server.pl 
+swipl run_mud_server.pl 
+swipl run_mud_server.pl 
+cls
+swipl run_mud_server.pl 
+swipl run_mud_server.pl 
+ls cpack/xmlrdf
+ls cpack/
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+vi /mnt/sde1/packs_web/ClioPatria/cpack/xmlrdf/lib/xmlrdf/rdf_rewrite.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+grep utility_translation . -r
+grep utility_translation . -r /opt/logicmoo_workspace/packs_web/ClioPatria /opt/logicmoo_workspace/packs_web/swish
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+PuTTY
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; swipl run_mud_server.pl 
+cls ; ./StartMUD.sh
+fg
+cls ; swipl -o --help run_mud_server.pl 
+cls ; swipl -o --help
+cls ; swipl -o -help
+cls ; swipl -help
+cls ; swipl   --signals=false --stack_limit=6G  -o run_mud_server.pl 
+cls ; swipl --signals=false --stack_limit=6g -o run_mud_server.pl 
+cls ; swipl --signals=false --stack_limit=6g -o -l run_mud_server.pl 
+cls ; swipl --signals=false --stack_limit=6g -o -l run_mud_server.pl 
+cls ; swipl --signals=true --stack_limit=6g -o -l run_mud_server.pl 
+cls ; swipl --signals=true --stack_limit=6g -o run_mud_server.pl 
+cls ; swipl --signals=true --stack_limit=6g -o 
+cls ; swipl --signals=true --stack_limit=6g -O --pce=false
+cls ; swipl --signals=true --stack_limit=6g -O --pce=false run_mud_server.pl 
+./StartMUD.sh
