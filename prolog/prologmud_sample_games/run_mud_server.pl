@@ -9,36 +9,36 @@
 % ==============================================
 % INIT LOCAL DIR
 % ==============================================
+:- use_module(library(prolog_autoload)).
+:- use_module(library(prolog_pack)).
+:- user:[library('theme/auto.pl')].
+:- multifile(user:file_search_path/2).
+:-   dynamic(user:file_search_path/2).
 
-:- use_module(library(logicmoo_utils_all)).
 
+:- if( \+ exists_source(library(sldnfdraw))).
 :- attach_packs('/opt/logicmoo_workspace/packs_lib').
+:- endif.
+:- if( \+ exists_source(library(pfc))).
+:- attach_packs('/opt/logicmoo_workspace/packs_sys').
+:- endif.
+:- if( \+ exists_source(library(lps_syntax))).
 :- attach_packs('/opt/logicmoo_workspace/packs_web').
-%
-%:- user:['swish/server.pl'].
-%:- listing(handler).
-%:- listing(file_search_path).
-%:- threads.
-/*
+:- endif.
 
-% 
+mudSubPart(face,isEach(eyes,nose,mouth)).
+mudSubPart([upper_torso,arms,left_arm,left_hand,left_digits]).
+mudSubPart([upper_torso,arms,right_arm,right_hand,right_digits]).
+mudSubPart([pelvis,legs,left_leg,left_foot,left_toes]).
+mudSubPart([pelvis,legs,right_leg,right_foot,right_toes]).
+
 :- multifile swish_config:reply_page/1. % redefine SWISH's page maker:
 :- dynamic swish_config:reply_page/1. % redefine SWISH's page maker:
-:- user:['swish/swish.pl'].
-:- user:['swish/server.pl'].
-% :- assertz(user:file_search_path(swish,'swish/')).
-:- user:['lps_corner/swish/user_module_clio.pl'].
-:- server:server('0.0.0.0':3020).
-
-:- break.
-
-:- ['run-clio'].
-*/
+:- ['/opt/logicmoo_workspace/packs_web/swish/run_swish_and_clio'].
 
 :- listing(handler).
 :- listing(file_search_path).
 :- threads.
-
 
 :- prolog_load_context(directory,D),cd(D).
 
@@ -62,15 +62,7 @@
 %:- endif.
 
 
-
-:- user:[library('theme/auto.pl')].
-
-:- use_module(library(prolog_pack)).
-:- multifile(user:file_search_path/2).
-:-   dynamic(user:file_search_path/2).
-
 :- attach_packs('/opt/logicmoo_workspace/packs_web/plweb/packs').
-:- attach_packs('/opt/logicmoo_workspace/packs_lib').
 
 % :- cpack_install([prov,amalgame,skos,cpack_repository,media_cache,'EDM','cloud',trill_on_swish,ecdemo,command,rdf_qa,waisda,jquery,accurator,pirates,cluster_search_ui,skos_browser,tag_matcher,statistics,opmv,vumix]).
 
@@ -78,20 +70,24 @@
 
 :- set_prolog_flag(ec_loader,false).
 
-:- break.
+%:- break.
 
 
-:- abolish(system:trace,0).
-:- asserta(system:trace).
+%:- abolish(system:trace,0).
+%:- asserta(system:trace).
 % :- set_prolog_flag(encoding,text).
 
+:- use_module(library(http/http_path)).
+:- multifile http:location/3.
+:- dynamic   http:location/3.
+http:location(root, '/', []).
+http:location(swish, '/swish', []).
 
 :- '$set_typein_module'(baseKB).
 :- '$set_source_module'(baseKB).
 :- ensure_loaded(library(nomic_mu)).
 % http://gitlab.logicmoo.org:3020/pldoc/pack/
 %:- asserta((pldoc_http:doc_enabled:-!)).
-
 
 % ==============================================
 % [Required] Load the Logicmoo User System

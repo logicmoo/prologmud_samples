@@ -117,3 +117,13 @@ cd conf/
 eggdrop
 cd ~
 ./PreStartMUD.sh 
+./StartMUD.sh
+vi run_mud_server.pl 
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+swipl run_mud_server.pl 
+ls
+swipl run_mud_server.pl 
+ln -s cpack
+rm cpack 

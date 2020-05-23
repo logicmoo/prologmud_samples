@@ -1,1 +1,0 @@
-../cpack/yaz/config-available/yaz.pl

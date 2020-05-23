@@ -8,7 +8,7 @@
 :- dynamic user:file_search_path/2.
 :- multifile cpack:registered_cpack/2.
 
-:- cpack_register(trill_on_swish,'cpack/trill_on_swish',[home_url('https://cliopatria.swi-prolog.org/packs/trill_on_swish'),requires([])]).
+%:- cpack_register(trill_on_swish,'cpack/trill_on_swish',[home_url('https://cliopatria.swi-prolog.org/packs/trill_on_swish'),requires([])]).
 :- cpack_register(find_resource,'cpack/find_resource',[home_url('https://cliopatria.swi-prolog.org/packs/find_resource'),requires([])]).
 :- cpack_register(foaf,'cpack/foaf',[home_url('https://cliopatria.swi-prolog.org/packs/foaf'),requires([])]).
 :- cpack_register(foaf_user,'cpack/foaf_user',[home_url('https://cliopatria.swi-prolog.org/packs/foaf_user'),requires([foaf])]).
@@ -31,8 +31,8 @@
 :- cpack_register(media_cache,'cpack/media_cache',[home_url('https://cliopatria.swi-prolog.org/packs/media_cache'),requires([])]).
 :- cpack_register(tag_matcher,'cpack/tag_matcher',[home_url('https://cliopatria.swi-prolog.org/packs/tag_matcher'),requires([find_resource])]).
 :- cpack_register(yaz,'cpack/yaz',[home_url('https://cliopatria.swi-prolog.org/packs/yaz'),requires([find_resource,isearch,tag_matcher,yui3])]).
-:- cpack_register(waisda,'cpack/waisda',[home_url('https://cliopatria.swi-prolog.org/packs/waisda'),requires([skos,yaz])]).
-:- cpack_register(swish,'cpack/swish',[home_url('https://cliopatria.swi-prolog.org/packs/swish'),requires([])]).
+%:- cpack_register(waisda,'cpack/waisda',[home_url('https://cliopatria.swi-prolog.org/packs/waisda'),requires([skos,yaz])]).
+%:- cpack_register(swish,'cpack/swish',[home_url('https://cliopatria.swi-prolog.org/packs/swish'),requires([])]).
 :- cpack_register(jquery,'cpack/jquery',[home_url('https://cliopatria.swi-prolog.org/packs/jquery'),requires([])]).
 :- cpack_register(command,'cpack/command',[home_url('https://cliopatria.swi-prolog.org/packs/command'),requires([])]).
 :- cpack_register(pirates,'cpack/pirates',[home_url('https://cliopatria.swi-prolog.org/packs/pirates'),requires([])]).
@@ -42,5 +42,5 @@
 :- cpack_register(accurator,'cpack/accurator',[home_url('https://cliopatria.swi-prolog.org/packs/accurator'),requires([annotation_service,cluster_search,media_cache])]).
 :- cpack_register(image_annotation,'cpack/image_annotation',[home_url('https://cliopatria.swi-prolog.org/packs/image_annotation'),requires([annotation_service,autocompletion,media_cache,yui3])]).
 :- cpack_register(cluster_search_ui,'cpack/cluster_search_ui',[home_url('https://cliopatria.swi-prolog.org/packs/cluster_search_ui'),requires([image_annotation])]).
-:- cpack_register(vumix,'cpack/vumix',[home_url('https://cliopatria.swi-prolog.org/packs/vumix'),requires([annotation_service,autocompletion,find_resource,versioned_graph,yaz,yui3])]).
+%:- cpack_register(vumix,'cpack/vumix',[home_url('https://cliopatria.swi-prolog.org/packs/vumix'),requires([annotation_service,autocompletion,find_resource,versioned_graph,yaz,yui3])]).
 :- cpack_register(opmv,'cpack/opmv',[home_url('https://cliopatria.swi-prolog.org/packs/opmv'),requires([])]).

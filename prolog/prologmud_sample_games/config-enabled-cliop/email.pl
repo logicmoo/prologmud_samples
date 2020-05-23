@@ -36,7 +36,7 @@
 :- module(config_email,
           [ email_test/1                % +To
           ]).
-:- use_module(trill_on_swish).
+%:- use_module(trill_on_swish).
 :- use_module(library(settings)).
 :- use_module(library(debug)).
 
