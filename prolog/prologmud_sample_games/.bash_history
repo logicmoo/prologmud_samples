@@ -193,3 +193,58 @@ cls ; swipl --signals=true --stack_limit=6g -o
 cls ; swipl --signals=true --stack_limit=6g -O --pce=false
 cls ; swipl --signals=true --stack_limit=6g -O --pce=false run_mud_server.pl 
 ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cat run_mud_server.pl 
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+ls
+ls
+ls
+pwd
+ls
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+ca
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cat run_mud_server.pl 
+vi .config/swi-prolog/init.pl 
+vi .config/swi-prolog/init.pl 
+vi .config/swi-prolog/init.pl 
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+kill -9 swipl
+kill -9 %1
+kill -9 %1
+fg
+./PreStartMUD.sh 
+ls
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+./PreStartMUD.sh 
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+./PreStartMUD.sh 
+git status
+git diff run_mud_server.pl
+./PreStartMUD.sh 
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls

@@ -1,3 +1,20 @@
+:- use_module(library(prolog_autoload)).
+:- use_module(library(prolog_pack)).
+:- user:[library('theme/auto.pl')].
+:- multifile(user:file_search_path/2).
+:-   dynamic(user:file_search_path/2).
+
+
+:- if( \+ exists_source(library(sldnfdraw))).
+:- attach_packs('/opt/logicmoo_workspace/packs_lib').
+:- endif.
+:- if( \+ exists_source(library(pfc))).
+:- attach_packs('/opt/logicmoo_workspace/packs_sys').
+:- endif.
+:- if( \+ exists_source(library(lps_syntax))).
+:- attach_packs('/opt/logicmoo_workspace/packs_web').
+:- endif.
+
 :- if(false).
 :- if(false).
 
