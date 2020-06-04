@@ -7,16 +7,12 @@
 
 */
 :- current_prolog_flag('argv',Is),writeq(set_prolog_flag('argv',Is)),!,nl.
-% :- cpack_install([prov,amalgame,skos,cpack_repository,media_cache,'EDM','cloud',trill_on_swish,ecdemo,command,rdf_qa,waisda,jquery,accurator,pirates,cluster_search_ui,skos_browser,tag_matcher,statistics,opmv,vumix]).
 
-:- user:['/opt/logicmoo_workspace/packs_web/swish/remote_swish'].
-
+:- user:['/opt/logicmoo_workspace/packs_web/swish/remote_swish.pl'].
 
 
 :- user:ensure_loaded(library(lps_corner)).
 
-
-:- cls.
 
 :- binaryChop2:['/opt/logicmoo_workspace/packs_web/lps_corner/examples/binaryChop2'].
 
@@ -26,6 +22,7 @@
    DB:golps(X),
    listing(lps_program_module/1),
    wdmsg(X).
+
 /*
 :- break.
 
@@ -48,6 +45,16 @@
    format('~N~p.~n',[X]).
 
 :- break.
+
+:- goat:['/opt/logicmoo_workspace/packs_web/lps_corner/examples/goat.pl'].
+
+:- interpreter:must_lps_program_module(DB),
+   %elsewhere:listing(DB:_),   
+   DB:golps(X),
+   listing(lps_program_module/1),
+   format('~N~p.~n',[X]).
+
+
 */
 
 % ==============================================

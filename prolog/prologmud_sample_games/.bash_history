@@ -248,3 +248,117 @@ swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
 swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
 swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
 cls
+./PreStartMUD.sh 
+l;s
+ls
+l
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls
+swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+ls
+mkdir foo
+rmdir foo
+./on_boot.sh 
+mkdir foo
+rmdir foo
+ls
+df
+df -h
+cd ~prologmud_server/eggdrop/conf/
+eggdrop
+ls
+./on_boot.sh 
+screen -r
+./PreStartMUD.sh 
+./PreStartMUD.sh 
+./PreStartMUD.sh 
