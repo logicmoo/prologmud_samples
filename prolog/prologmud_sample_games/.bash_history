@@ -362,3 +362,56 @@ screen -r
 ./PreStartMUD.sh 
 ./PreStartMUD.sh 
 ./PreStartMUD.sh 
+./PreStartMUD.sh 
+cls
+cls
+./PreStartMUD.sh 
+./StartMUD.sh
+cat /usr/lib/swi-prolog/library/pengines_io.pl
+./StartMUD.sh
+cls
+cls ; swipl --signals=true --stack_limit=16g --pce=false -l run_mud_server.pl
+cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+cls ; swipl --signals=true --stack_limit=16g --pce=false -g "rtrace,[run_mud_server]"
+cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+cls
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+vi  /usr/lib/swi-prolog/library/pengines_io.pl
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=true -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=true -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=true -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+cls
+ cls ; swipl --signals=true --stack_limit=16g --pce=false -g "[run_mud_server]"
+ cls ; swipl --signals=true --stack_limit=16g --pce=false [run_mud_server]
+ cls ; swipl --signals=true --stack_limit=16g --pce=false run_mud_server
+ cls ; swipl --signals=true --stack_limit=16g run_mud_server.pl 
+cls
+ cls ; swipl --signals=true --stack_limit=16g run_mud_server.pl 
+ cls ; swipl --signals=true --stack_limit=16g run_mud_server.pl 
+ cls ; swipl --signals=true --stack_limit=16g -l run_mud_server.pl 
+cls
+ cls ; swipl --signals=true --stack_limit=16g -l run_mud_server.pl 
+cls
+ cls ; swipl --signals=true --stack_limit=16g -l run_mud_server.pl 
+export DISPLAY=
+ cls ; swipl --signals=true --stack_limit=16g --pce=false  -l run_mud_server.pl 
+cd  /opt/logicmoo_workspace/packs_sys/logicmoo_utils/
+git status
+cls
+cls ; swipl --signals=true --stack_limit=16g run_mud_server.pl
+cls
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl

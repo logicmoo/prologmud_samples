@@ -6,13 +6,26 @@
 
 
 */
+%:- if( exists_source('/opt/logicmoo_workspace/packs_web/plweb/plweb.pl') ).
+% :- plweb:server([port(3020)]).
+%:- add_history(user:['/opt/logicmoo_workspace/packs_web/plweb/plweb.pl']).
+%:- add_history(plweb:with_mutex(plweb_init, server_init)).
+%:- endif.
+
 :- current_prolog_flag('argv',Is),writeq(set_prolog_flag('argv',Is)),!,nl.
+
+:- use_module(library(logicmoo_utils)).
+
+:- shell('./PreStartMUD.sh').
 
 :- user:['/opt/logicmoo_workspace/packs_web/swish/remote_swish.pl'].
 
 
 :- user:ensure_loaded(library(lps_corner)).
 
+%:- user:['/opt/logicmoo_workspace/packs_web/plweb/plweb.pl'].
+%:- doc_enable(true).
+%:- plweb:with_mutex(plweb_init, server_init).
 
 :- binaryChop2:['/opt/logicmoo_workspace/packs_web/lps_corner/examples/binaryChop2'].
 
@@ -104,6 +117,8 @@
 %:- asserta(system:trace).
 % :- set_prolog_flag(encoding,text).
 
+:- remove_undef_search.
+
 :- baseKB:ensure_loaded(library(nomic_mu)).
 % http://gitlab.logicmoo.org:3020/pldoc/pack/
 %:- asserta((pldoc_http:doc_enabled:-!)).
@@ -121,14 +136,11 @@
 :- baseKB:ensure_loaded(library(logicmoo_mud)).
 
 
-:- if( exists_source('/opt/logicmoo_workspace/packs_web/plweb/plweb.pl') ).
-%:- user:['/opt/logicmoo_workspace/packs_web/plweb/plweb.pl'].
-%:- doc_enable(true).
-%:- plweb:with_mutex(plweb_init, server_init).
-% :- plweb:server([port(3020)]).
-:- add_history(user:['/opt/logicmoo_workspace/packs_web/plweb/plweb.pl']).
-:- add_history(plweb:with_mutex(plweb_init, server_init)).
-:- endif.
+:- set_prolog_flag(gc,true).
+:- garbage_collect.
+:- add_history(srv_mu_main).
+:- add_history(mu:srv_mu).
+:- add_history(shell('./PreStartMUD.sh')).
 
 /*
 :- break.
@@ -188,5 +200,6 @@ end_of_file.
 %:- clif_show.
 
 %:- break.
+
 
 
