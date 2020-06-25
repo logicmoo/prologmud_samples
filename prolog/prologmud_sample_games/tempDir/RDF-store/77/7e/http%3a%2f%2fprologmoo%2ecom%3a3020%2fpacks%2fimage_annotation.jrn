@@ -200,7 +200,7 @@ assert('_:genid73','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid73','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 assert('http://prologmoo.com:3020/packs/image_annotation','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid74').
 assert('_:genid74','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid74','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
+assert('_:genid74','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
 assert('_:genid74','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 assert('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/prov1').
 assert('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/amalgame1').
@@ -453,7 +453,7 @@ retract('_:genid73','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 retract('_:genid73','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 retract('http://prologmoo.com:3020/packs/image_annotation','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid74').
 retract('_:genid74','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid74','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
+retract('_:genid74','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
 retract('_:genid74','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 retract('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/prov1').
 retract('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/amalgame1').
@@ -800,7 +800,7 @@ assert('_:genid109','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 assert('_:genid109','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 assert('http://prologmoo.com:3020/packs/image_annotation','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid110').
 assert('_:genid110','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid110','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
+assert('_:genid110','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
 assert('_:genid110','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 assert('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/prov1').
 assert('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/amalgame1').
@@ -1069,7 +1069,7 @@ retract('_:genid109','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','htt
 retract('_:genid109','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
 retract('_:genid109','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 retract('http://prologmoo.com:3020/packs/image_annotation','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid110').
-retract('_:genid110','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
+retract('_:genid110','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
 retract('_:genid110','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 retract('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/prov1').
 retract('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/amalgame1').
@@ -1388,7 +1388,7 @@ assert('_:genid57','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid57','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 assert('http://prologmoo.com:3020/packs/image_annotation','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid58').
 assert('_:genid58','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid58','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
+assert('_:genid58','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/image_annotation.git').
 assert('_:genid58','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e662fc21bdbce72f3691a86c916e92478e2cee2b)).
 assert('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/prov1').
 assert('__http://prologmoo.com:3020/packs/image_annotation1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/amalgame1').

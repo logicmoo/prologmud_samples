@@ -120,7 +120,7 @@
 :- remove_undef_search.
 
 :- baseKB:ensure_loaded(library(nomic_mu)).
-% http://gitlab.logicmoo.org:3020/pldoc/pack/
+% https://logicmoo.org:3020/pldoc/pack/
 %:- asserta((pldoc_http:doc_enabled:-!)).
 
 % ==============================================
@@ -140,6 +140,8 @@
 :- garbage_collect.
 :- add_history(srv_mu_main).
 :- add_history(mu:srv_mu).
+:- add_history(mpred_why(mudIsa(iCoffeeCup7, tSpatialThing))).
+
 :- add_history(shell('./PreStartMUD.sh')).
 
 /*

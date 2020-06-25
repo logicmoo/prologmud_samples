@@ -198,7 +198,7 @@ assert('_:genid13','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid13','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ea873eac91c0f6d65e02f063bf9bfe9e00ff91de)).
 assert('http://prologmoo.com:3020/packs/vumix','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid14').
 assert('_:genid14','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid14','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/vumix.git').
+assert('_:genid14','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/vumix.git').
 assert('_:genid14','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ea873eac91c0f6d65e02f063bf9bfe9e00ff91de)).
 assert('__http://prologmoo.com:3020/packs/vumix1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal(bd8710737d1671cbd62cdc0d49b859888d750edd)).
 assert('http://prologmoo.com:3020/packs/vumix/applications/p1.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(vumix_p1)).
@@ -1306,7 +1306,7 @@ retract('http://prologmoo.com:3020/packs/vumix/lib/tfidf.pl','http://www.w3.org/
 retract('http://prologmoo.com:3020/packs/vumix/web/js/vuplayer/wmvplayer.js','http://cliopatria.swi-prolog.org/schema/cpack#inPack','http://prologmoo.com:3020/packs/vumix').
 retract('http://prologmoo.com:3020/packs/vumix/applications/vumix_p0.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('gv_resource_commit/5')).
 retract('http://prologmoo.com:3020/packs/vumix/web/js/vuplayer/silverlight.js','http://cliopatria.swi-prolog.org/schema/cpack#name',literal('silverlight.js')).
-retract('_:genid14','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/vumix.git').
+retract('_:genid14','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/vumix.git').
 retract('http://prologmoo.com:3020/packs/vumix/lib/tag_interpret.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('pairs_values/2')).
 retract('http://prologmoo.com:3020/packs/vumix/lib/beng_xml.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesSystemFile','http://prologmoo.com:3020/file_ref/library(isub)').
 retract('http://prologmoo.com:3020/packs/vumix/web/js/vuplayer/wmvplayer.js','http://cliopatria.swi-prolog.org/schema/cpack#path',literal('web/js/vuplayer/wmvplayer.js')).
@@ -1528,7 +1528,7 @@ assert('_:genid97','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid97','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ea873eac91c0f6d65e02f063bf9bfe9e00ff91de)).
 assert('http://prologmoo.com:3020/packs/vumix','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid98').
 assert('_:genid98','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid98','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/vumix.git').
+assert('_:genid98','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/vumix.git').
 assert('_:genid98','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ea873eac91c0f6d65e02f063bf9bfe9e00ff91de)).
 assert('__http://prologmoo.com:3020/packs/vumix1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal(bd8710737d1671cbd62cdc0d49b859888d750edd)).
 assert('http://prologmoo.com:3020/packs/vumix/applications/p1.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(vumix_p1)).

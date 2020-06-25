@@ -8,6 +8,8 @@ break sysError
 break fatalError
 set breakpoint pending off
 
+set pagination off
+
 # Pass `normal signals'
 
 handle SIGPIPE noprint nostop pass
@@ -23,6 +25,8 @@ set backtrace past-main on
 set backtrace past-entry on
 set backtrace limit unlimited
 
+set auto-load safe-path /
+
 define tbt
   thread apply all backtrace
 end
@@ -34,6 +38,8 @@ handle SIGSEGV stop print nopass
 
 set print thread-events on
 set print thread-events off
+
+set print inferior-events off
 
 # Some common ways to start the system with the test-suite loaded
 
@@ -71,7 +77,7 @@ define public
 end
 
 run
-# thread apply all bt full
-print $_exitcode
-quit $_exitcode
+#print $_exitcode
+#quit $_exitcode
+quit
 

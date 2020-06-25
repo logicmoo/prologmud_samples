@@ -756,7 +756,7 @@ assert('_:genid17','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid17','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(cbfed62b0bcacf477106f802e83b20b3faa5782c)).
 assert('http://prologmoo.com:3020/packs/trill_on_swish','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid18').
 assert('_:genid18','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid18','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/trill_on_swish.git').
+assert('_:genid18','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/trill_on_swish.git').
 assert('_:genid18','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(cbfed62b0bcacf477106f802e83b20b3faa5782c)).
 assert('__http://prologmoo.com:3020/packs/trill_on_swish1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('860070d4230d292bc8951222aac8b6880287f4cd')).
 assert('http://prologmoo.com:3020/packs/trill_on_swish/applications/trill_on_swish.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(swish_app)).
@@ -2146,7 +2146,7 @@ retract('_:genid17','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','http
 retract('_:genid17','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
 retract('_:genid17','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(cbfed62b0bcacf477106f802e83b20b3faa5782c)).
 retract('_:genid18','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid18','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/trill_on_swish.git').
+retract('_:genid18','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/trill_on_swish.git').
 retract('http://prologmoo.com:3020/packs/trill_on_swish/applications/trill_on_swish.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(swish_app)).
 retract('http://prologmoo.com:3020/packs/trill_on_swish/applications/trill_on_swish.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('exists_source/1')).
 retract('http://prologmoo.com:3020/packs/trill_on_swish/applications/trill_on_swish.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('option/2')).
@@ -3732,7 +3732,7 @@ assert('_:genid89','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid89','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(cbfed62b0bcacf477106f802e83b20b3faa5782c)).
 assert('http://prologmoo.com:3020/packs/trill_on_swish','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid90').
 assert('_:genid90','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid90','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/trill_on_swish.git').
+assert('_:genid90','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/trill_on_swish.git').
 assert('_:genid90','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(cbfed62b0bcacf477106f802e83b20b3faa5782c)).
 assert('__http://prologmoo.com:3020/packs/trill_on_swish1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('860070d4230d292bc8951222aac8b6880287f4cd')).
 assert('http://prologmoo.com:3020/packs/trill_on_swish/applications/trill_on_swish.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(swish_app)).

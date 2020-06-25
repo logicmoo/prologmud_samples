@@ -57,7 +57,7 @@ assert('_:genid7','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal
 assert('_:genid7','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('46967ac7c643a729d235ceb84ea8e24ef78eced1')).
 assert('http://prologmoo.com:3020/packs/waisda','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid8').
 assert('_:genid8','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid8','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/waisda.git').
+assert('_:genid8','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/waisda.git').
 assert('_:genid8','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('46967ac7c643a729d235ceb84ea8e24ef78eced1')).
 assert('http://prologmoo.com:3020/packs/waisda/config-available/waisda.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('load_data/0')).
 assert('http://prologmoo.com:3020/packs/waisda/config-available/waisda.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_waisda)).
@@ -304,7 +304,7 @@ retract('http://prologmoo.com:3020/packs/waisda/lib/import_waisda.pl','http://cl
 retract('http://prologmoo.com:3020/packs/waisda/config-available/DEFAULTS','http://cliopatria.swi-prolog.org/schema/cpack#size',literal(type('http://www.w3.org/2001/XMLSchema#integer','22'))).
 retract('http://prologmoo.com:3020/packs/waisda/lib/exp_stats.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesPackageFile','http://prologmoo.com:3020/file_ref/api(reconcile)').
 retract('http://prologmoo.com:3020/packs/waisda/lib/exp_stats.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesPackageFile','http://prologmoo.com:3020/file_ref/library(video_annotation)').
-retract('_:genid8','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/waisda.git').
+retract('_:genid8','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/waisda.git').
 retract('http://prologmoo.com:3020/packs/waisda/lib/import_waisda.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('waisda_to_rdf/0')).
 retract('http://prologmoo.com:3020/packs/waisda/lib/import_waisda.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesPackageFile','http://prologmoo.com:3020/file_ref/library(video_annotation)').
 retract('http://prologmoo.com:3020/packs/waisda/config-available/waisda.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesSystemFile','http://prologmoo.com:3020/file_ref/library(semweb/rdfs)').
@@ -373,7 +373,7 @@ assert('_:genid99','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid99','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('46967ac7c643a729d235ceb84ea8e24ef78eced1')).
 assert('http://prologmoo.com:3020/packs/waisda','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid100').
 assert('_:genid100','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid100','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/waisda.git').
+assert('_:genid100','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/waisda.git').
 assert('_:genid100','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('46967ac7c643a729d235ceb84ea8e24ef78eced1')).
 assert('http://prologmoo.com:3020/packs/waisda/config-available/waisda.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('load_data/0')).
 assert('http://prologmoo.com:3020/packs/waisda/config-available/waisda.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_waisda)).

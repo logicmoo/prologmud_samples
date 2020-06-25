@@ -72,7 +72,7 @@ assert('_:genid37','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid37','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e5a0697a4ded56acec77c3efe26335f47cf161f2)).
 assert('http://prologmoo.com:3020/packs/opmv','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid38').
 assert('_:genid38','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid38','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
+assert('_:genid38','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
 assert('_:genid38','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e5a0697a4ded56acec77c3efe26335f47cf161f2)).
 assert('http://prologmoo.com:3020/packs/opmv/config-available/opmv.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_opmv)).
 assert('http://prologmoo.com:3020/packs/opmv/config-available/opmv.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesPackageFile','http://prologmoo.com:3020/packs/opmv/lib/opmv_schema.pl').
@@ -136,7 +136,7 @@ retract('http://prologmoo.com:3020/packs/opmv','http://cliopatria.swi-prolog.org
 retract('_:genid37','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','http://cliopatria.swi-prolog.org/git/cpack-mirrors/opmv.git').
 retract('_:genid37','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
 retract('http://prologmoo.com:3020/packs/opmv','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid38').
-retract('_:genid38','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
+retract('_:genid38','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
 retract('http://prologmoo.com:3020/packs/opmv/lib/opmv_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('rdf_attach_library/1')).
 retract('http://prologmoo.com:3020/packs/opmv/lib/opmv_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('rdf_load_library/1')).
 retract('http://prologmoo.com:3020/packs/opmv/lib/opmv_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesSystemFile','http://prologmoo.com:3020/file_ref/library(semweb/rdf_db)').
@@ -252,7 +252,7 @@ assert('_:genid117','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 assert('_:genid117','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e5a0697a4ded56acec77c3efe26335f47cf161f2)).
 assert('http://prologmoo.com:3020/packs/opmv','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid118').
 assert('_:genid118','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid118','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
+assert('_:genid118','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
 assert('_:genid118','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e5a0697a4ded56acec77c3efe26335f47cf161f2)).
 assert('http://prologmoo.com:3020/packs/opmv/config-available/opmv.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_opmv)).
 assert('http://prologmoo.com:3020/packs/opmv/config-available/opmv.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesPackageFile','http://prologmoo.com:3020/file_ref/library(opmv_schema)').
@@ -325,7 +325,7 @@ retract('http://prologmoo.com:3020/packs/opmv/lib/opmv_schema.pl','http://cliopa
 retract('http://prologmoo.com:3020/packs/opmv/lib/opmvc_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(opmvc_schema)).
 retract('http://prologmoo.com:3020/packs/opmv/lib/opmvc_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('rdf_load_library/1')).
 retract('http://prologmoo.com:3020/packs/opmv/lib/opmv_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#resolves','http://prologmoo.com:3020/file_ref/library(opmv_schema)').
-retract('_:genid118','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
+retract('_:genid118','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
 retract('http://prologmoo.com:3020/packs/opmv/lib/opmvc_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('rdf_attach_library/1')).
 retract('http://prologmoo.com:3020/packs/opmv/config-available/opmv.pl','http://cliopatria.swi-prolog.org/schema/cpack#name',literal('opmv.pl')).
 retract('http://prologmoo.com:3020/packs/opmv','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid118').
@@ -430,7 +430,7 @@ assert('_:genid65','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid65','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e5a0697a4ded56acec77c3efe26335f47cf161f2)).
 assert('http://prologmoo.com:3020/packs/opmv','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid66').
 assert('_:genid66','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid66','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
+assert('_:genid66','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/opmv.git').
 assert('_:genid66','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e5a0697a4ded56acec77c3efe26335f47cf161f2)).
 assert('http://prologmoo.com:3020/packs/opmv/config-available/opmv.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_opmv)).
 assert('http://prologmoo.com:3020/packs/opmv/config-available/opmv.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesPackageFile','http://prologmoo.com:3020/file_ref/library(opmv_schema)').

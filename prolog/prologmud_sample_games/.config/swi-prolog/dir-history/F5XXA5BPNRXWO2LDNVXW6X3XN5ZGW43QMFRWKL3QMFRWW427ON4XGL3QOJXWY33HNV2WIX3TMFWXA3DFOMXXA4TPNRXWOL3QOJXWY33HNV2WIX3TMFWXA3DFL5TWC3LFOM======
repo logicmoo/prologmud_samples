@@ -1,9 +1,9 @@
 _HiStOrY_V2_
-rtrace((\040quietlySE(member(X,[1,2,3]))\040,\040member(X,[1])\040,\040write(hi)\040)).
-use_module(library(logicmoo_utils)).
-rtrace((\040quietlySE(member(X,[1,2,3]))\040,\040member(X,[1])\040,\040write(hi)\040)).
-rtraceSE((\040quietlySE(member(X,[1,2,3]))\040,\040member(X,[1])\040,\040write(hi)\040)).
-start_rtrace.
+www_start.\040
+gripe_time(40,if_file_exists(ensure_loaded(baseKB:library(logicmoo_webbot)))).\040
+ensure_hmud.\040
+gripe_time(40,if_file_exists(ensure_loaded(baseKB:library(logicmoo_planner)))).\040
+start_telnet.\040
 egg_booting.\040
 ensure_threaded_engine_loop.\040
 set_how_virtualize_file(false,'/opt/logicmoo_workspace/packs_sys/pfc/prolog/pfc_lib_2_0.pl').\040
@@ -77,7 +77,7 @@ gripe_time(40,if_file_exists(ensure_loaded(baseKB:library(logicmoo_webbot)))).\0
 ensure_hmud.\040
 gripe_time(40,if_file_exists(ensure_loaded(baseKB:library(logicmoo_planner)))).\040
 start_telnet.\040
-sanity(baseKB:argIsa(genlPreds,2,_23379578)).\040
+sanity(baseKB:argIsa(genlPreds,2,_22858870)).\040
 sanity(baseKB:dmsg(sanity_test_ifood_rez)).\040
 sanity(baseKB:statistics).\040
 sanity(baseKB:check_clause_counts).\040
@@ -95,7 +95,7 @@ listing(localityOfObject).\040
 listing(mudAtLoc).\040
 lst.\040
 logicmoo_i_cyc_xform.\040
-dumpST.
-egg_booting.\040
-ensure_threaded_engine_loop.\040
-set_how_virtualize_file(false,'/opt/logicmoo_workspace/packs_sys/pfc/prolog/pfc_lib_2_0.pl').\040
+srv_mu_main.\040
+srv_mu.\040
+mpred_why(mudIsa(iCoffeeCup7,tSpatialThing)).\040
+shell('./PreStartMUD.sh').\040

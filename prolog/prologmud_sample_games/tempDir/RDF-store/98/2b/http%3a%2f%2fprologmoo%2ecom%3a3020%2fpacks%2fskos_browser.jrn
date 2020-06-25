@@ -84,7 +84,7 @@ assert('_:genid49','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid49','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 assert('http://prologmoo.com:3020/packs/skos_browser','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid50').
 assert('_:genid50','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid50','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
+assert('_:genid50','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
 assert('_:genid50','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 assert('__http://prologmoo.com:3020/packs/skos_browser1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8c012ba451cb8899cd86f8dc33a48b0b17b9b5e9')).
 assert('http://prologmoo.com:3020/packs/skos_browser/api/skos_concepts.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('concept_results/4')).
@@ -204,7 +204,7 @@ retract('http://prologmoo.com:3020/packs/skos_browser','http://cliopatria.swi-pr
 retract('http://prologmoo.com:3020/packs/skos_browser','http://cliopatria.swi-prolog.org/schema/cpack#clonedRepository','_:genid49').
 retract('_:genid49','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
 retract('_:genid49','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
-retract('_:genid50','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
+retract('_:genid50','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
 retract('_:genid50','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 retract('http://prologmoo.com:3020/packs/skos_browser/api/skos_concepts.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('concept_results/4')).
 retract('http://prologmoo.com:3020/packs/skos_browser/api/skos_concepts.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(skos_concepts)).
@@ -394,7 +394,7 @@ assert('_:genid131','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 assert('_:genid131','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 assert('http://prologmoo.com:3020/packs/skos_browser','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid132').
 assert('_:genid132','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid132','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
+assert('_:genid132','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
 assert('_:genid132','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 assert('__http://prologmoo.com:3020/packs/skos_browser1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8c012ba451cb8899cd86f8dc33a48b0b17b9b5e9')).
 assert('http://prologmoo.com:3020/packs/skos_browser/api/skos_concepts.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('concept_results/4')).
@@ -496,7 +496,7 @@ retract('http://prologmoo.com:3020/packs/skos_browser','http://cliopatria.swi-pr
 retract('_:genid131','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 retract('http://prologmoo.com:3020/packs/skos_browser','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid132').
 retract('_:genid132','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid132','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
+retract('_:genid132','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
 retract('_:genid132','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 retract('__http://prologmoo.com:3020/packs/skos_browser1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8c012ba451cb8899cd86f8dc33a48b0b17b9b5e9')).
 retract('http://prologmoo.com:3020/packs/skos_browser/api/skos_concepts.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(skos_concepts)).
@@ -654,7 +654,7 @@ assert('_:genid79','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid79','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 assert('http://prologmoo.com:3020/packs/skos_browser','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid80').
 assert('_:genid80','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid80','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
+assert('_:genid80','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/skos_browser.git').
 assert('_:genid80','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(ce0755d2cf43d4257e16cee1049e589b3bb1fa46)).
 assert('__http://prologmoo.com:3020/packs/skos_browser1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8c012ba451cb8899cd86f8dc33a48b0b17b9b5e9')).
 assert('http://prologmoo.com:3020/packs/skos_browser/api/skos_concepts.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('concept_results/4')).

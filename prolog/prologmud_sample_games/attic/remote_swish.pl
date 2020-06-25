@@ -211,7 +211,7 @@ pengines:authentication_hook(Request, swish, User) :-
 :- dynamic pengines:allowed/2.
 
 % dmiles runs in very well protected VM
-pengines:not_sandboxed(_Maybe, _Application) :- gethostname(X),X=gitlab.
+pengines:not_sandboxed(_Maybe, _Application) :- gethostname(X),X=logicmoo.org.
 pengines:not_sandboxed(Maybe, Application) :- currently_logged_in(pengines:not_sandboxed(Maybe, Application),_User),!.
 
 current_user(User):- currently_logged_in(why,User).

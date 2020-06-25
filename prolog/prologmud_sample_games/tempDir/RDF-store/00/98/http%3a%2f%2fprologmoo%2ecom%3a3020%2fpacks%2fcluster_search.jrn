@@ -170,7 +170,7 @@ assert('_:genid81','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid81','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 assert('http://prologmoo.com:3020/packs/cluster_search','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid82').
 assert('_:genid82','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid82','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
+assert('_:genid82','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
 assert('_:genid82','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 assert('__http://prologmoo.com:3020/packs/cluster_search1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/cluster_search2','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8ecbc3d555ecbc8331719730f4cb446377ec712a')).
@@ -874,7 +874,7 @@ retract('_:genid81','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 retract('_:genid81','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 retract('http://prologmoo.com:3020/packs/cluster_search','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid82').
 retract('_:genid82','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid82','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
+retract('_:genid82','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
 retract('_:genid82','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 retract('__http://prologmoo.com:3020/packs/cluster_search1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 retract('__http://prologmoo.com:3020/packs/cluster_search2','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8ecbc3d555ecbc8331719730f4cb446377ec712a')).
@@ -1616,7 +1616,7 @@ assert('_:genid91','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid91','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 assert('http://prologmoo.com:3020/packs/cluster_search','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid92').
 assert('_:genid92','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid92','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
+assert('_:genid92','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
 assert('_:genid92','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 assert('__http://prologmoo.com:3020/packs/cluster_search1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/cluster_search2','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8ecbc3d555ecbc8331719730f4cb446377ec712a')).
@@ -2241,7 +2241,7 @@ retract('_:genid91','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 retract('_:genid91','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 retract('http://prologmoo.com:3020/packs/cluster_search','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid92').
 retract('_:genid92','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid92','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
+retract('_:genid92','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
 retract('_:genid92','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 retract('__http://prologmoo.com:3020/packs/cluster_search1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 retract('__http://prologmoo.com:3020/packs/cluster_search2','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8ecbc3d555ecbc8331719730f4cb446377ec712a')).
@@ -2910,7 +2910,7 @@ assert('_:genid35','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid35','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 assert('http://prologmoo.com:3020/packs/cluster_search','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid36').
 assert('_:genid36','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid36','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
+assert('_:genid36','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/cluster_search.git').
 assert('_:genid36','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('077ed7f94b99ae6ebcce980d18f7381eb88de951')).
 assert('__http://prologmoo.com:3020/packs/cluster_search1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/cluster_search2','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('8ecbc3d555ecbc8331719730f4cb446377ec712a')).

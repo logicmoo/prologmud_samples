@@ -45,7 +45,7 @@ assert('_:genid3','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal
 assert('_:genid3','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e403f2939bab5531cc2b46cfe1290811c5f51720)).
 assert('http://prologmoo.com:3020/packs/yui3','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid4').
 assert('_:genid4','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid4','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/yui3.git').
+assert('_:genid4','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/yui3.git').
 assert('_:genid4','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e403f2939bab5531cc2b46cfe1290811c5f51720)).
 assert('http://prologmoo.com:3020/packs/yui3/config-available/yui3.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(yui3_conf)).
 assert('http://prologmoo.com:3020/packs/yui3/config-available/yui3.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('http_handler/3')).
@@ -145,7 +145,7 @@ retract('_:genid3','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','http:
 retract('_:genid3','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
 retract('http://prologmoo.com:3020/packs/yui3','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid4').
 retract('_:genid4','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid4','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/yui3.git').
+retract('_:genid4','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/yui3.git').
 retract('_:genid4','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e403f2939bab5531cc2b46cfe1290811c5f51720)).
 retract('http://prologmoo.com:3020/packs/yui3/config-available/yui3.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(yui3_conf)).
 retract('http://prologmoo.com:3020/packs/yui3/config-available/yui3.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('http_handler/3')).
@@ -267,7 +267,7 @@ assert('_:genid107','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 assert('_:genid107','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e403f2939bab5531cc2b46cfe1290811c5f51720)).
 assert('http://prologmoo.com:3020/packs/yui3','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid108').
 assert('_:genid108','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid108','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/yui3.git').
+assert('_:genid108','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/yui3.git').
 assert('_:genid108','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e403f2939bab5531cc2b46cfe1290811c5f51720)).
 assert('http://prologmoo.com:3020/packs/yui3/config-available/yui3.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(yui3_conf)).
 assert('http://prologmoo.com:3020/packs/yui3/config-available/yui3.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('http_handler/3')).

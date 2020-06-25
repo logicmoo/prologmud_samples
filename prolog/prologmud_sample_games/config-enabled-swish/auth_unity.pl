@@ -146,7 +146,7 @@ swish_config:user_info(_Request, unity, UserInfo) :-
 
 oauth2:server_attribute(unity, url,            'https://woezel.ia.cwi.nl:2443').
 oauth2:server_attribute(unity, redirect_uri,
-                        'http://logicmoo.org/oauth2/unity/reply').
+                        'https://logicmoo.org/oauth2/unity/reply').
 oauth2:server_attribute(unity, authorization_endpoint,
                         '/oauth2-as/oauth2-authz').
 oauth2:server_attribute(unity, token_endpoint,     '/oauth2/token').

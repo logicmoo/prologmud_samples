@@ -66,7 +66,7 @@ assert('_:genid45','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid45','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
 assert('http://prologmoo.com:3020/packs/autocompletion','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid46').
 assert('_:genid46','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid46','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
+assert('_:genid46','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
 assert('_:genid46','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
 assert('__http://prologmoo.com:3020/packs/autocompletion1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal(f007b578392d8913c7333e96476377878c8eb149)).
 assert('__http://prologmoo.com:3020/packs/autocompletion1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/versioned_graph1').
@@ -234,7 +234,7 @@ retract('http://prologmoo.com:3020/packs/autocompletion/web/js/skosautocomplete.
 retract('http://prologmoo.com:3020/packs/autocompletion/lib/instance_search.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesPackageFile','http://prologmoo.com:3020/packs/autocompletion/lib/ac_filter.pl').
 retract('http://prologmoo.com:3020/packs/autocompletion/api/autocomplete_api.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('http_handler/3')).
 retract('http://prologmoo.com:3020/packs/autocompletion/lib/instance_search.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('member/2')).
-retract('_:genid46','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
+retract('_:genid46','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
 retract('http://prologmoo.com:3020/packs/autocompletion/api/autocomplete_api.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('http_parameters/2')).
 retract('http://prologmoo.com:3020/packs/autocompletion/config-available/autocompletion.pl','http://cliopatria.swi-prolog.org/schema/cpack#inPack','http://prologmoo.com:3020/packs/autocompletion').
 retract('http://prologmoo.com:3020/packs/autocompletion/lib/instance_search.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('find_resource_by_name/3')).
@@ -346,7 +346,7 @@ assert('_:genid87','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid87','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
 assert('http://prologmoo.com:3020/packs/autocompletion','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid88').
 assert('_:genid88','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid88','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
+assert('_:genid88','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
 assert('_:genid88','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
 assert('__http://prologmoo.com:3020/packs/autocompletion1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal(f007b578392d8913c7333e96476377878c8eb149)).
 assert('__http://prologmoo.com:3020/packs/autocompletion1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/versioned_graph1').
@@ -443,7 +443,7 @@ retract('http://prologmoo.com:3020/packs/autocompletion','http://cliopatria.swi-
 retract('http://prologmoo.com:3020/packs/autocompletion','http://cliopatria.swi-prolog.org/schema/cpack#submittedDate',literal(type('http://www.w3.org/2001/XMLSchema#dateTime','2017-06-05T09:06:02-07:00'))).
 retract('_:genid87','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
 retract('_:genid87','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
-retract('_:genid88','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
+retract('_:genid88','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
 retract('_:genid88','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
 retract('__http://prologmoo.com:3020/packs/autocompletion1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/rdf_qa1').
 retract('__http://prologmoo.com:3020/packs/autocompletion1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/annotation_dashboard1').
@@ -578,7 +578,7 @@ assert('_:genid31','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid31','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
 assert('http://prologmoo.com:3020/packs/autocompletion','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid32').
 assert('_:genid32','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid32','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
+assert('_:genid32','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/autocompletion.git').
 assert('_:genid32','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('235d3e2fe42c063e27e3231bfeab5d4522d88eaa')).
 assert('__http://prologmoo.com:3020/packs/autocompletion1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal(f007b578392d8913c7333e96476377878c8eb149)).
 assert('__http://prologmoo.com:3020/packs/autocompletion1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/rdf_qa1').

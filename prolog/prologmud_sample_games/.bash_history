@@ -415,3 +415,93 @@ cls
 killall -9 swipl
 killall -9 swipl
 killall -9 swipl
+killall -9 swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+swipl
+nslookup logicmoo.org
+nslookup logicmoo.org -server 8.8.8.8
+./PreStartMUD.sh 
+cls ; swipl --signals=true --stack_limit=16g run_mud_server.pl
+cls ; swipl --signals=true --pce=false --stack_limit=16g run_mud_server.pl
+cls ; swipl --signals=true --pce=false --stack_limit=16g run_mud_server.pl
+cls ; swipl --signals=true --pce=false --stack_limit=16g run_mud_server.pl
+cls ;  swipl --signals=true --pce=false --stack_limit=16g run_mud_server.pl
+./PreStartMUD.sh 
+./StartMUD.sh
+./PreStartMUD.sh ;  ./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+cls
+./StartMUD.sh
+cls
+./StartMUD.sh
+cls
+./StartMUD.sh
+top
+docker 
+su - prologmud_server
+./StartMUD.sh
+ls
+./StartMUD.sh

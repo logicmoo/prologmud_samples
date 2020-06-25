@@ -41,7 +41,7 @@ assert('_:genid25','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid25','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e0db719e79cc56392500b9779543fb688333c46c)).
 assert('http://prologmoo.com:3020/packs/foaf','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid26').
 assert('_:genid26','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid26','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
+assert('_:genid26','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
 assert('_:genid26','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e0db719e79cc56392500b9779543fb688333c46c)).
 assert('__http://prologmoo.com:3020/packs/foaf1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/foaf1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/swish1').
@@ -108,7 +108,7 @@ retract('_:genid25','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cl
 retract('_:genid25','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
 retract('http://prologmoo.com:3020/packs/foaf','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid26').
 retract('_:genid26','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid26','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
+retract('_:genid26','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
 retract('__http://prologmoo.com:3020/packs/foaf1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 retract('__http://prologmoo.com:3020/packs/foaf1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/swish1').
 retract('http://prologmoo.com:3020/packs/foaf/lib/foaf_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(foaf_schema)).
@@ -191,7 +191,7 @@ assert('_:genid105','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 assert('_:genid105','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e0db719e79cc56392500b9779543fb688333c46c)).
 assert('http://prologmoo.com:3020/packs/foaf','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid106').
 assert('_:genid106','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid106','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
+assert('_:genid106','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
 assert('_:genid106','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e0db719e79cc56392500b9779543fb688333c46c)).
 assert('__http://prologmoo.com:3020/packs/foaf1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/foaf1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/rda_gr21').
@@ -247,7 +247,7 @@ retract('http://prologmoo.com:3020/packs/foaf/lib/foaf_schema.pl','http://cliopa
 retract('http://prologmoo.com:3020/packs/foaf/lib/foaf_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#resolves','http://prologmoo.com:3020/file_ref/library(foaf_schema)').
 retract('http://prologmoo.com:3020/packs/foaf/rdf/base/foaf/spec/20100809.rdf','http://cliopatria.swi-prolog.org/schema/cpack#base',literal('20100809')).
 retract('http://prologmoo.com:3020/packs/foaf/rdf/cpack/foaf.ttl','http://cliopatria.swi-prolog.org/schema/cpack#inPack','http://prologmoo.com:3020/packs/foaf').
-retract('_:genid106','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
+retract('_:genid106','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
 retract('http://prologmoo.com:3020/packs/foaf','http://cliopatria.swi-prolog.org/schema/cpack#packageName',literal(foaf)).
 retract('http://prologmoo.com:3020/packs/foaf/rdf/base/Manifest.ttl','http://cliopatria.swi-prolog.org/schema/cpack#name',literal('Manifest.ttl')).
 retract('http://prologmoo.com:3020/packs/foaf/lib/foaf_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#base',literal(foaf_schema)).
@@ -321,7 +321,7 @@ assert('_:genid51','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid51','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e0db719e79cc56392500b9779543fb688333c46c)).
 assert('http://prologmoo.com:3020/packs/foaf','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid52').
 assert('_:genid52','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid52','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
+assert('_:genid52','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/foaf.git').
 assert('_:genid52','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal(e0db719e79cc56392500b9779543fb688333c46c)).
 assert('__http://prologmoo.com:3020/packs/foaf1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/foaf1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/webaccess1').

@@ -187,7 +187,7 @@ assert('_:genid29','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid29','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('8dd608b628c456c41b214d698ad3ee0244e46f65')).
 assert('http://prologmoo.com:3020/packs/xmlrdf','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid30').
 assert('_:genid30','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid30','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/xmlrdf.git').
+assert('_:genid30','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/xmlrdf.git').
 assert('_:genid30','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('8dd608b628c456c41b214d698ad3ee0244e46f65')).
 assert('http://prologmoo.com:3020/packs/xmlrdf/config-available/xmlrdf.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_xmlrdf)).
 assert('http://prologmoo.com:3020/packs/xmlrdf/doc/pltotex.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('pltotex/0')).
@@ -603,7 +603,7 @@ retract('http://prologmoo.com:3020/packs/xmlrdf','http://cliopatria.swi-prolog.o
 retract('_:genid29','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
 retract('_:genid29','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
 retract('_:genid30','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-retract('_:genid30','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/xmlrdf.git').
+retract('_:genid30','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/xmlrdf.git').
 retract('_:genid30','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('8dd608b628c456c41b214d698ad3ee0244e46f65')).
 retract('http://prologmoo.com:3020/packs/xmlrdf/config-available/xmlrdf.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_xmlrdf)).
 retract('http://prologmoo.com:3020/packs/xmlrdf/doc/pltotex.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('pltotex/2')).
@@ -1169,7 +1169,7 @@ assert('_:genid103','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 assert('_:genid103','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('8dd608b628c456c41b214d698ad3ee0244e46f65')).
 assert('http://prologmoo.com:3020/packs/xmlrdf','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid104').
 assert('_:genid104','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid104','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/xmlrdf.git').
+assert('_:genid104','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/xmlrdf.git').
 assert('_:genid104','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('8dd608b628c456c41b214d698ad3ee0244e46f65')).
 assert('http://prologmoo.com:3020/packs/xmlrdf/config-available/xmlrdf.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(conf_xmlrdf)).
 assert('http://prologmoo.com:3020/packs/xmlrdf/doc/pltotex.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('pltotex/0')).

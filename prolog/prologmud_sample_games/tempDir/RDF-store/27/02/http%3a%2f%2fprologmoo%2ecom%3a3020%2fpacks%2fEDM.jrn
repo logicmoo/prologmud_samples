@@ -60,7 +60,7 @@ assert('_:genid43','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid43','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 assert('http://prologmoo.com:3020/packs/EDM','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid44').
 assert('_:genid44','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid44','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
+assert('_:genid44','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
 assert('_:genid44','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 assert('__http://prologmoo.com:3020/packs/EDM1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/EDM1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/swish1').
@@ -209,7 +209,7 @@ retract('_:genid43','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','http
 retract('_:genid43','http://cliopatria.swi-prolog.org/schema/cpack#branch',literal(master)).
 retract('_:genid43','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 retract('http://prologmoo.com:3020/packs/EDM','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid44').
-retract('_:genid44','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
+retract('_:genid44','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
 retract('_:genid44','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 retract('__http://prologmoo.com:3020/packs/EDM1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/swish1').
 retract('__http://prologmoo.com:3020/packs/EDM1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/foaf1').
@@ -396,7 +396,7 @@ assert('_:genid101','http://cliopatria.swi-prolog.org/schema/cpack#branch',liter
 assert('_:genid101','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 assert('http://prologmoo.com:3020/packs/EDM','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid102').
 assert('_:genid102','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid102','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
+assert('_:genid102','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
 assert('_:genid102','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 assert('__http://prologmoo.com:3020/packs/EDM1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/EDM1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/rda_gr21').
@@ -586,7 +586,7 @@ retract('http://prologmoo.com:3020/packs/EDM/components/edm/graph.pl','http://cl
 retract('http://prologmoo.com:3020/packs/EDM/components/edm/graph.pl','http://cliopatria.swi-prolog.org/schema/cpack#exportsPredicate',literal('edm_context_graph/3')).
 retract('http://prologmoo.com:3020/packs/EDM/components/edm/components.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('iri_xml_namespace/3')).
 retract('http://prologmoo.com:3020/packs/EDM/web/icons/ad_secret_agent.png','http://cliopatria.swi-prolog.org/schema/cpack#path',literal('web/icons/ad_secret_agent.png')).
-retract('_:genid102','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
+retract('_:genid102','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
 retract('http://prologmoo.com:3020/packs/EDM/components/edm/components.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(edm_components)).
 retract('__http://prologmoo.com:3020/packs/EDM1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/webaccess1').
 retract('_:genid102','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
@@ -660,7 +660,7 @@ assert('_:genid47','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid47','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 assert('http://prologmoo.com:3020/packs/EDM','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid48').
 assert('_:genid48','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid48','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
+assert('_:genid48','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/EDM.git').
 assert('_:genid48','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('7521933b96f1b2002a0e33be5ea9d1d232ecf4f3')).
 assert('__http://prologmoo.com:3020/packs/EDM1','http://xmlns.com/foaf/0.1/mbox_sha1sum',literal('978960dc2b55569afc442ae1a6f1a617e013d732')).
 assert('__http://prologmoo.com:3020/packs/EDM1','http://www.w3.org/2002/07/owl#sameAs','__http://prologmoo.com:3020/packs/webaccess1').

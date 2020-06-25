@@ -42,7 +42,7 @@ assert('_:genid53','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid53','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('81ef5d1ac0d18284dc87e75feb9b41b63f27c607')).
 assert('http://prologmoo.com:3020/packs/void','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid54').
 assert('_:genid54','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid54','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/void.git').
+assert('_:genid54','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/void.git').
 assert('_:genid54','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('81ef5d1ac0d18284dc87e75feb9b41b63f27c607')).
 assert('http://prologmoo.com:3020/packs/void/lib/void_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(void_schema)).
 assert('http://prologmoo.com:3020/packs/void/lib/void_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#requiresPredicate',literal('rdf_attach_library/1')).
@@ -90,7 +90,7 @@ retract('http://prologmoo.com:3020/packs/void/lib/void_schema.pl','http://cliopa
 retract('http://prologmoo.com:3020/packs/void/lib/void_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#path',literal('lib/void_schema.pl')).
 retract('http://prologmoo.com:3020/packs/void/rdf/base/void-20110616.rdf','http://cliopatria.swi-prolog.org/schema/cpack#inPack','http://prologmoo.com:3020/packs/void').
 retract('http://prologmoo.com:3020/packs/void','http://cliopatria.swi-prolog.org/schema/cpack#submittedDate',literal(type('http://www.w3.org/2001/XMLSchema#dateTime','2017-06-05T09:06:06-07:00'))).
-retract('_:genid54','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/void.git').
+retract('_:genid54','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/void.git').
 retract('http://prologmoo.com:3020/packs/void/lib/void_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#resolves','http://prologmoo.com:3020/file_ref/library(void_schema)').
 retract('http://prologmoo.com:3020/packs/void/rdf/base/Manifest.ttl','http://cliopatria.swi-prolog.org/schema/cpack#base',literal('Manifest')).
 retract('http://prologmoo.com:3020/packs/void','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Ontology').
@@ -148,7 +148,7 @@ assert('_:genid95','http://cliopatria.swi-prolog.org/schema/cpack#branch',litera
 assert('_:genid95','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('81ef5d1ac0d18284dc87e75feb9b41b63f27c607')).
 assert('http://prologmoo.com:3020/packs/void','http://cliopatria.swi-prolog.org/schema/cpack#mirrorRepository','_:genid96').
 assert('_:genid96','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://cliopatria.swi-prolog.org/schema/cpack#Repository').
-assert('_:genid96','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://gitlab/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/void.git').
+assert('_:genid96','http://cliopatria.swi-prolog.org/schema/cpack#gitURL','git://logicmoo.org/home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/cpack-mirrors/void.git').
 assert('_:genid96','http://cliopatria.swi-prolog.org/schema/cpack#hash',literal('81ef5d1ac0d18284dc87e75feb9b41b63f27c607')).
 assert('http://prologmoo.com:3020/packs/void/lib/void_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#module',literal(void_schema)).
 assert('http://prologmoo.com:3020/packs/void/lib/void_schema.pl','http://cliopatria.swi-prolog.org/schema/cpack#usesSystemFile','http://prologmoo.com:3020/file_ref/library(semweb/rdf_db)').

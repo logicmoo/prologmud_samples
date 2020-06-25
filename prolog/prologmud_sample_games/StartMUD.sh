@@ -207,7 +207,8 @@ list_descendants ()
   echo "$children"
 } 
 
-export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
+export WHOLE="gdb -x gdbinit -return-child-result --args ${RUNFILE}"
+#export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" -ex run -ex quit --args ${RUNFILE}"
 #export WHOLE="gdb -x gdbinit -return-child-result -ex \"set pagination off\" --args ${RUNFILE}"
 #export WHOLE="${RUNFILE}"
 
@@ -216,7 +217,7 @@ if [[ $UID == 0 ]]; then
 fi
 
 
-while [[ RAN_ALREADY -ne 1 ]] && [[ $COMMAND_LAST -ne 666 ]] && [[ $COMMAND_LAST -ne 9 ]] && [[ $COMMAND_LAST -ne 1 ]] && [[ $COMMAND_LAST -ne 137 ]];
+while [[ RAN_ALREADY -ne 1 ]] && [[ $COMMAND_LAST -ne 666 ]] && [[ $COMMAND_LAST -ne 9 ]] && [[ $COMMAND_LAST -ne 4 ]] && [[ $COMMAND_LAST -ne 137 ]];
 do
      echo "You should rarely see this";    
   
@@ -314,7 +315,7 @@ wasdir=""
 
       reset -c -Q -w -I -w
       sleep 2
-      if [[ "$COMMAND_LAST" == "4" ]]; then
+      if [[ "$COMMAND_LAST" == "1" ]]; then
          cls
       fi
      )
