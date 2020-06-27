@@ -12,13 +12,42 @@
 %:- add_history(plweb:with_mutex(plweb_init, server_init)).
 %:- endif.
 
+:- shell('./PreStartMUD.sh').
+
 :- current_prolog_flag('argv',Is),writeq(set_prolog_flag('argv',Is)),!,nl.
 
 :- use_module(library(logicmoo_utils)).
+:- use_module(library(logicmoo_common)).
 
-:- shell('./PreStartMUD.sh').
+
+%:- list_autoload.
+:- autoload_all.
+%:- list_autoload.
+
 
 :- user:['/opt/logicmoo_workspace/packs_web/swish/remote_swish.pl'].
+
+:- noguitracer.
+%:- if(current_prolog_flag(argv,[])).
+%  sudo -u prologmud_server gdb -x gdbinit -return-child-result -ex "set pagination off" -ex run -ex quit --args swipl -l run_mud_server.pl --all --world --repl --lisp --lispsock --sumo --planner --nonet --repl --noworld
+:- if(\+ ((current_prolog_flag(argv,X),member(E,X),atom_concat('--',_,E)))).
+:- current_prolog_flag('argv',WasArgV),
+   append(WasArgV,[         
+   '--','--all','--pdt','--world','--repl','--lisp','--lispsock','--sumo', '--planner',
+   '--cliop','--sigma','--www', '--irc','--swish','--docs','--plweb',   
+   '--no-fork', '--workers=16', '--port=3020', 
+   %'--user=www-data',
+   % '--nonet' '--noworld',
+   '--logtalk',
+   '--elfinder', '--defaults' ], NewArgV),
+   set_prolog_flag('argv',NewArgV).
+:- endif.
+
+:- current_prolog_flag('argv',Is),writeq(set_prolog_flag('argv',Is)),!,nl.
+
+
+:- user:use_module(library(eggdrop)).
+:- egg_go.
 
 
 :- user:ensure_loaded(library(lps_corner)).
@@ -76,36 +105,26 @@
 
 % :- prolog_load_context(directory,D),cd(D).
 
-
-%:- if(current_prolog_flag(argv,[])).
-%  sudo -u prologmud_server gdb -x gdbinit -return-child-result -ex "set pagination off" -ex run -ex quit --args swipl -l run_mud_server.pl --all --world --repl --lisp --lispsock --sumo --planner --nonet --repl --noworld
-:- if(\+ ((current_prolog_flag(argv,X),member(E,X),atom_concat('--',_,E)))).
-:- current_prolog_flag('argv',WasArgV),
-   append(WasArgV,[         
-   '--','--all','--pdt','--world','--repl','--lisp','--lispsock','--sumo', '--planner',
-   '--cliop','--sigma','--www', '--irc','--swish','--docs','--plweb',   
-   '--no-fork', '--workers=16', '--port=3020', 
-   %'--user=www-data',
-   % '--nonet' '--noworld',
-   '--logtalk',
-   '--elfinder', '--defaults' ], NewArgV),
-   set_prolog_flag('argv',NewArgV).
-:- endif.
-
-
 :- attach_packs('/opt/logicmoo_workspace/packs_web/plweb/packs').
-
-:- current_prolog_flag('argv',Is),writeq(set_prolog_flag('argv',Is)),!,nl.
 % :- cpack_install([prov,amalgame,skos,cpack_repository,media_cache,'EDM','cloud',trill_on_swish,ecdemo,command,rdf_qa,waisda,jquery,accurator,pirates,cluster_search_ui,skos_browser,tag_matcher,statistics,opmv,vumix]).
 
 :- pack_list_installed.
 
+:- add_history(srv_mu_main).
+:- add_history(mu:srv_mu).
+:- add_history(mpred_why(mudIsa(iCoffeeCup7, tSpatialThing))).
+
+:- add_history(make:make_no_trace).
+:- add_history(shell('./PreStartMUD.sh')).
+:- add_history([pack(logicmoo_base/t/examples/fol/'einstein_simpler_03.pfc')]).
+%:- add_history((+ 1 = '$VAR'('X'))). % PuttY
+:- add_history((+ 1 = _Y)).
+
+:- break.
+
+%:- load_library_system(library(logicmoo_nlu)).
 
 
-
-:- listing(handler).
-:- listing(file_search_path).
-:- threads.
 
 
 :- set_prolog_flag(ec_loader,false).
@@ -123,11 +142,17 @@
 % https://logicmoo.org:3020/pldoc/pack/
 %:- asserta((pldoc_http:doc_enabled:-!)).
 
+:- set_prolog_flag(gc,true).
+:- garbage_collect.
+
 % ==============================================
 % [Required] Load the Logicmoo User System
 % ==============================================
 :- baseKB:ensure_loaded(library(logicmoo_lib)).
 
+
+:- set_prolog_flag(gc,true).
+:- garbage_collect.
 
 % ==============================================
 % ============= MUD SERVER CODE LOADING =============
@@ -138,11 +163,7 @@
 
 :- set_prolog_flag(gc,true).
 :- garbage_collect.
-:- add_history(srv_mu_main).
-:- add_history(mu:srv_mu).
-:- add_history(mpred_why(mudIsa(iCoffeeCup7, tSpatialThing))).
 
-:- add_history(shell('./PreStartMUD.sh')).
 
 /*
 :- break.
