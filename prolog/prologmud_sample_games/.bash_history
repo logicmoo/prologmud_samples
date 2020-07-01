@@ -505,3 +505,356 @@ su - prologmud_server
 ./StartMUD.sh
 ls
 ./StartMUD.sh
+./StartMUD.sh
+ls
+./PreStartMUD.sh 
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+grep mpred_core /opt/logicmoo_workspace/packs_sys -r
+grep mpred_core /opt/logicmoo_workspace/packs_sys -r --include="*.pl"
+grep mpred_core /opt/logicmoo_workspace/packs_sys/logicmoo_nlu/ -r --include="*.pl"
+./StartMUD.sh
+cls
+./StartMUD.sh
+cls
+./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+killall -9 xterm
+killall -9 xterm
+killall -9 swipl
+killall -9 swipl
+ps axf
+top
+top
+ps xf
+kill -9  6800
+kill -9  6800
+fg
+cls ; ./StartMUD.sh
+killall -9  swipl
+killall -9  swipl
+ps xf
+kill -9  8528    8513
+kill -9  8528    8513
+ps xf
+killall -9  swipl
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+ps x
+ps xf
+ps xfa
+cls ; ./StartMUD.sh
+ps ax
+ps xf
+kill -9  41137
+kill -9  41137
+kill -9  41137
+fg
+kill -9  41137
+ps xf
+fg
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls
+gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls
+gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+e
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=16g -l run_mud_server.pl
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+rm -rf .config/swi-prolog/dir-history/F5*
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+cls ; gdb -x gdbinit -return-child-result --args swipl --signals=true --stack_limit=64g -l run_mud_server.pl
+./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+killall -9 swipl
+killall -1 swipl
+killall -16 swipl
+killall -15 swipl
+killall -1 swipl
+killall -0 swipl
+killall -2 swipl
+killall -3 swipl
+killall -4 swipl
+killall -6 swipl
+killall -5 swipl
+killall -5 swipl
+killall -5 swipl
+killall -5 swipl
+killall -5 swipl
+ps axf
+kill -9 108169  98420 108172
+ps axf
+ps axf
+ps axf
+kill -9 108169  98420 108172 11065
+kill -9 108169  98420 108172 1106595 1106596
+ps axf
+ps axf
+kill -9 108169  98420 108172 1106595 1106596 110655
+killall swipl
+killall /usr/local/bin/swipl
+killall /usr/local/bin/swipl
+killall -9 /usr/local/bin/swipl
+vi StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+killall -9 swipl
+ps xf
+killall -9 /usr/local/bin/swipl
+killall -9 /usr/local/bin/swipl
+ps xf
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -debug -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+./logicmoo_server_t1 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+cat /opt/logicmoo_workspace/packs_web/ClioPatria/user/user_db.pl
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l compile_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl 
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+cls
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+./logicmoo_server 
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --repl --lisp --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --all --pdt --world --lispsock --sumo --planner --cliop --sigma --www --irc --swish --docs --plweb --no-fork --workers=16 --port=3020 --logtalk --elfinder --defaults
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+./logicmoo_server 
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl -- --hi
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl --
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl --
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+./logicmoo_server 
+./logicmoo_server 
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+ swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+cls ;  swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+./logicmoo_server 
+./logicmoo_server -g prolog
+./logicmoo_server -g prolog
+./logicmoo_server -g prolog
+./logicmoo_server -g prolog
+./logicmoo_server -g prolog
+./logicmoo_server -g prolog
+rm ./logicmoo_server 
+cls ;  swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+cls ;  swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+cls ;  swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+cls ;  swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+swipl
+swipl
+./logicmoo_server 
+./logicmoo_server 
+cls ;  swipl --signals=true --stack_limit=32g -l run_mud_server.pl
+cls ;  swipl --signals=true --stack_limit=32g -l baseKB:run_mud_server.pl
+cls ;  swipl --signals=true --stack_limit=32g -g "[run_mud_server]"
+cls ;  swipl --signals=true --stack_limit=32g -g "baseKB:[run_mud_server]"
+cls ;  swipl --signals=true --stack_limit=32g -g "baseKB:[run_mud_server]"
+cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
+cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
+cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
+cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
