@@ -917,3 +917,23 @@ which butterfly.server.py
 pip install butterfly
 which butterfly.server.py
 butterfly.server.py
+cd ~prologmud_server/eggdrop/conf/
+eggdrop
+which butterfly.server.py
+./on_boot.sh 
+screen -r
+./StartMUD.sh
+./PreStartMUD.sh 
+./StartMUD.sh
+rm logicmoo_server
+./StartMUD.sh
+rm logicmoo_server
+./StartMUD.sh
+rm logicmoo_server
+./StartMUD.sh
+kill -9 &1
+kill -9 &1
+kill -9 &1
+kill -9 %1
+kill -9 %1
+fg

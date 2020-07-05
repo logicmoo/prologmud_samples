@@ -156,7 +156,8 @@ function start_redirect {
    lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
    # local RLWRAP="rlwrap -a -A -r -c -N -r --file=${COMP} --history-filename=${HIST} -s 1000"
    # START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd='telnet localhost ${PORT}' &"
-   local START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
+   # local START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
+   local START_REDIR="nohup butterfly.server.py --debug --allow-html-escapes=True --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
    echo $START_REDIR   
    eval $START_REDIR & 
 }

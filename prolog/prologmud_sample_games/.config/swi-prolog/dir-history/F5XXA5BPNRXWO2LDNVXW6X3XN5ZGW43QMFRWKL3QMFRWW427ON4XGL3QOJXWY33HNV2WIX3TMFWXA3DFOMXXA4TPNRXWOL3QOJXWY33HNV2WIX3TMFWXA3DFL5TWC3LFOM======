@@ -1,9 +1,4 @@
 _HiStOrY_V2_
-load_library_system(library(logicmoo_planner)).\040
-[user:init_mud_server].\040
-[user:run_mud_server].\040
-consult(library(prologmud_sample_games/run_mud_server)).\040
-logicmoo_swilib:add_history_ideas.\040
 logicmoo_swilib:dmsg(start_x_ide).\040
 gripe_time(40,if_file_exists(ensure_loaded(system:logicmoo_swilib))).\040
 logicmoo_lib:gripe_time(40,if_file_exists(ensure_loaded(logicmoo_lib:library(logicmoo_typesystem)))).\040
@@ -96,6 +91,11 @@ start_all.\040
 start_mud_telnet.\040
 lar.\040
 lst.\040
-+\0401=_38528.\040
++\0401=_32794.\040
+make.
+baseKB:gripe_time(40,if_file_exists(ensure_loaded(baseKB:library(logicmoo_network)))).\040
+gripe_time(40,if_file_exists(ensure_loaded(system:library(logicmoo_lib)))).\040
+baseKB:gripe_time(40,if_file_exists(ensure_loaded(baseKB:library(logicmoo_webbot)))).\040
+baseKB:start_telnet.\040
 qsave_logicmoo.
 load_after_compile.\040
