@@ -21,6 +21,7 @@ else
     echo "The script WAS NOT sourced."
 fi
 
+
 # #( mkdir -p /tmp/tempDir/ ; cp -a tempDir/?* /tmp/tempDir/?* ;  cd  /tmp/tempDir/ ; ln  -s * -r /home/prologmud_server/lib/swipl/pack/prologmud_samples/prolog/prologmud_sample_games/ )
 
 #cls ; killall -9 swipl perl ; killall -9 swipl perl ;  swipl --irc --world --repl -g "[run_mud_server]" -s run_clio.pl
@@ -42,8 +43,14 @@ pathmunge () {
            fi
         fi
 }
+
 export LOGICMOO_WS=/opt/logicmoo_workspace
-pathmunge $LOGICMOO_WS/bin:$PATH
+
+pathmunge $LOGICMOO_WS/bin
+pathmunge /opt/logicmoo_workspace/packs_web/butterfly
+pathmunge /opt/anaconda3/bin
+
+echo PATH=$PATH
 
 pidof  eggdrop >/dev/null
 if [[ $? -ne 0 ]] ; then
@@ -97,14 +104,13 @@ echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
 # killall -9 swipl-prologmud
        
 export SWIPL="$LOGICMOO_WS/bin/swipl-prologmud -o"
-export SWIPL="swipl-prologmud -o"
-      #"-G18G -L18G -T18G"
+export SWIPL="swipl-prologmud -o" 
+#"-G18G -L18G -T18G"
 # export SWIPL="swipl --signals=true --stack_limit=16g --pce=false "
 export SWIPL="swipl --signals=true --stack_limit=32g "
 #swipl run_mud_server.pl
-export CMDARGS="-l run_mud_server.pl $* --all --world --repl --lisp --lispsock --sumo --planner"
+export CMDARGS="-l run_mud_server.pl $* --all --world --lispsock --sumo --planner"
 export CMDARGS="-l run_mud_server.pl $*"
-#CMDARGS=+" --sigma --www --docs --cliop --swish --plweb --elfinder"
 #CMDARGS=+" --sigma --www --docs --cliop --swish --plweb --elfinder"
 #CMDARGS=+" --tinykb --fullkb --rcyc --logtalk --nlu --pdt --irc"
 
@@ -142,8 +148,17 @@ function start_redirect_ttyd {
 function start_redirect {
    local PORT=$((0+$1))
    local PORT100=$((100 + $1))
+   local HIST=history_$1
+   local COMP=completion_$1
+   touch $HIST
+
+   touch $COMP
    lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
-   nohup websocket_redir.sh butterfly $PORT $PORT100 &
+   # local RLWRAP="rlwrap -a -A -r -c -N -r --file=${COMP} --history-filename=${HIST} -s 1000"
+   # START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd='telnet localhost ${PORT}' &"
+   local START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
+   echo $START_REDIR   
+   eval $START_REDIR & 
 }
 
      
@@ -217,15 +232,16 @@ if [[ $UID == 0 ]]; then
   export WHOLE="sudo -u prologmud_server ${WHOLE}"
 fi
 
+echo "LOGICMOO_BASE_PORT=${LOGICMOO_BASE_PORT}"
 
 while [[ RAN_ALREADY -ne 1 ]] && [[ $COMMAND_LAST -ne 666 ]] && [[ $COMMAND_LAST -ne 9 ]] && [[ $COMMAND_LAST -ne 4 ]] && [[ $COMMAND_LAST -ne 137 ]];
 do
-     echo "You should rarely see this";    
-  
-      
+         
    if [[ $COMMAND_LAST -ne 4 ]]; then
+      echo "You should rarely see this";
       echo cls_putty
    fi
+
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "~~~~~~~~~~~~~KILL PREV~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -268,6 +284,7 @@ wasdir=""
 
          wasdir=$(dirname -- $0)
          # cd $LOGICMOO_WS/packs_web/wetty
+         rm -f nohup.out
          start_redirect $(($LOGICMOO_BASE_PORT+0))
          start_redirect $(($LOGICMOO_BASE_PORT+1))
          start_redirect $(($LOGICMOO_BASE_PORT+2))
@@ -275,6 +292,7 @@ wasdir=""
          start_redirect $(($LOGICMOO_BASE_PORT+23))
          start_redirect $(($LOGICMOO_BASE_PORT+25))
          start_redirect $(($LOGICMOO_BASE_PORT+301))
+         cat nohup.out
          cd $wasdir
      fi
           
@@ -291,6 +309,10 @@ wasdir=""
      echo LOGICMOO_WS=$LOGICMOO_WS
      echo LOGICMOO_BASE_PORT=$LOGICMOO_BASE_PORT
      echo "~~Run~~"
+      FILE=./logicmoo_server
+      if test -f "$FILE"; then
+          WHOLE=$FILE
+      fi 
      echo $WHOLE
      echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
      echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"

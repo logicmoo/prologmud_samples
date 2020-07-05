@@ -858,3 +858,62 @@ cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
 cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
 cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
 cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
+./on_boot.sh 
+df
+cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
+cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
+./PreStartMUD.sh 
+cls ;  swipl --signals=true --stack_limit=32g -l "run_mud_server"
+./PreStartMUD.sh 
+./StartMUD.sh
+lsof
+cls
+./StartMUD.sh
+./StartMUD.sh
+git status
+ls
+lsof
+git status
+cp StartMUD.sh
+cp StartMUD.sh StartMUD.sh
+cp StartMUD.sh StartMUD.back
+cp StartMUD.sh StartMUD.backrm  compile_mud_server.qlf 
+rm  compile_mud_server.qlf 
+rm qt ct
+cat 2
+rm 2
+ls
+./StartMUD.sh
+cls
+./StartMUD.sh
+. ~/.profile
+./StartMUD.sh
+./StartMUD.sh
+echo $PATH
+./StartMUD.sh
+./StartMUD.sh
+cat nohup.out
+cd /opt/logicmoo_workspace/packs_web/butterfly/
+./butterfly.server.py 
+make
+git pull
+git status
+cd ..
+cp -a butterfly butterfly-back
+./StartMUD.sh
+cat nohup.out 
+rm nohup.out 
+./StartMUD.sh
+cat nohup.out 
+rm nohup.out 
+./StartMUD.sh
+cat nohup.out 
+vi /opt/logicmoo_workspace/bin/websocket_redir.sh
+cat nohup.out 
+rm nohup.out 
+./StartMUD.sh
+cat nohup.out 
+which butterfly.server.py
+pip install butterfly
+which butterfly.server.py
+butterfly.server.py
