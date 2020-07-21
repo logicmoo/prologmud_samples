@@ -937,3 +937,537 @@ kill -9 &1
 kill -9 %1
 kill -9 %1
 fg
+./StartMUD.sh
+cls
+./StartMUD.sh
+kill -9 %1
+kill -9 %1
+./StartMUD.sh
+rm logicmoo_server
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+rm logicmoo_server
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+rm logicmoo_server
+cls ; ./StartMUD.sh
+rm logicmoo_server
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+rm logicmoo_server
+cls ; ./StartMUD.sh
+fg
+cat compile_mud_server.pl 
+pwd
+cd /opt/logicmoo_workspace/packs_web/swish
+mv data data-hide
+cd /opt/logicmoo_workspace/packs_web/swish
+./daemon.pl --port=3020
+ln -s /home/prologmud_server/data 
+ls
+./daemon.pl --port=3020
+ls -l
+ls data/
+ls data -l
+ls -l
+cat vi
+mv vi extra_paths.pl
+ls
+./daemon.pl --port=3020
+grep http:cors . -r
+grep cors . -r
+grep cors . -r
+grep cors . -r --include="*.pl"
+./daemon.pl --port=3020
+./daemon.pl --port=3020
+./daemon.pl --port=3020
+fg
+ps axf
+lsof 3020
+cat ~prologmud_server/StartMUD.sh
+  lsof -t -i:3020
+kill -9 31639 
+kill -9 31639 
+./daemon.pl --port=3020
+  lsof -t -i:3020
+kill -9 `  lsof -t -i:3020`
+kill -9 `  lsof -t -i:3020`
+./run.pl --port=3020
+ls
+chmod +x run.pl
+./run.pl --port=3020
+swipl ./run.pl --port=3020
+swipl ./run.pl --port=3020 --public
+cat run_swish_and_clio.pl 
+cat ~prologmud_server/compile_mud_server.pl 
+swipl ./run.pl --port=3020 --public
+cp web web-ORIG -a
+ls
+unzip swish-bower-components.zip -d web
+unzip swish-node-modules.zip -d web
+unzip swish-node-modules.zip -d .
+cd web
+ls
+rm -rf web
+ls
+cd ..
+swipl ./run.pl --port=3020 --public
+swipl ./run.pl --port=3020 --public
+swipl ./run.pl --port=3020 --public
+swipl ./run.pl --port=3020 --public
+cd web
+ls
+ln -s node_modules bower_components
+ls
+find -name "*ACE*"
+find -name "*ace*"
+cd web/
+ls
+rsync -avr bower_components/* ../node_modules/
+rsync -avr bower_components/* ../node_modules/
+rsync -avr bower_components/* ../node_modules/
+rsync -avr bower_components/* ../node_modules/
+rsync -avru bower_components/* ../node_modules/
+rsync -avrx bower_components/* ../node_modules/
+rsync 
+rsync -avrh bower_components/* ../node_modules/
+rsync -avrhu bower_components/* ../node_modules/
+rsync -avrhuI bower_components/* ../node_modules/
+rsync -avrhuI bower_components/* ../node_modules/
+cd ..
+rm -rf web/
+cd /opt/logicmoo_workspace/packs_web/swish
+rm -rf web/web/
+ls
+ls web
+ls web/node_modules/
+ls web
+ls web/node_modules/
+swipl ./run.pl --port=3020 --public
+swipl ./run.pl --port=3020 --public
+grep dicts_to_same_keys . -r
+vi swish.pl 
+swipl ./run.pl --port=3020 --public
+cd ..
+cd swish-TryIT2/
+swipl ./run.pl --port=3020 --public
+cd /opt/logicmoo_workspace/packs_web/swish-TryIT2
+swipl ./run.pl --port=3020 --public
+cp /opt/logicmoo_workspace/packs_web/swish/run.pl .
+chmod +x run.pl 
+swipl ./run.pl --port=3020 --public
+mv swish.pl swish-works.pl 
+cp /opt/logicmoo_workspace/packs_web/swish/swish.pl .
+swipl ./run.pl --port=3020 --public
+mkdir log
+swipl ./run.pl --port=3020 --public
+swipl ./run.pl --port=3020 --public
+cd ..
+cp /mnt/sde1/packs_web/swish-with-filesystem-interaction-REAL~/ swish-FSI1 -a
+cp -a /mnt/sde1/packs_web/swish-with-filesystem-interaction-REAL~ /opt/logicmoo_workspace/packs_web/swish-FSI-R
+cd  /opt/logicmoo_workspace/packs_web/swish-FSI-R
+cd  /opt/logicmoo_workspace/packs_web/swish-FSI-R
+cd  /opt/logicmoo_workspace/packs_web/swish-FSI-R/
+cd  /opt/logicmoo_workspace/packs_web/swish-FSI-R/
+cd  /opt/logicmoo_workspace/packs_web/swish-FSI-R
+ls
+cd /opt/logicmoo_workspace/packs_web/swish-friguzzi
+ls
+cat README.md 
+ mkdir -p config-enabled
+ (cd config-enabled && ln -s ../config-available/auth_http_always.pl)
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+ sudo npm install -g jsdoc
+npm install -g jsdoc
+npm install -g jsdoc
+docker run -d -p 3050:3050 --volumes-from rserve -v $(pwd):/data swipl/swish
+cd /opt/logicmoo_workspace/packs_web/swish-friguzzi
+ls
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+ls
+  yarn
+    make 
+  yarn
+  git submodule update --init
+  yarn
+  make packs
+  yarn
+    make src
+    make src
+wget http://www.swi-prolog.org/download/swish/swish-node-modules.zip.
+wget http://www.swi-prolog.org/download/swish/swish-node-modules.zip
+make zip
+ls
+  make yarn-zip
+ls
+make src
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd pack/rserve_client/
+ls
+make
+ls
+. /opt/logicmoo_workspace/packs_lib/phil/buildenv.sh ; make
+ls
+ls lib
+ls lib/x86_64-linux/
+cd ..
+ls
+cd ..
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+ls
+cat myswish.pl 
+ls
+cat ide.pl 
+export DISPLAY='192.168.88.1:0.0' 
+cat ide.pl 
+ls config-enabled/
+cat config-enabled/r_serve.pl 
+cat config-available/chat80.pl 
+cd config-enabled/
+l;s
+ln -s ../config-available/* .
+ls
+cd ..
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd pack/
+cd hdt/
+ls
+. /opt/logicmoo_workspace/packs_lib/phil/buildenv.sh ; make
+cd -
+cd ..
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cat /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/sshd.pl
+swipl
+cd pack/
+ls
+git checkout https://github.com/JanWielemaker/libssh
+git clone  https://github.com/JanWielemaker/libssh
+cd libssh/
+ls
+cat README.md 
+apt install libshh-dev
+cat README.md 
+ls
+cmake
+ls
+cd cmake/
+ls
+cd ..
+mkdir build
+cd build/
+cmake ..
+ls
+make
+ls
+make install
+ls /opt/logicmoo_workspace/packs_web/swish-friguzzi/pack/libssh/lib/x86_64-linux/
+ls /opt/logicmoo_workspace/packs_web/swish-friguzzi/pack/libssh/lib/x86_64-linux/
+cd ..
+cd ..
+cd ..
+cat /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/sshd.pl
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cat /opt/logicmoo_workspace/packs_web/swish-friguzzi/pack/wordnet/README.md 
+ export  WNDB=/opt/logicmoo_workspace/packs_sys/logicmoo_nlu/ext/pldata/WNprolog-3.0/prolog
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cat  /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/gitty_files.pl
+cat  /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/gitty_files.pl
+cls
+cat  /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/gitty_files.pl
+find -name "storage.pl"
+vi config-available/gitty/Hangout.swinb 
+vi /dmiles-setpaths.pl 
+cat  /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/gitty_files.pl
+vi /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/gitty_files.pl
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+mv /opt/logicmoo_workspace/packs_sys/hdt/pack.pl /opt/logicmoo_workspace/packs_sys/hdt/pack.pl.hide
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+ls
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public -g run_swish
+cd ../
+mv swish swish-mine
+ln -s swish-friguzzi swish
+ls
+cd swish
+swipl -l /dmiles-setpaths.pl run.pl -g run_swish --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl -g run_swish --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl -g run_swish --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+git checkout lib/page.pl
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+vi run.pl 
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+vi run.pl 
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+vi run.pl 
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cp ../swish-mine/web/node_modules/ace /web/node_modules -a
+cp ../swish-mine/web/node_modules/ace web/node_modules -a
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+ls web/node_modules/ace/build/src/keybinding-
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+grep vre4 . -r
+rm data/log/httpd.log
+grep vre4 . -r
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+grep vre4 . -r
+rm ./data/log/httpd.lo
+rm ./data/log/httpd.log
+cls
+grep vre4 . -r
+vi ./config-available/branding.pl
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd .
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd /opt/logicmoo_workspace/packs_web/swish
+ swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+ swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd web/js
+git status
+git status .
+find -name "*.bak" 
+find -name "*.bak"  -delete 
+git status .
+git diff
+git diff tabbed.js
+git checkout tabbed.js
+git checkout tabbed.js 
+cd /opt/logicmoo_workspace/packs_web/swish-friguzzi
+ls
+cat config-available/r_serve.pl 
+cls
+cat config-available/r_serve.pl 
+swipl run.pl
+cls
+cat README.md 
+docker kill rserv
+docker kill rservv
+docker kill rserv
+su - 
+cd /opt/logicmoo_workspace/packs_web/swish/web/js
+cd ..
+git status .
+cd ..
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd ../..
+find -name "pakcs"
+find -name "pakcs" -maxdepth 2
+find . -name "pakcs" -maxdepth 2
+find -name "pakcs" -maxdepth 2 .
+cd packs_sys/
+git clone https://git.ps.informatik.uni-kiel.de/curry/pakcs.git
+cd /opt/logicmoo_workspace/packs_web/swish
+cd /opt/logicmoo_workspace/packs_web/swish
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+mkdir /opt/logicmoo_workspace/packs_web/lps_corner/prolog/dialect/lps_autoload
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd .
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd web/
+;s
+ls
+ln -s ../../swish-teamspoon/web/node_modules .
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd ..
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+mkdir data
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cp -a ../swish-teamspoon/config-enabled .
+ls config-enabled/
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+cd .
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+vi swish.pl 
+vi swish.pl 
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
+killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run_swish_and_clio.pl --port=3020 --public
+su - prologmud_server 
+cd /opt/logicmoo_workspace/html/elFinder
+ composer require kunalvarma05/dropbox-php-sdk
+cd /opt/logicmoo_workspace/html/elFinder
+ composer require kunalvarma05/dropbox-php-sdk
+ls
+cat composer.json 
+ls -l
+cd /opt/logicmoo_workspace/html/elFinder
+ composer require kunalvarma05/dropbox-php-sdk
+ composer require studio-42/elfinder
+ composer install
+ composer help
+ composer install 
+ composer show
+ composer update
+cd php
+ls
+ls ..
+ln -s ../vendor .
+ls
+ composer require kunalvarma05/dropbox-php-sdk
+ composer require kunalvarma05/dropbox-php-sdk
+cat ../composer.
+cat ../composer.json 
+ composer require kunalvarma05/dropbox-php-sdk "google/apiclient" google/apiclient:^2.0 barryvdh/elfinder-flysystem-driver nao-pon/flysystem-google-drive
+./StartMUD.sh
+./PreStartMUD.sh 
+./PreStartMUD.sh 
+rm /tmp/tempDir/httpd.log
+./PreStartMUD.sh 
+./StartMUD.sh
+./StartMUD.sh
+./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls
+rm ./logicmoo_server
+cls ; ./StartMUD.sh
+rm ./logicmoo_server
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+cls ; ./StartMUD.sh
+killall -9 swipl
+cls ; ./StartMUD.sh
+ps axf | grep 3020
+netstat -an | grep 3020
+netstat -anp | grep 3020
+killall -9 118485  121249 
+kill -9 118485  121249 
+kill -9 118485  121249 
+netstat -anp | grep 3020
+kill -9 118485  121249 118969
+netstat -anp | grep 3020
+netstat -anp | grep 3020
+fg
+fg
+netstat -anp | grep 3020
+netstat -anp | grep 3020
+kill -9 118485  121249 118969 118971
+netstat -anp | grep 3020
+ps axf

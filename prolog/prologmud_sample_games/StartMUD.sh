@@ -114,7 +114,7 @@ export CMDARGS="-l run_mud_server.pl $*"
 #CMDARGS=+" --sigma --www --docs --cliop --swish --plweb --elfinder"
 #CMDARGS=+" --tinykb --fullkb --rcyc --logtalk --nlu --pdt --irc"
 
-#unset DISPLAY
+unset DISPLAY
 
 nvm use 8.0.0
 nvm use --delete-prefix v8.0.0 --silent
@@ -156,8 +156,8 @@ function start_redirect {
    lsof -t -i:$PORT100 | xargs --no-run-if-empty kill -9
    # local RLWRAP="rlwrap -a -A -r -c -N -r --file=${COMP} --history-filename=${HIST} -s 1000"
    # START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd='telnet localhost ${PORT}' &"
-   # local START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
-   local START_REDIR="nohup butterfly.server.py --debug --allow-html-escapes=True --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
+   local START_REDIR="nohup butterfly.server.py --debug --i-hereby-declare-i-dont-want-any-security-whatsoever --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
+   # local START_REDIR="nohup butterfly.server.py --debug --allow-html-escapes=True --unsecure --host=0.0.0.0 --port=${PORT100} --cmd=\"/usr/bin/rlwrap -a -A -r -c -N -r --history-filename=history_3000 -s 1000 /usr/bin/telnet localhost ${PORT}\" "
    echo $START_REDIR   
    eval $START_REDIR & 
 }
@@ -246,6 +246,12 @@ do
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "~~~~~~~~~~~~~KILL PREV~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+
+    if [ `whoami` != 'root' ]
+      then
+        killall -9  swipl
+        killall -9  /usr/bin/swipl
+    fi
     echo kill -9 $(list_descendants $MY_PID)
     # kill -9 $(list_descendants $MY_PID)
     #swipl forks xterm making it not die until the xterm it launched is dead

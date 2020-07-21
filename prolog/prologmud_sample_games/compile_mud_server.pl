@@ -167,7 +167,7 @@ check_startup_flags:-
    ignore((  
            \+ ((member(E,WasArgV), 
                 atom_concat('--',_,E))),
-         append(WasArgV,[
+   append(WasArgV,[
    '--',
    '--all', % all default options (in case there are new ones!)
    '--pdt', % Prolog Development for Eclipse
@@ -317,9 +317,9 @@ do_setup_history:-
   add_history(input_to_forms("( #\\a #\\u0009 . #\\bell )",'$VAR'('O'),'$VAR'('Vs'))),
   add_history(tstl),
   add_history(qconsult_kb7166),
-  add_history(load_lps_corner),  
+  add_history(load_lps_corner),
   add_history(qsave_logicmoo),
-  add_history(load_after_compile),
+  add_history(start_all),
   add_history(load_before_compile),
   add_history(adventure),
   add_history(start_all),
@@ -382,30 +382,31 @@ expose_all:-
 
 load_before_compile:- 
    mud_baseKB,
-   %autoload_all([verbose(true)]),
-   baseKB:use_module(library(logicmoo_clif)),
-   baseKB:ensure_loaded(library('logicmoo/common_logic/common_logic_clif.pfc')),
-   baseKB:ensure_loaded(library('logicmoo/common_logic/common_logic_sumo.pfc')),
-   add_history(try_zebra),
-   %autoload_all([verbose(true)]),
-   user:ensure_loaded('/opt/logicmoo_workspace/packs_web/swish/remote_swish.pl'),
-   %autoload_all([verbose(true)]),
+   user:ensure_loaded('/opt/logicmoo_workspace/packs_web/swish/run_swish_and_clio.pl').
+
+start_network:- 
+   egg_go,
+   shell('./PreStartMUD.sh'),
+   broadcast:broadcast(http(pre_server_start)),
+   cp_server:cp_server([]),
+   broadcast:broadcast(http(post_server_start)),
+   swish:start_swish_stat_collector,!.
+   
+load_rest:-
+      baseKB:use_module(library(logicmoo_clif)),
+      baseKB:ensure_loaded(library('logicmoo/common_logic/common_logic_sumo.pfc')),
+      add_history(try_zebra),
    baseKB:ensure_loaded(library(logicmoo_mud)),
-   %autoload_all([verbose(true)]),
    baseKB:ensure_loaded(library(logicmoo_nlu)),
-   autoload_all([verbose(true)]),
-   add_history(load_after_compile),
+   add_history(start_all),
    add_history(qsave_logicmoo),
    nodebug,
-   (current_prolog_flag(gui_tracer,true)->noguitracer;true),
+  (current_prolog_flag(gui_tracer,true)->noguitracer;true),
    % run_before_qsave,
    do_setup_history,
    finish_processing_world,
-   !.
+  !.
 
-:- if(\+ prolog_load_context(reloading,true)).
-:- load_before_compile.
-:- endif.
 
 
 
@@ -424,26 +425,24 @@ qsave_logicmoo :-
        op(save),%map('logicmoo_server.map'), % foreign(no_save),
        autoload(true),       
        stand_alone(false)]),
-   add_history(load_after_compile),
+   add_history(start_all),
    !.
 
-start_all:- 
+import_some:- 
+      forall((current_predicate(baseKB:F/A),M=baseKB,functor(P,F,A),
+         (predicate_property(M:P,imported_from(RM))->true;RM=M)),
+         (RM:export(RM:F/A),rtrace:import(RM:F/A))),   
+      forall((current_predicate(M:F/A),M==baseKB,functor(P,F,A),
+         (predicate_property(M:P,imported_from(RM))->true;RM=M)),
+         (RM:export(RM:F/A),rtrace:import(RM:F/A))), !.
+
+start_rest:- 
    mud_baseKB,
-   egg_go,
-   cp_server:cp_server([]),
-   broadcast:broadcast(http(post_server_start)),
-   swish:start_swish_stat_collector,
-   forall((current_predicate(baseKB:F/A),M=baseKB,functor(P,F,A),
-      (predicate_property(M:P,imported_from(RM))->true;RM=M)),
-      (RM:export(RM:F/A),rtrace:import(RM:F/A))),   
-   forall((current_predicate(M:F/A),M==baseKB,functor(P,F,A),
-      (predicate_property(M:P,imported_from(RM))->true;RM=M)),
-      (RM:export(RM:F/A),rtrace:import(RM:F/A))),
    % rtrace,
    load_nomic_mu,% autoload_all([verbose(true)]), 
    load_lps_corner,% autoload_all([verbose(true)]), 
+   import_some,
    expose_all,
-   shell('./PreStartMUD.sh'),
    baseKB:start_runtime_mud,
    %run_setup_now,  
    baseKB:start_mud_telnet, 
@@ -453,7 +452,19 @@ start_all:-
    threads,
    !.
 
+:- set_prolog_flag(no_sandbox, true).
+:- use_module(library(pfc_lib)).
 
-:- initialization(start_all,restore).
+:- load_before_compile.
+:- initialization(start_network,restore).
+:- if(\+ compiling).
+:- initialization(start_network,now).
+:- endif.
+%:- load_rest.
+:- initialization(start_rest,restore).
+:- if(\+ compiling).
+%:- initialization(start_rest,now).
+:- endif.
+% :- initialization(qsave_logicmoo, main).
 
 
