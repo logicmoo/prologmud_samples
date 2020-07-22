@@ -1,4 +1,5 @@
 _HiStOrY_V2_
+loadTinyKB.\040
 threads.\040
 run_pending_inits.\040
 use_module(library(sexpr_reader)).\040
@@ -15,6 +16,7 @@ load_library_system(library(logicmoo_planner)).\040
 [user:run_mud_server].\040
 consult(library(prologmud_sample_games/run_mud_server)).\040
 try_zebra.\040
+dumpST.
 mpred_why(mudIsa(iCoffeeCup7,tSpatialThing)).\040
 make:make_no_trace.\040
 shell('./PreStartMUD.sh').\040
@@ -97,5 +99,3 @@ load_library_system(library(logicmoo_planner)).\040
 [user:init_mud_server].\040
 [user:run_mud_server].\040
 consult(library(prologmud_sample_games/run_mud_server)).\040
-try_zebra.\040
-dumpST.
