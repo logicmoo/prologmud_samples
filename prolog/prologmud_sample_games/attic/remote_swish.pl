@@ -344,7 +344,7 @@ pet:- pengine_rpc("http://prologmoo.com:3020",
    wdmsg(sin_table(X,Y)).
 
 
-:- debug.
+%:- debug.
 
 :- swish.
 

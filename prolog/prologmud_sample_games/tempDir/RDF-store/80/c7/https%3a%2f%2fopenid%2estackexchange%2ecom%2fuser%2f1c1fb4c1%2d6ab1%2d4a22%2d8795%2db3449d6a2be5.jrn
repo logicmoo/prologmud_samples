@@ -1,3 +1,0 @@
-start([time(1496826814)]).
-assert('https://openid.stackexchange.com/user/1c1fb4c1-6ab1-4a22-8795-b3449d6a2be5','http://www.w3.org/1999/02/22-rdf-syntax-ns#type','http://xmlns.com/foaf/0.1/Person').
-end([time(1496827032)]).

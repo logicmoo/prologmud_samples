@@ -1,9 +1,0 @@
-/* Generated file
-   Keep track of installed config files
-*/
-
-file('config.pl','/home/prologmud_server/Cliopatria/config-available',1588573348).
-file('store.pl','/home/prologmud_server/Cliopatria/config-available',1588573348).
-file('network.pl','/home/prologmud_server/Cliopatria/config-available',1588573348).
-file('zlib.pl','/home/prologmud_server/Cliopatria/config-available',1588573348).
-file('pengines.pl','/home/prologmud_server/Cliopatria/config-available',1588573348).

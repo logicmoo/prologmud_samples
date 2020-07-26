@@ -1,1 +1,0 @@
-../cpack/cluster_search_ui/config-available/cluster_search_ui.pl

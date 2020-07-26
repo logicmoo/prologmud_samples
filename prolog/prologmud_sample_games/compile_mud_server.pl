@@ -9,36 +9,40 @@
 %  sudo -u prologmud_server gdb -x gdbinit -return-child-result -ex "set pagination off" -ex run -ex quit --args swipl -l run_mud_server.pl --all --nonet --noworld
 
 
+C:\Users\logicmoo>rem C:\Windows\System32\runas.exe /savecred /user:remote-user 
+ "\"C:\Program Files\swipl\bin\swipl.exe\" -f \"C:\Users\remote-user\AppData\Local\swi-prolog\pack\prologmud_samples\prolog\prologmud_sample_games\run_mud_server.pl\""
+
+
+?- cd(library(prologmud_sample_games)).
+?- [run_mud_server].
+
+
 W:\opt\logicmoo_workspace\packs_sys\logicmoo_utils\prolog;W:\opt\logicmoo_workspace\packs_sys\logicmoo_base\prolog;W:\opt\logicmoo_workspace\packs_sys\pfc\prolog;W:\opt\logicmoo_workspace\packs_sys\logicmoo_nlu\prolog\logicmoo_nlu;W:\opt\logicmoo_workspace\packs_sys\prologmud\prolog;W:\opt\logicmoo_workspace\packs_sys\logicmoo_nlu\prolog\marty_white;W:\opt\logicmoo_workspace\packs_sys\logicmoo_nlu\ext\chat80;W:\opt\logicmoo_workspace\packs_sys\logicmoo_nlu\ext\ape
 
 
 */
+:- set_prolog_flag(pfc_version,2.0).
+:- set_prolog_flag(dmsg_level,never).
+
+attach_packs_relative(Rel):-
+   once(((
+    (working_directory(Dir,Dir);prolog_load_context(directory,Dir)),
+    (absolute_file_name(Rel,PackDir,[relative_to(Dir),file_type(directory),file_errors(fail)]);
+      absolute_file_name(Rel,PackDir,[file_type(directory),file_errors(fail)])),
+    writeln(attach_packs(PackDir)),attach_packs(PackDir)));writeln(failed(attach_packs_relative_web(Rel)))).
+
 
 load_package_dirs:- 
   findall(PackDir,'$pack':pack(Pack, PackDir),Before),
-  ignore(( \+ exists_source(library(logicmoo_common)), attach_packs('/opt/logicmoo_workspace/packs_sys'))),
-  ignore(( \+ exists_source(library(sldnfdraw)), attach_packs('/opt/logicmoo_workspace/packs_lib'))),
-  ignore(( \+ exists_source(library(rserve_client)), attach_packs('/opt/logicmoo_workspace/packs_web/swish/pack'))),
-  ignore(( \+ exists_source(library(lps_corner)), attach_packs('/opt/logicmoo_workspace/packs_web'))),
-  % ignore(( \+ exists_source(pack(plweb/pack_info)), attach_packs('/opt/logicmoo_workspace/packs_web'))),
+  ignore(( \+ exists_source(library(logicmoo_common)), attach_packs_relative('../../..'))),
   findall(PackDir,'$pack':pack(Pack, PackDir),After),
-  (Before==After -> writeln(load_package_dirs) ; catch(pack_list_installed,_,true)),
+  (Before==After -> writeln(load_package_dirs(After)) ; true),
+  pack_list_installed,
   !.
 
- 
 :- initialization(load_package_dirs, now).
 :- initialization(load_package_dirs, restore_state).
-
-:- multifile(sandbox:safe_primitive/1).
-:- dynamic(sandbox:safe_primitive/1).
-:- multifile(sandbox:safe_meta_predicate/1).
-:- dynamic(sandbox:safe_meta_predicate/1).
-
-:- dynamic(http_unix_daemon:http_daemon/0).
-
-:- use_module(library(logicmoo_common)).
-sandbox:safe_primitive(dumpst:dumpST()).
-sandbox:safe_meta_predicate(system:notrace/1).
+:- use_module(library(logicmoo_webui)).
 
 :- if(\+ prolog_load_context(reloading,true)).
 :- use_module(library(sandbox)).
@@ -53,13 +57,11 @@ sandbox:safe_meta_predicate(system:notrace/1).
 :- system:use_module(library(make)).
 :- system:use_module(library(qsave)).
 :- system:use_module(library(prolog_autoload)).
-:- system:use_module(library(prolog_pack)).
 :- system:use_module(library(lists)).
 :- system:use_module(library(backcomp)).
 :- system:use_module(library(edit)).
 :- system:use_module(library(prolog_trace)).
 :- system:use_module(library(threadutil)).
-:- system:use_module(library(debug)).
 :- system:use_module(library(yall)).
 :- system:use_module(library(time)).
 :- abolish(system:time/1).
@@ -73,7 +75,6 @@ sandbox:safe_meta_predicate(system:notrace/1).
 :- system:use_module(library(codesio)).
 :- system:use_module(library(crypt)).
 :- system:use_module(library(ctypes)).
-:- system:use_module(library(debug)).
 :- system:use_module(library(dialect)).
 :- system:use_module(library(doc_files)).
 :- system:use_module(library(doc_http)).
@@ -136,11 +137,11 @@ sandbox:safe_meta_predicate(system:notrace/1).
 :- system:use_module(library(writef)).
 :- system:use_module(library(zlib)).
 
-:- system:use_module(library(jpl)).
+%:- system:use_module(library(jpl)).
 %:- use_module(library(wfs)).
 :- system:use_module(library(wfs),[call_residual_program/2,call_delays/2,delays_residual_program/2,answer_residual/2]).
-:- system:use_module(library(gui_tracer)). % autoloading swi_ide:guitracer/0 from /usr/lib/swipl/xpce/prolog/lib/gui_tracer
-:- system:use_module(library(swi_compatibility)). %% autoloading swi_ide:auto_call/1 from /usr/lib/swipl/xpce/prolog/lib/swi_compatibility
+%:- system:use_module(library(gui_tracer)). % autoloading swi_ide:guitracer/0 from /usr/lib/swipl/xpce/prolog/lib/gui_tracer
+%:- system:use_module(library(swi_compatibility)). %% autoloading swi_ide:auto_call/1 from /usr/lib/swipl/xpce/prolog/lib/swi_compatibility
 :- endif.
 
 
@@ -213,7 +214,7 @@ mud_baseKB :- '$set_typein_module'(baseKB),'$set_source_module'(baseKB),module(b
 
 load_plweb :-  
  % set_prolog_flag(cant_qsave_logicmoo,true),
- ignore(( \+ exists_source(pack(plweb/pack_info)), attach_packs('/opt/logicmoo_workspace/packs_web'))),
+ %ignore(( \+ exists_source(pack(plweb/pack_info)), attach_packs('/opt/logicmoo_workspace/packs_web'))),
  % :- attach_packs('/opt/logicmoo_workspace/packs_web/plweb/packs').
  @((user:['/opt/logicmoo_workspace/packs_web/plweb/plweb.pl'],
   doc_enable(true),
@@ -225,15 +226,15 @@ run_lps_corner(File):- is_list(File),!,maplist(run_lps_corner,File).
 run_lps_corner(File):-
    absolute_file_name(File,DB),
    DB:use_module(library(lps_corner)), 
-   listing(db:actions/1),
-   listing(interpreter:actions/1),
+   %listing(db:actions/1),
+   %listing(interpreter:actions/1),
    interpreter:check_lps_program_module(DB),
    DB:consult(DB),
    interpreter:must_lps_program_module(DB),
-   elsewhere:listing(DB:_),
+   %elsewhere:listing(DB:_),
    DB:golps(X),
-   listing(interpreter:lps_program_module/1),
-   wdmsg(X).
+   %listing(interpreter:lps_program_module/1),
+   dmsg(X).
 
 load_lps_corner:- 
   set_prolog_flag(cant_qsave_logicmoo,true),
@@ -291,13 +292,12 @@ remove_undef_srch:- remove_undef_search.
 do_setup_history:-  
  ((
   current_input(S),
-   catch(prolog:history(S, load), _, true),
-  ignore((prolog_load_context(file,File),forall((source_file(Code,File),strip_module(Code,_,Atom),atom(Atom)),add_history(Code)))),
+  ignore(catch(prolog:history(S, load), _, true)),  
   logicmoo_startup:((
   add_history(mpred_why(mudIsa(iCoffeeCup7, tSpatialThing))),
   add_history(make:make_no_trace),
   add_history(shell('./PreStartMUD.sh')),
-  add_history(run_lps_corner('/opt/logicmoo_workspace/packs_web/lps_corner/examples/goat.pl')),
+  add_history(run_lps_corner('lps_corner/examples/goat.pl')),
   add_history([pack(logicmoo_base/t/examples/fol/'einstein_simpler_03.pfc')]),
   add_history([pack(logicmoo_base/t/examples/fol/'einstein_simpler_04.pfc')]),
   add_history(make:make_no_trace),
@@ -309,6 +309,7 @@ do_setup_history:-
   add_history(make),        
   add_history(mmake),
   add_history(login_and_run),        
+  ignore((prolog_load_context(file,File),forall((source_file(Code,File),strip_module(Code,_,Atom),atom(Atom)),add_history(Code)))),
   add_history(loadSumo),
   add_history(loadTinyKB),
   add_history(threads),
@@ -326,6 +327,20 @@ do_setup_history:-
   add_history(start_mud_telnet),
   add_history(lar),
   add_history(lst),
+  
+  maplist(add_history, [ 
+   mud_baseKB,
+   % rtrace,
+   load_nomic_mu,% autoload_all([verbose(true)]), 
+   load_lps_corner,% autoload_all([verbose(true)]), 
+   import_some,
+   expose_all,
+   %baseKB:start_runtime_mud,
+   %run_setup_now,  
+   %baseKB:start_mud_telnet, 
+   % adventure,
+   % lar,
+   baseKB:listing(mudAtLoc)]),
   add_history((+ 1 = _Y)))))),
   !.
 
@@ -380,19 +395,32 @@ expose_all:-
        (catch((RM:export(RM:F/A),system:import(RM:F/A)),E,nop(dmsg(E))))).
 
 
+:- multifile(rdf_rewrite:arity/2).
+:- dynamic(rdf_rewrite:arity/2).
+
 load_before_compile:- 
    mud_baseKB,
-   user:ensure_loaded('/opt/logicmoo_workspace/packs_web/swish/run_swish_and_clio.pl').
+   /*
+   ignore(catch(pack_install(rocksdb),_,true)),
+   ignore(catch(pack_install(sldnfdraw),_,true)),
+   ignore(catch(pack_install(aleph),_,true)),
+   ignore(catch(pack_install(phil),_,true)),
+   ignore(catch(pack_install(cplint_r),_,true)),
+   */
+   cd('/tmp/tempDir'),
+   webui_load_swish_and_clio,
+   quietly(load_lps_corner).
 
 start_network:- 
+   load_before_compile,
    egg_go,
-   shell('./PreStartMUD.sh'),
-   broadcast:broadcast(http(pre_server_start)),
-   cp_server:cp_server([]),
-   broadcast:broadcast(http(post_server_start)),
-   swish:start_swish_stat_collector,!.
+   ignore(catch(shell('./PreStartMUD.sh'),_,true)),
+   webui_start_swish_and_clio,!.
    
 load_rest:-
+   load_before_compile,
+   load_lps_corner,
+   load_nomic_mu,
       baseKB:use_module(library(logicmoo_clif)),
       baseKB:ensure_loaded(library('logicmoo/common_logic/common_logic_sumo.pfc')),
       add_history(try_zebra),
@@ -428,6 +456,7 @@ qsave_logicmoo :-
    add_history(start_all),
    !.
 
+import_some:- !.
 import_some:- 
       forall((current_predicate(baseKB:F/A),M=baseKB,functor(P,F,A),
          (predicate_property(M:P,imported_from(RM))->true;RM=M)),
@@ -437,14 +466,15 @@ import_some:-
          (RM:export(RM:F/A),rtrace:import(RM:F/A))), !.
 
 start_rest:- 
+   load_rest,
    mud_baseKB,
    % rtrace,
-   load_nomic_mu,% autoload_all([verbose(true)]), 
-   load_lps_corner,% autoload_all([verbose(true)]), 
+   %load_nomic_mu,% autoload_all([verbose(true)]), 
+   %load_lps_corner,% autoload_all([verbose(true)]), 
    import_some,
    expose_all,
    baseKB:start_runtime_mud,
-   %run_setup_now,  
+   run_setup_now,  
    baseKB:start_mud_telnet, 
    % adventure,
    % lar,
@@ -452,19 +482,27 @@ start_rest:-
    threads,
    !.
 
+baseKB:start_rest:- start_rest.
+
+start_all :- start_network, start_rest.
+
 :- set_prolog_flag(no_sandbox, true).
-:- use_module(library(pfc_lib)).
+% :- use_module(library(pfc_lib)).
 
 :- load_before_compile.
 :- initialization(start_network,restore).
-:- if(\+ compiling).
+:- if( \+ compiling).
 :- initialization(start_network,now).
 :- endif.
-%:- load_rest.
+:- load_rest.
 :- initialization(start_rest,restore).
-:- if(\+ compiling).
-%:- initialization(start_rest,now).
+:- if( \+ compiling).
+:- initialization(start_rest,now).
 :- endif.
 % :- initialization(qsave_logicmoo, main).
+:- initialization(initialize,restore).
+:- if( \+ compiling).
+:- initialization(initialize,now).
+:- endif.
 
-
+:- prolog. 

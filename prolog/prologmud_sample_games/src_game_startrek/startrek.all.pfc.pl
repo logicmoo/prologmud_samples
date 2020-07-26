@@ -5,8 +5,10 @@
 % Douglas Miles
 %
 */
+:- module(baseKB).
+:- use_module(library(pfc)).
 
-:- file_begin(pfc).
+%:- file_begin(pfc).
 
 :- install_constant_renamer_until_eof.
 
@@ -326,6 +328,8 @@ localityOfObject('iArea1013Object668','iArea1013').
 localityOfObject('iArea1016Object669','iArea1016').
 localityOfObject('iArea1024Object670','iArea1024').
 */
+
+:- rtrace.
 localityOfObject('iAlexander671','iArea1025').
 localityOfObject(iCommanderdata66,'iArea1010').
 localityOfObject(iExplorer1,'iArea1000').
