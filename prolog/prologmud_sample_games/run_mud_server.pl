@@ -169,31 +169,37 @@ check_startup_flags:-
            \+ ((member(E,WasArgV), 
                 atom_concat('--',_,E))),
    append(WasArgV,[
-   '--',
-   '--all', % all default options (in case there are new ones!)
-   '--pdt', % Prolog Development for Eclipse
+   '--',   
+
    '--mud', % Load MUD server
    '--world', % Load MUD server World
+   %'--nonet' '--noworld',
+
    '--clif', % Support for CLIF
    '--sumo', % Support for SUMO
-   '--tinykb', % Support for LarKC
    '--nlkb', % Load CYC NL 
    '--cyckb', % Load CYC KB 
-   '--sigma', % Sigma Inference Engine Server  https://logicmoo.org/logicmoo/
-   '--planner', % Load any planners
-   '--cliop',  % https://logicmoo.org/cliopatria/
+   '--tinykb', % Support for LarKC
+
    '--www', % https://logicmoo.org/*
+   '--no-fork', '--workers=16', '--port=3020',
+   %'--user=www-data',
+   '--sigma', % Sigma Inference Engine Server  https://logicmoo.org/logicmoo/
+   '--cliop',  % https://logicmoo.org/cliopatria/
    '--irc', % Launch IRC Eggdrop Client
    '--swish', % https://logicmoo.org/swish/
    '--docs', % https://logicmoo.org/pldoc/
-   '--plweb',   % https://logicmoo.org/plweb
-   '--no-fork', '--workers=16', '--port=3020', 
-   %'--user=www-data',
-   % '--nonet' '--noworld',
+   '--plweb',   % https://logicmoo.org/plweb/
+   
    % '--lispsock', % '--wamcl', % is already implied by --lispsock
+
    '--logtalk', % Support Logtalk
    '--elfinder', % Support Filesystem Browser   https://logicmoo.org/ef/
-   '--defaults' 
+   '--nopdt', % Prolog Development for Eclipse
+   '--planner', % Load any planners
+
+   '--all', % all default options (in case there are new ones!)
+   '--defaults'
    ], NewArgV),
    set_prolog_flag('argv',NewArgV))),
    current_prolog_flag(argv,Is),

@@ -329,7 +329,7 @@ localityOfObject('iArea1016Object669','iArea1016').
 localityOfObject('iArea1024Object670','iArea1024').
 */
 
-:- rtrace.
+% :- rtrace.
 localityOfObject('iAlexander671','iArea1025').
 localityOfObject(iCommanderdata66,'iArea1010').
 localityOfObject(iExplorer1,'iArea1000').
