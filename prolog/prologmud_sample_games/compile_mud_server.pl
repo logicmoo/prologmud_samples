@@ -105,7 +105,7 @@ load_package_dirs:-
 :- system:use_module(library(pldoc/doc_util)).
 :- system:use_module(library(pldoc/man_index)).
 :- system:use_module(library(porter_stem)).
-:- system:use_module(library(pprint)).
+%:- system:use_module(library(pprint)).
 :- system:use_module(library(predicate_options)).
 :- system:use_module(library(process)).
 :- system:use_module(library(prolog_clause)).

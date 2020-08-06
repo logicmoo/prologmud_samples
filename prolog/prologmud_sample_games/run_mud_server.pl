@@ -21,6 +21,9 @@ W:\opt\logicmoo_workspace\packs_sys\logicmoo_utils\prolog;W:\opt\logicmoo_worksp
 
 
 */
+:- setenv('DISPLAY', '192.168.88.1:0.0').
+:- (notrace(gtrace),nodebug).
+
 :- set_prolog_flag(pfc_version,2.0).
 :- set_prolog_flag(dmsg_level,never).
 
@@ -105,7 +108,7 @@ load_package_dirs:-
 :- system:use_module(library(pldoc/doc_util)).
 :- system:use_module(library(pldoc/man_index)).
 :- system:use_module(library(porter_stem)).
-:- system:use_module(library(pprint)).
+%:- system:use_module(library(pprint)).
 :- system:use_module(library(predicate_options)).
 :- system:use_module(library(process)).
 :- system:use_module(library(prolog_clause)).
@@ -228,6 +231,7 @@ load_plweb :-
 
 swish:is_really_module.
 
+run_lps_corner(File):- wdmsg(run_lps_corner(File)),!.
 run_lps_corner(File):- is_list(File),!,maplist(run_lps_corner,File).
 run_lps_corner(File):-
    absolute_file_name(File,DB),
@@ -242,6 +246,7 @@ run_lps_corner(File):-
    %listing(interpreter:lps_program_module/1),
    dmsg(X).
 
+load_lps_corner:-!.
 load_lps_corner:- 
   set_prolog_flag(cant_qsave_logicmoo,true),
   run_lps_corner('/opt/logicmoo_workspace/packs_web/lps_corner/examples/binaryChop2.pl').
@@ -510,5 +515,9 @@ start_all :- start_network, start_rest.
 :- if( \+ compiling).
 :- initialization(initialize,now).
 :- endif.
+
+:- setenv('DISPLAY', '192.168.88.1:0.0').
+:- (notrace(gtrace),nodebug).
+%:- guitracer.
 
 :- prolog. 
