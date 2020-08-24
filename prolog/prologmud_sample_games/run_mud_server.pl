@@ -21,9 +21,9 @@ W:\opt\logicmoo_workspace\packs_sys\logicmoo_utils\prolog;W:\opt\logicmoo_worksp
 
 
 */
-:- setenv('DISPLAY', '192.168.88.1:0.0').
-:- (notrace(gtrace),nodebug).
-
+%:- setenv('DISPLAY', '192.168.88.1:0.0').
+%:- (notrace(gtrace),nodebug).
+:- set_prolog_flag(verbose_load,true).
 :- set_prolog_flag(pfc_version,2.0).
 :- set_prolog_flag(dmsg_level,never).
 
@@ -300,44 +300,46 @@ remove_undef_srch:- remove_undef_search.
 
 :- before_boot(remove_undef_srch).
 
+do_setup_history:-!.
 do_setup_history:-  
  ((
   current_input(S),
   ignore(catch(prolog:history(S, load), _, true)),  
   logicmoo_startup:((
-  add_history(mpred_why(mudIsa(iCoffeeCup7, tSpatialThing))),
-  add_history(make:make_no_trace),
-  add_history(shell('./PreStartMUD.sh')),
-  add_history(run_lps_corner('lps_corner/examples/goat.pl')),
-  add_history([pack(logicmoo_base/t/examples/fol/'einstein_simpler_03.pfc')]),
-  add_history([pack(logicmoo_base/t/examples/fol/'einstein_simpler_04.pfc')]),
-  add_history(make:make_no_trace),
-  add_history(load_plweb),
-  add_history(help(match_regex/2)),
-  add_history(list_undefined),
-  add_history(listing(lmconf:at_restore_goal/2)),
-  add_history(statistics),        
-  add_history(make),        
-  add_history(mmake),
-  add_history(login_and_run),
-  ignore((prolog_load_context(file,File),forall((source_file(Code,File),strip_module(Code,_,Atom),atom(Atom)),add_history(Code)))),
-  add_history(loadSumo),
-  add_history(loadTinyKB),
-  add_history(threads),
-  add_history(run_pending_inits),
-  add_history(use_module(library(sexpr_reader))),
-  add_history(input_to_forms("( #\\a #\\u0009 . #\\bell )",'$VAR'('O'),'$VAR'('Vs'))),
-  add_history(tstl),
-  add_history(qconsult_kb7166),
-  add_history(load_lps_corner),
-  add_history(qsave_logicmoo),
-  add_history(start_all),
-  add_history(load_before_compile),
-  add_history(adventure),
-  add_history(start_all),
-  add_history(start_mud_telnet),
-  add_history(lar),
-  add_history(lst),
+  add_history([
+  (mpred_why(mudIsa(iCoffeeCup7, tSpatialThing))),
+  (make:make_no_trace),
+  (shell('./PreStartMUD.sh')),
+  (run_lps_corner('lps_corner/examples/goat.pl')),
+  ([pack(logicmoo_base/t/examples/fol/'einstein_simpler_03.pfc')]),
+  ([pack(logicmoo_base/t/examples/fol/'einstein_simpler_04.pfc')]),
+  (make:make_no_trace),
+  (load_plweb),
+  (help(match_regex/2)),
+  (list_undefined),
+  (listing(lmconf:at_restore_goal/2)),
+  (statistics),        
+  (make),        
+  (mmake),
+  (login_and_run),
+  ignore((prolog_load_context(file,File),forall((source_file(Code,File),strip_module(Code,_,Atom),atom(Atom)),(Code)))),
+  (loadSumo),
+  (loadTinyKB),
+  (threads),
+  (run_pending_inits),
+  (use_module(library(sexpr_reader))),
+  (input_to_forms("( #\\a #\\u0009 . #\\bell )",'$VAR'('O'),'$VAR'('Vs'))),
+  (tstl),
+  (qconsult_kb7166),
+  (load_lps_corner),
+  (qsave_logicmoo),
+  (start_all),
+  (load_before_compile),
+  (adventure),
+  (start_all),
+  (start_mud_telnet),
+  (lar),
+  (lst)]),
   
   maplist(add_history, [ 
    mud_baseKB,
@@ -516,8 +518,10 @@ start_all :- start_network, start_rest.
 :- initialization(initialize,now).
 :- endif.
 
-:- setenv('DISPLAY', '192.168.88.1:0.0').
-:- (notrace(gtrace),nodebug).
+%:- setenv('DISPLAY', '192.168.88.1:0.0').
+%:- (notrace(gtrace),nodebug).
 %:- guitracer.
+
+:- system:reexport(pldata(kb_0988)).
 
 :- prolog. 
