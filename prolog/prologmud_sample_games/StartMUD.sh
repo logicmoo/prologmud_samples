@@ -249,8 +249,8 @@ do
 
     if [ `whoami` != 'root' ]
       then
-        killall -9  swipl
-        killall -9  /usr/bin/swipl
+        echo killall -9  swipl
+        echo killall -9  /usr/bin/swipl
     fi
     echo kill -9 $(list_descendants $MY_PID)
     # kill -9 $(list_descendants $MY_PID)

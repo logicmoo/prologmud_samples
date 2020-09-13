@@ -21,7 +21,7 @@ W:\opt\logicmoo_workspace\packs_sys\logicmoo_utils\prolog;W:\opt\logicmoo_worksp
 
 
 */
-%:- setenv('DISPLAY', '192.168.88.1:0.0').
+:- setenv('DISPLAY', '10.0.0.12:0.0').
 %:- (notrace(gtrace),nodebug).
 :- set_prolog_flag(verbose_load,true).
 :- set_prolog_flag(pfc_version,2.0).

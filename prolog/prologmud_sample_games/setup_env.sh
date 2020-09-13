@@ -14,16 +14,16 @@ echo or chroot /mnt/chroot su - prologmud_server -c bash --login
 
 #export PATH=$LOGICMOO_WS/bin:$SWI_HOME_DIR/bin/x86_64-linux:$PATH
 
-export DISPLAY=10.0.0.122:0.0
-export LOGTALKHOME=~/lib/swipl/packs_lib/logtalk/logtalk-3.10.9
+#export DISPLAY=10.0.0.122:0.0
+#export LOGTALKHOME=~/lib/swipl/packs_lib/logtalk/logtalk-3.10.9
 
-killall -9 swipl xterm # darn xpce xterms!
-killall -9 perl # we forked the flash server and it holds SWIPL alive
-killall -9 swipl # its ok since this is the prologmud_server user and not root
+#killall -9 swipl xterm # darn xpce xterms!
+#killall -9 perl # we forked the flash server and it holds SWIPL alive
+#killall -9 swipl # its ok since this is the prologmud_server user and not root
 
 #swipl --irc --world --repl 
 
-echo -t "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_swish)],[run_mud_server],prolog)" # -f /dev/null
+#echo -t "user:([library(logtalk)],[library(logicmoo_swish)],[library(logicmoo_swish)],[run_mud_server],prolog)" # -f /dev/null
 #cls ; killall -9 perl swipl perl xterm; 
 #cls ; kill -9 %1 %2 %3 %4 ; kill -9 %1 %2 %3 %4 
 #swipl  -f /dev/null --irc --world --repl --www -l run_mud_server.pl -g "set_defaultAssertMt(prologMOO)"
