@@ -524,4 +524,7 @@ start_all :- start_network, start_rest.
 
 :- system:reexport(pldata(kb_0988)).
 
+:- use_module(library(logicmoo_cg)).
+:- use_module(library(narsese)).
+
 :- prolog. 
