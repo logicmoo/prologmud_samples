@@ -1471,3 +1471,34 @@ netstat -anp | grep 3020
 kill -9 118485  121249 118969 118971
 netstat -anp | grep 3020
 ps axf
+swipl -l init_paths.pl 
+mv init_paths.pl setup_paths.pl
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
