@@ -25,7 +25,7 @@
 
 
 
-:- thread_local(infSupertypeName).
+:- thread_local(infSupertypeName/0).
 % alolwos lexical deduction such as tStandTable is a tTable and a tBedRoom is a tRoom
 % onSpawn localityOfObject(tStandTable, tBedRoom).
 

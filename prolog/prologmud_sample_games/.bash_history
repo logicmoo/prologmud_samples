@@ -1502,3 +1502,7 @@ swipl -l setup_paths.pl
 swipl -l setup_paths.pl 
 swipl -l setup_paths.pl 
 swipl -l setup_paths.pl 
+./on_boot.sh 
+threads
+ps axf
+./PreStartMUD.sh 
