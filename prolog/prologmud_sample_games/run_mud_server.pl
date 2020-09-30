@@ -21,7 +21,7 @@ W:\opt\logicmoo_workspace\packs_sys\logicmoo_utils\prolog;W:\opt\logicmoo_worksp
 
 
 */
-:- setenv('DISPLAY', '10.0.0.12:0.0').
+:- setenv('DISPLAY', '10.0.0.122:0.0').
 %:- (notrace(gtrace),nodebug).
 :- set_prolog_flag(verbose_load,true).
 :- set_prolog_flag(pfc_version,2.0).
@@ -424,11 +424,16 @@ load_before_compile:-
    webui_load_swish_and_clio,
    quietly(load_lps_corner).
 
+%start_network:- 
+%   load_before_compile,!.
+
 start_network:- 
    load_before_compile,
    egg_go,
    ignore(catch(shell('./PreStartMUD.sh'),_,true)),
-   webui_start_swish_and_clio,!.
+   webui_start_swish_and_clio,
+   threads,statistics,
+   !.
    
 load_rest:-
    load_before_compile,
@@ -503,10 +508,20 @@ start_all :- start_network, start_rest.
 % :- use_module(library(pfc_lib)).
 
 :- load_before_compile.
+
 :- initialization(start_network,restore).
 :- if( \+ compiling).
 :- initialization(start_network,now).
 :- endif.
+
+
+:- set_prolog_flag(debug,true).
+:- set_prolog_flag(access_level,system).
+
+
+:- abolish(user:prolog_load_file/2).
+:- dynamic(user:prolog_load_file/2).
+
 :- load_rest.
 :- initialization(start_rest,restore).
 :- if( \+ compiling).
