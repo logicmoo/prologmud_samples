@@ -50,11 +50,12 @@ pathmunge $LOGICMOO_WS/bin:$PATH
 
 
 cp $LOGICMOO_WS/packs_xtra/golorp/?*.txt $NEWPWD/
-rsync -avh $LOGICMOO_WS/packs_sys/prologmud_samples/prolog/prologmud_sample_games/tempDir /tmp/
+rsync -avh $NEWPWD/tempDir /tmp/
+ln -s /tmp/tempDir/* .
 chmod a+w -R /tmp/tempDir
 chmod a+w -R /tmp/tempDir/?*
 chmod a+w -R /tmp/tempDir/?*/
-touch passwd
+#touch passwd
 chmod 777 passwd
 
 

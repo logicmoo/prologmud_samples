@@ -362,3 +362,120 @@ yarn
 ./StartMUD.sh
 ./StartMUD.sh 
 cls ; swipl --signals=true --stack_limit=32g -l run_mud_server.pl --all 
+swipl -l setup_paths.pl 
+cd /pack/eggdrop/conf/
+eggdrop
+cd ~
+swipl -l setup_paths.pl 
+cd /opt/logicmoo_workspace/
+df . -h
+cd /
+cd ~
+df . -h
+git clone https://github.com/SWI-Prolog/swipl-devel
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl 
+pwd
+cd /pack
+ls
+cd -
+swipl -l setup_paths.pl 
+cd .
+swipl -l setup_paths.pl 
+swipl -l setup_paths.pl -d start_network
+swipl -l setup_paths.pl -g start_network
+cp setup_paths.pl init_mud_server.pl 
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+swipl -l init_mud_server.pl -g start_network
+ls -l 
+ls -l ~
+swipl
+apt remove swi-prolog*
+cd ~prologmud_server/eggdrop/conf/
+eggdrop
+cd /pack/eggdrop/conf/
+eggdrop
+ls
+cd /opt/logicmoo_workspace/packs_sys
+ls
+cd prologmud
+ls
+cd ../eggdrop/
+ls
+find
+cd conf/
+ls
+cd \~HIDE~/
+ls
+cd ..
+ls
+ls /tmp/
+ls
+cd ..
+ls
+find 
+cp ./conf/~HIDE~/PrologMUD-freenode.user
+cp ./conf/~HIDE~/PrologMUD-freenode.user conf/
+..
+cd ..
+cd ..
+find -name "*.chan"
+ls
+cd /
+ls
+cd gitlab-pack
+ls
+find -name "*.chan"
+cd /pack/eggdrop/conf/
+ls
+eggdrop
+rm /PrologMUD-freenode.*
+cd /pack/eggdrop/
+ls
+cd conf/
+ls
+eggdrop
+ls
+./PreStartMUD.sh 
+ls
+./StartMUD.sh 
+ls /var/www/html
+ls /var/www/html/*7*
+ls /var/www/html/*/*7*
+ls /var/www/html/downloads/
+./StartMUD.sh 
+ps axf
+swipl
+cd /opt/logicmoo_workspace/packs_sys/eggdrop/conf/
+ls
+eggdrop
+chroot /mnt/ubuntu
