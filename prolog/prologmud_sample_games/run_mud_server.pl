@@ -21,7 +21,7 @@ W:\opt\logicmoo_workspace\packs_sys\logicmoo_utils\prolog;W:\opt\logicmoo_worksp
 
 
 */
-:- setenv('DISPLAY', '10.0.0.122:0.0').
+:- getenv('DISPLAY',_)->true;setenv('DISPLAY', '10.0.0.122:0.0').
 %:- (notrace(gtrace),nodebug).
 :- set_prolog_flag(verbose_load,true).
 :- set_prolog_flag(pfc_version,2.0).
@@ -45,9 +45,9 @@ load_package_dirs:-
  
 :- initialization(load_package_dirs, now).
 :- initialization(load_package_dirs, restore_state).
-:- use_module(library(logicmoo_webui)).
 
-:- dmsg("Ensure run_mud_server").
+
+%:- dmsg("Ensure run_mud_server").
 %:- rtrace(dmsg2("Ensure Run_MUD_SERVER1")).
 %:- break.
 
@@ -67,7 +67,6 @@ load_package_dirs:-
 
 :- current_prolog_flag('argv',Is),writeq(current_prolog_flag('argv',Is)),!,nl.
 
-:- use_module(library(logicmoo_utils)).
 :- use_module(library(logicmoo_common)).
 
 check_startup_flags:- 
@@ -170,7 +169,7 @@ do_setup_history:-
   (loadTinyKB),
   (threads),
   (run_pending_inits),
-  (use_module(library(sexpr_reader))),
+  % (use_module(library(sexpr_reader))),
   (input_to_forms("( #\\a #\\u0009 . #\\bell )",'$VAR'('O'),'$VAR'('Vs'))),
   (tstl),
   (qconsult_kb7166),
@@ -250,7 +249,7 @@ expose_all:-
 
 
 :- multifile(rdf_rewrite:arity/2).
-:- dynamic(rdf_rewrite:arity/2).
+:- dynamic(rdf_rewrite:arity/2).                         
 /*
  (1) * /usr/local/share/swi-prolog/pack
    (2)   /usr/share/swi-prolog/pack
@@ -259,6 +258,10 @@ expose_all:-
 
 */
 load_before_compile:- 
+   use_module(library(logicmoo_webui)),
+   
+   %:- use_module(library(logicmoo_nlu)).
+
    mud_baseKB,
    /*
    ignore(catch(pack_install(rocksdb),_,true)),
@@ -269,14 +272,14 @@ load_before_compile:-
    */
    ignore((
     \+ exists_directory('/tmp/tempDir/') -> catch(shell('./PreStartMUD.sh'),_,true))),
-   ignore(( exists_directory('/tmp/tempDir') -> cd('/tmp/tempDir'))),
+   %ignore(( exists_directory('/tmp/tempDir') -> cd('/tmp/tempDir'))),
    webui_load_swish_and_clio,   
    add_history(start_network).
 
 %start_network:- 
 %   load_before_compile,!.
 
-start_network:- 
+start_network:-       
    load_before_compile,
    egg_go,   
    webui_start_swish_and_clio,
@@ -285,14 +288,12 @@ start_network:-
    
 load_rest:-
    nodebug,
-   load_before_compile,
    load_nomic_mu,
-   baseKB:ensure_loaded(library(logicmoo_ec)),
-   baseKB:ensure_loaded(library(logicmoo_cg)),
+   load_before_compile,
+   baseKB:ensure_loaded(library(logicmoo_nlu)),
    baseKB:ensure_loaded(library(narsese)),
    baseKB:ensure_loaded(library(logicmoo_clif)),
-   baseKB:ensure_loaded(library('logicmoo/common_logic/common_logic_sumo.pfc')),
-   baseKB:ensure_loaded(library(logicmoo_nlu)),
+   baseKB:ensure_loaded(library('logicmoo/common_logic/common_logic_sumo.pfc')),   
    add_history(try_zebra),
    add_history(start_all),
    add_history(qsave_logicmoo),
@@ -302,6 +303,8 @@ load_rest:-
    do_setup_history,
    nodebug,
    baseKB:ensure_loaded(library(logicmoo_mud)),
+   baseKB:ensure_loaded(library(logicmoo_cg)),
+   baseKB:ensure_loaded(library(logicmoo_ec)),
    finish_processing_world,
   !.
 

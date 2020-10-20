@@ -479,3 +479,19 @@ cd /opt/logicmoo_workspace/packs_sys/eggdrop/conf/
 ls
 eggdrop
 chroot /mnt/ubuntu
+ls
+ls
+cls
+./StartMUD.sh 
+./StartMUD.sh 
+cls ; swipl -l run_mud_server.pl
+cls ; swipl -l run_mud_server.pl
+cls ; swipl -l run_mud_server.pl
+cls ; swipl -l run_mud_server.pl
+cls ; swipl -l run_mud_server.pl
+swipl
+which swipl
+ls
+cls 
+swipl
+swipl
