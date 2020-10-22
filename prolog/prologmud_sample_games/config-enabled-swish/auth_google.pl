@@ -123,7 +123,7 @@ token_info_to_user_info(TokenInfo, UserInfo) :-
                              identity_provider:google
                            }).
 
-%!  _map_user_info(+OAuthInfo, -UserInfo) is det.
+%!  google_map_user_info(+OAuthInfo, -UserInfo) is det.
 %
 %   u{user:User, group:Group, name:Name, email:Email}
 
