@@ -1,9 +1,7 @@
-apt install libshh-dev
+apt install libssh-dev
 butterfly help
 butterfly.server.py
-ca
 cat  /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/gitty_files.pl
-cat ../composer.
 cat ../composer.json 
 cat /opt/logicmoo_workspace/packs_web/ClioPatria/user/user_db.pl
 cat /opt/logicmoo_workspace/packs_web/swish-friguzzi/config-enabled/sshd.pl
@@ -172,33 +170,7 @@ grep mpred_core /opt/logicmoo_workspace/packs_sys/logicmoo_nlu/ -r --include="*.
 grep utility_translation . -r
 grep utility_translation . -r /opt/logicmoo_workspace/packs_web/ClioPatria /opt/logicmoo_workspace/packs_web/swish
 grep vre4 . -r
-kill -9  41137
-kill -9  6800
-kill -9  8528    8513
 kill -9 %1
-kill -9 &1
-kill -9 108169  98420 108172
-kill -9 108169  98420 108172 11065
-kill -9 108169  98420 108172 1106595 1106596
-kill -9 108169  98420 108172 1106595 1106596 110655
-kill -9 118485  121249 
-kill -9 118485  121249 118969
-kill -9 118485  121249 118969 118971
-kill -9 31639 
-kill -9 `  lsof -t -i:3020`
-kill -9 swipl
-killall -0 swipl
-killall -1 swipl
-killall -15 swipl
-killall -16 swipl
-killall -2 swipl
-killall -3 swipl
-killall -4 swipl
-killall -5 swipl
-killall -6 swipl
-killall -9  swipl
-killall -9 /usr/local/bin/swipl
-killall -9 118485  121249 
 killall -9 swipl
 killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run.pl --port=3020 --public
 killall -9 swipl ;  swipl -l /dmiles-setpaths.pl run_swish_and_clio.pl --port=3020 --public
@@ -208,38 +180,6 @@ killall swipl
 l
 l;s
 ln -s ../../swish-teamspoon/web/node_modules .
-ln -s ../config-available/* .
-ln -s ../vendor .
-ln -s /home/prologmud_server/data 
-ln -s cpack
-ln -s node_modules bower_components
-ln -s swish-friguzzi swish
-ls
-ls -l
-ls -l  /tmp/tempDir
-ls -l  /tmp/tempDir/data/
-ls -l  /tmp/tempDir/data/*/
-ls -l tempDir/
-ls -l tempDir/ -R
-ls ..
-ls /mnt/sdj1/packs_web/butterfly/
-ls /opt/logicmoo_workspace/packs_web/butterfly/
-ls /opt/logicmoo_workspace/packs_web/swish-friguzzi/pack/libssh/lib/x86_64-linux/
-ls config-enabled/
-ls cpack/
-ls cpack/xmlrdf
-ls data 
-ls data -l
-ls data/
-ls lib
-ls lib/x86_64-linux/
-ls web
-ls web/node_modules/
-ls web/node_modules/ace/build/src/keybinding-
-ls.
-lsof
-lsof -t -i:3020
-lsof 3020
 make
 make install
 make packs

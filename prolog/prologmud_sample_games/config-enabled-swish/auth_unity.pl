@@ -89,7 +89,7 @@ oauth2:login(_Request, unity, TokenInfo) :-
     debug(oauth, 'Claim: ~p', [Claim]),
     unity_map_user_info(Claim, UserInfo),
     http_open_session(_SessionID, []),
-    session_remove_user_data,
+    unity_session_remove_user_data,
     http_session_assert(oauth2(unity, TokenInfo)),
     http_session_assert(user_info(unity, UserInfo)),
     reply_logged_in([ identity_provider('Unity'),
@@ -120,10 +120,10 @@ unity_map_user_field(Field, Field).
 %   Logout by removing the session data
 
 unity_logout(_Request) :-
-    catch(session_remove_user_data, _, true),
+    catch(unity_session_remove_user_data, _, true),
     reply_logged_out([]).
 
-session_remove_user_data :-
+unity_session_remove_user_data :-
     http_session_retractall(oauth2(_,_)),
     http_session_retractall(user_info(_,_)).
 
