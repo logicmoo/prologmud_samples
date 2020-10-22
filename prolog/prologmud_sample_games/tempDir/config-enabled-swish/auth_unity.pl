@@ -87,7 +87,7 @@ oauth2:login(_Request, unity, TokenInfo) :-
     debug(oauth, 'Token: ~p', [TokenInfo]),
     oauth2_user_info(unity, TokenInfo, Claim),
     debug(oauth, 'Claim: ~p', [Claim]),
-    map_user_info(Claim, UserInfo),
+    unity_map_user_info(Claim, UserInfo),
     http_open_session(_SessionID, []),
     session_remove_user_data,
     http_session_assert(oauth2(unity, TokenInfo)),
@@ -97,13 +97,13 @@ oauth2:login(_Request, unity, TokenInfo) :-
                       user_info(UserInfo)
                     ]).
 
-%!  map_user_info(+OAuthInfo, -UserInfo) is det.
+%!  unity_map_user_info(+OAuthInfo, -UserInfo) is det.
 %
 %   u{user:User, group:Group, name:Name, email:Email}
 
-map_user_info(Dict0, Dict) :-
+unity_map_user_info(Dict0, Dict) :-
     dict_pairs(Dict0, Tag, Pairs0),
-    maplist(map_user_field, Pairs0, Pairs),
+    maplist(unity_map_user_field, Pairs0, Pairs),
     http_link_to_id(unity_logout, [], LogoutURL),
     dict_pairs(Dict, Tag,
                [ auth_method-oauth2,
@@ -112,8 +112,8 @@ map_user_info(Dict0, Dict) :-
                | Pairs
                ]).
 
-map_user_field(cn-Name, name-Name) :- !.
-map_user_field(Field, Field).
+unity_map_user_field(cn-Name, name-Name) :- !.
+unity_map_user_field(Field, Field).
 
 %!  unity_logout(+Request)
 %

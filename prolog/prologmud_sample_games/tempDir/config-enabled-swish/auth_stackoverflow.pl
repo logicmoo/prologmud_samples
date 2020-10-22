@@ -135,7 +135,7 @@ oauth2:login(_Request, stackexchange, TokenInfo) :-
     debug(oauth, 'TokenInfo: ~p', [TokenInfo]),
     stackexchange_me(TokenInfo.access_token, Claim),
     debug(oauth, 'Claim: ~p', [Claim]),
-    map_user_info(Claim, UserInfo),
+    stackexchange_map_user_info(Claim, UserInfo),
     http_open_session(_SessionID, []),
     session_remove_user_data,
     http_session_assert(oauth2(stackexchange, TokenInfo)),
@@ -220,13 +220,13 @@ swish_config:user_info(_Request, stackexchange, UserInfo) :-
     http_in_session(_SessionID),
     http_session_data(user_info(stackexchange, UserInfo)).
 
-%!  map_user_info(+OAuthInfo, -UserInfo) is det.
+%!  mstackexchange_ap_user_info(+OAuthInfo, -UserInfo) is det.
 %
 %   u{user:User, group:Group, name:Name, email:Email}
 
-map_user_info(Dict0, Dict) :-
+stackexchange_map_user_info(Dict0, Dict) :-
     dict_pairs(Dict0, Tag, Pairs0),
-    maplist(map_user_field, Pairs0, Pairs),
+    maplist(stackexchange_map_user_field, Pairs0, Pairs),
     http_link_to_id(stackexchange_logout, [], LogoutURL),
     dict_pairs(Dict, Tag,
                [ identity_provider-stackexchange,
@@ -235,10 +235,10 @@ map_user_info(Dict0, Dict) :-
                | Pairs
                ]).
 
-map_user_field(display_name-Name, name-Name) :- !.
-map_user_field(profile_image-URL, picture-URL) :- !.
-map_user_field(link-URL,          profile_url-URL) :- !.
-map_user_field(Field, Field).
+stackexchange_map_user_field(display_name-Name, name-Name) :- !.
+stackexchange_map_user_field(profile_image-URL, picture-URL) :- !.
+stackexchange_map_user_field(link-URL,          profile_url-URL) :- !.
+stackexchange_map_user_field(Field, Field).
 
 session_remove_user_data :-
     http_session_retractall(oauth2(_,_)),

@@ -116,18 +116,18 @@ swish_config:user_info(_Request, google, UserInfo) :-
 
 token_info_to_user_info(TokenInfo, UserInfo) :-
     oauth2_claim(TokenInfo, Claim),
-    map_user_info(Claim, Claim1),
+    google_map_user_info(Claim, Claim1),
     http_link_to_id(google_logout, [], LogoutURL),
     UserInfo = Claim1.put(_{ auth_method:oauth2,
                              logout_url:LogoutURL,
                              identity_provider:google
                            }).
 
-%!  map_user_info(+OAuthInfo, -UserInfo) is det.
+%!  _map_user_info(+OAuthInfo, -UserInfo) is det.
 %
 %   u{user:User, group:Group, name:Name, email:Email}
 
-map_user_info(Dict, Dict) :-
+google_map_user_info(Dict, Dict) :-
     debug(oauth, 'Got: ~p', [Dict]).
 
 %!  oauth2:server_attribute(?ServerID, ?Attribute, ?Value)
