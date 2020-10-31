@@ -34,12 +34,15 @@ attach_packs_relative(Rel):-
       absolute_file_name(Rel,PackDir,[file_type(directory),file_errors(fail)])),
     writeln(attach_packs(PackDir)),attach_packs(PackDir)));writeln(failed(attach_packs_relative_web(Rel)))).
 
-
 load_package_dirs:- 
   findall(PackDir,'$pack':pack(Pack, PackDir),Before),  
   ignore(( \+ exists_source(library(logicmoo_common)), attach_packs_relative('../../..'))),
   findall(PackDir,'$pack':pack(Pack, PackDir),After),
   (Before==After -> writeln(load_package_dirs(After)) ; true),
+  ignore(catch(make_directory('/tmp/tempDir/pack'),_,true)),
+  (user:file_search_path(pack,'/tmp/tempDir/pack') -> true ; asserta(user:file_search_path(pack,'/tmp/tempDir/pack'))),
+  attach_packs('/tmp/tempDir/pack'),
+  pack_install(logicmoo_utils,[upgrade(true),interactive(false)]),
   pack_list_installed,
   !.
  
