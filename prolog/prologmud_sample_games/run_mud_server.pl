@@ -34,7 +34,7 @@ attach_packs_relative(Rel):-
       absolute_file_name(Rel,PackDir,[file_type(directory),file_errors(fail)])),
     writeln(attach_packs(PackDir)),attach_packs(PackDir)));writeln(failed(attach_packs_relative_web(Rel)))).
 
-load_package_dirs:- 
+load_package_dirs:-
   findall(PackDir,'$pack':pack(Pack, PackDir),Before),  
   ignore(( \+ exists_source(library(logicmoo_common)), attach_packs_relative('../../..'))),
   findall(PackDir,'$pack':pack(Pack, PackDir),After),
@@ -70,6 +70,8 @@ load_package_dirs:-
 
 :- current_prolog_flag('argv',Is),writeq(current_prolog_flag('argv',Is)),!,nl.
 
+
+:- use_module(library(prolog_deps)).
 :- use_module(library(logicmoo_common)).
 
 check_startup_flags:- 
@@ -261,7 +263,9 @@ expose_all:-
 
 */
 load_before_compile:- 
+   %set_prolog_flag(verbose_file_search,true),
    use_module(library(logicmoo_webui)),
+   %set_prolog_flag(verbose_file_search,false),
    
    %:- use_module(library(logicmoo_nlu)).
 
