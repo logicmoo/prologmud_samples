@@ -435,3 +435,9 @@ ls
 cls 
 swipl
 swipl
+ls
+./PreStartMUD.sh 
+swipl -l run_mud_server.pl
+git status
+ls -l
+git add .
