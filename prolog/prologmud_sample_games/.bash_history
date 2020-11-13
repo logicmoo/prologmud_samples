@@ -441,3 +441,5 @@ swipl -l run_mud_server.pl
 git status
 ls -l
 git add .
+ls -l
+swipl -l run_mud_server.pl
