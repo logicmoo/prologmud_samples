@@ -18,7 +18,7 @@
 % Where Things are Located
 % ==================================================
 
-:- file_begin(pfc).
+:- expects_dialect(pfc).
 
 ==>prologHybrid(localityOfObject(tObj,tSpatialThing)).
 % which will imply ... :-decl_mpred_hybrid(localityOfObject(kappa(Self,genls(Self,obj)),kappa(Self2,genls(Self2,tSpatialThing)))).
@@ -314,4 +314,5 @@ onSpawn mudAreaConnected(tDiningRoom, tKitchen).
 onSpawn mudAreaConnected(tBedRoom, tClosetRoom).
 onSpawn mudAreaConnected(tKitchen, tBackYard).
 onSpawn mudAreaConnected(iArea1008, tBackYard).
+
 

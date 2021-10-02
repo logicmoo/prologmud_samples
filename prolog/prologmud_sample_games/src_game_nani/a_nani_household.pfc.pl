@@ -16,13 +16,14 @@ use this file with...
 
 :- op(600,fx,onSpawn).
 
-:- file_begin(pfc).
+:- expects_dialect(pfc).
 
 % ==================================================
 % Rooms
 % ==================================================
 
 /* technically the following are not needed due the mudAreaConnected/2s below */
+:- kb_shared((onSpawn)/1).
 onSpawn tRegion(tKitchen).
 onSpawn tRegion(tHallWay).
 onSpawn tRegion(tCellar).
